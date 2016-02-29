@@ -1,4 +1,4 @@
-# Static
+# Walter
 
 This repository provides static web assets for websites and web applications for the Scottish Government.
 
