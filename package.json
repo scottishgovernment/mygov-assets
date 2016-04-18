@@ -1,0 +1,21 @@
+{
+  "name": "walter",
+  "version": "0.0.1",
+  "description": "Shared sctatic components for Scottish public sector websites",
+  "main": "scss/main.scss",
+  "repository": {
+    "type": "git",
+    "url": "http://stash.digital.gov.uk/scm/mgv/walter.git"
+  },
+  "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inuitcss/base.lists/issues"
+  },
+  "homepage": "https://www.mygov.scot",
+  "keywords": [
+    "itcss",
+    "oocss",
+    "css"
+  ]
+}
