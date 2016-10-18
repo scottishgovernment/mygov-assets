@@ -19,6 +19,8 @@ $expandable__icon-color-open: transparent !default;
 $expandable__icon-image: '../images/icons/arrows/int_arrow_down_blue_35px.png' !default;
 $expandable__icon-image-hover: $expandable__icon-image !default;
 $expandable__icon-image-open: '../images/icons/arrows/int_arrow_up_blue_35px.png' !default;
+$expandable__icon-trigger: '../images/icons/arrows/down_arrow_18px.png' !default;
+$expandable__icon-trigger-open: '../images/icons/arrows/up_arrow_18px.png' !default;
 $expandable__title-size: inherit !default;
 
 
@@ -122,8 +124,8 @@ $expandable__title-size: inherit !default;
 
     &__link-trigger {
         &:after {
-            background: url("../images/icons/arrows/down_arrow_18px.png") no-repeat center center $color__link--primary;
-            @include image-retina( '../images/icons/arrows/down_arrow_18px.png', 18px, 18px);
+            background: url($expandable__icon-trigger) no-repeat center center $color__link--primary;
+            @include image-2x(get2xImage($expandable__icon-trigger), 18px, 18px);
             background-size: contain;
             border-radius: 18px;
             content: '';
@@ -149,15 +151,15 @@ $expandable__title-size: inherit !default;
 
                     &:hover {
                         background: url($expandable__icon-image-hover) no-repeat center $color__white;
-                        @include image-retina(get2xImage($expandable__icon-image-hover), 35px, 35px);
+                        @include image-2x(get2xImage($expandable__icon-image-hover), 35px, 35px);
                     }
                 }
             }
         }
 
         .expandable-item__link-trigger:after {
-            background-image: url("../images/icons/arrows/up_arrow_18px.png");
-            @include image-retina( '../images/icons/arrows/up_arrow_18px.png', 18px, 18px);
+            background-image: url($expandable__icon-trigger-open);
+            @include image-2x(get2xImage($expandable__icon-trigger-open), 18px, 18px);
         }
     }
 
