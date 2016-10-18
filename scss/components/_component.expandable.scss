@@ -15,7 +15,8 @@ $expandable__header-background-color-hover: $color__grey--light !default;
 $expandable__header-background-color-open: $color__blue--lighter !default;
 $expandable__icon-color: transparent !default;
 $expandable__icon-color-hover: transparent !default;
-$expandable__icon-color-open: transparent !default;
+$expandable__icon-color-open: $expandable__icon-color !default;
+$expandable__icon-color-open-hover: $expandable__icon-color-open !default;
 $expandable__icon-image: '../images/icons/arrows/int_arrow_down_blue_35px.png' !default;
 $expandable__icon-image-hover: $expandable__icon-image !default;
 $expandable__icon-image-open: '../images/icons/arrows/int_arrow_up_blue_35px.png' !default;
@@ -152,7 +153,7 @@ $expandable__title-size: inherit !default;
                     @include image-2x(get2xImage($expandable__icon-image-open), 35px, 35px);
 
                     &:hover {
-                        background: url($expandable__icon-image-open-hover) no-repeat center $expandable__icon-color-hover;
+                        background: url($expandable__icon-image-open-hover) no-repeat center $expandable__icon-color-open-hover;
                         @include image-2x(get2xImage($expandable__icon-image-open-hover), 35px, 35px);
                     }
                 }
