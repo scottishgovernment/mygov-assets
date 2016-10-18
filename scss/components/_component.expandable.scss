@@ -19,6 +19,7 @@ $expandable__icon-color-open: transparent !default;
 $expandable__icon-image: '../images/icons/arrows/int_arrow_down_blue_35px.png' !default;
 $expandable__icon-image-hover: $expandable__icon-image !default;
 $expandable__icon-image-open: '../images/icons/arrows/int_arrow_up_blue_35px.png' !default;
+$expandable__icon-image-open-hover: $expandable__icon-image-open !default;
 $expandable__icon-trigger: '../images/icons/arrows/down_arrow_18px.png' !default;
 $expandable__icon-trigger-open: '../images/icons/arrows/up_arrow_18px.png' !default;
 $expandable__title-size: inherit !default;
@@ -52,6 +53,7 @@ $expandable__title-size: inherit !default;
 
     &__header {
         background-color: $expandable__header_background-color;
+        border: 0;
         color: $expandable__body-color;
         cursor: pointer;
         display: table;
@@ -150,8 +152,8 @@ $expandable__title-size: inherit !default;
                     @include image-2x(get2xImage($expandable__icon-image-open), 35px, 35px);
 
                     &:hover {
-                        background: url($expandable__icon-image-hover) no-repeat center $color__white;
-                        @include image-2x(get2xImage($expandable__icon-image-hover), 35px, 35px);
+                        background: url($expandable__icon-image-open-hover) no-repeat center $expandable__icon-color-hover;
+                        @include image-2x(get2xImage($expandable__icon-image-open-hover), 35px, 35px);
                     }
                 }
             }
