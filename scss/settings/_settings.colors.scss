@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    #COLORS
+\*------------------------------------*/
+
+// Using a BEM-like syntax for variable names.
+
+// Palette
+$color__white:          #ffffff !default;
+$color__black:          #000000 !default;
+
+$color__white--selected: rgba(red($color__white), green($color__white), blue($color__white), 0.65) !default;
+
+$color__blue--lighter:  #e5f0f8 !default;
+$color__blue--light:    #d9effc !default;
+$color__blue--base:     #0065bd !default;
+$color__blue--dark:     #00437e !default;
+$color__blue--darker:   #002d54 !default;
+
+$color__grey--lighter:  #f8f8f8 !default;
+$color__grey--light:    #ebebeb !default;
+$color__grey--pale:     #e3e3e3 !default;
+$color__grey--medium:   #b3b3b3 !default;
+$color__grey--base:     #727272 !default;
+$color__grey--dark:     #333333 !default;
+
+$color__red--base:      #d32205 !default;
+$color__gold--base:     #ffb644 !default;
+$color__green--base:    #4e9d52 !default;
+$color__orange--base:   #e87621 !default; // used for ppt icon
+
+// Typography
+$color__body:           $color__grey--dark !default;
+$color__placeholder:    $color__grey--base !default;
+$color__grey--text:     $color__grey--base !default;
+
+// Links
+$color__link--primary:  $color__blue--base !default;
+$color__link--hover:    $color__blue--dark !default;
+$color__link--active:   $color__blue--dark !default;
+$color__link--focus:    $color__blue--dark !default;
+
+$color__tap-highlight:  transparent !default;
+
+// Buttons
+$color__button--primary:                $color__blue--base !default;
+$color__button--primary--hover:         $color__blue--dark !default;
+$color__button--primary--active:        $color__blue--dark !default;
+$color__button--primary--active-text:   $color__white--selected !default;
+$color__button--primary--focus:         $color__blue--dark !default;
+$color__social__button:                 $color__blue--light !default;
+
+// Form elements
+$color__input--focus:                   $color__blue--lighter !default;
+$color__input--focus-outline:           $color__blue--light !default;
+
+// Error and success
+$color__error:                          $color__red--base !default;
+$color__error--background:              scale-lightness($color__red--base, 80%) !default;
+$color__success:                        $color__green--base !default;
+$color__success--background:            scale-lightness($color__green--base, 80%) !default;
+
+// Notifications
+$notification__background--normal:  $color__grey--dark;
+$notification__foreground--normal:  $color__white;
+$notification__background--strong:  $color__gold--base;
+$notification__foreground--strong:  $color__body;
+
+//Borders
+$color__border--darker: $color__grey--dark;
+$color__border--dark: $color__grey--dark;
+$color__border--base: $color__grey--medium;
+$color__border--light: $color__grey--light;
