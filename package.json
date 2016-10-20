@@ -1,11 +1,10 @@
 {
-  "name": "walter",
+  "name": "mygov-assets",
   "version": "0.0.1",
-  "description": "Shared sctatic components for Scottish public sector websites",
-  "main": "scss/main.scss",
+  "description": "Shared static components for Scottish public sector websites",
   "repository": {
     "type": "git",
-    "url": "http://stash.digital.gov.uk/scm/mgv/walter.git"
+    "url": "http://stash.digital.gov.uk/scm/mgv/mygov-assets.git"
   },
   "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot>",
   "license": "MIT",
