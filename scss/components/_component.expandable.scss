@@ -3,30 +3,27 @@
     Used for accordion-like panels
 \*------------------------------------*/
 
-$expandable__background-color: $color__grey--lighter !default;
+$expandable__background-color: $color__white !default;
 $expandable__body-color: $color__body !default;
-$expandable__body-color-open: $color__grey--light !default;
-$expandable__border-color: $color__grey--pale !default;
-$expandable__header-color-hover: $expandable__body-color !default;
-$expandable__header-color-open: $expandable__body-color !default;
+$expandable__body-background-color-open: $color__grey--lighter !default;
+$expandable__border-color: $color__grey--medium !default;
+$expandable__header-color-hover: inherit !default;
+$expandable__header-color-open: $color__white !default;
 $expandable__header_background-color: $expandable__background-color !default;
 $expandable__header-background-color-focus: $color__blue--lighter !default;
-$expandable__header-background-color-hover: $color__grey--light !default;
-$expandable__header-background-color-open: $color__blue--lighter !default;
-$expandable__icon-color: transparent !default;
-$expandable__icon-color-hover: transparent !default;
-$expandable__icon-color-open: $expandable__icon-color !default;
+$expandable__header-background-color-hover: $color__grey--lighter !default;
+$expandable__header-background-color-open: $color__link--primary !default;
+$expandable__icon-color: $color__link--primary !default;
+$expandable__icon-color-hover: $expandable__icon-color !default;
+$expandable__icon-color-open: $color__white !default;
 $expandable__icon-color-open-hover: $expandable__icon-color-open !default;
-$expandable__icon-image: '../images/icons/arrows/int_arrow_down_blue_35px.png' !default;
+$expandable__icon-image: '../images/icons/arrows/int_arrow_down_35px.png' !default;
 $expandable__icon-image-hover: $expandable__icon-image !default;
 $expandable__icon-image-open: '../images/icons/arrows/int_arrow_up_blue_35px.png' !default;
 $expandable__icon-image-open-hover: $expandable__icon-image-open !default;
 $expandable__icon-trigger: '../images/icons/arrows/down_arrow_18px.png' !default;
 $expandable__icon-trigger-open: '../images/icons/arrows/up_arrow_18px.png' !default;
 $expandable__title-size: inherit !default;
-
-
-
 
 .expandable {
     h2 {
@@ -103,13 +100,12 @@ $expandable__title-size: inherit !default;
         right: 15px;
         top: 50%;
         width: 35px;
-
         @include image-2x(get2xImage($expandable__icon-image), 35px, 35px);
         @include transition(background 1s);
     }
 
     &__body {
-        background: $expandable__body-color-open;
+        background-color: $expandable__body-background-color-open;
         display: none;
         padding: 21px 15px 27px;
         position: relative;
@@ -121,7 +117,6 @@ $expandable__title-size: inherit !default;
                 margin-top: 0;
             }
         }
-
         @extend %inner-shadow-top !optional;
     }
 
@@ -182,7 +177,7 @@ For disclaimers in forms
     margin: 0;
 
     .expandable-item__body {
-        background: $color__white;
+        background: $expandable__background-color;
         font-size: 14px;
         margin-bottom: 28px;
         padding: 28px 25px;
@@ -192,7 +187,6 @@ For disclaimers in forms
         }
     }
 }
-
 @include media-query(tablet) {
     .expandable-item--disclaimer .expandable-item__body {
         font-size: 16px;
