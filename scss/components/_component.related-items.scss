@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    $RELATED ITEMS
+\*------------------------------------*/
+
+.related-items {
+    &__title {
+        font-size: 19px;
+        font-weight: $normal;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+
+    &__list {
+        margin: 0 0 10px 0;
+    }
+
+    &__item {
+        font-size: 17px;
+        list-style-type: none;
+        line-height: 21px;
+        margin: 14px 0 0 0;
+        padding: 0px 0px;
+    }
+
+    &__link {
+        text-decoration: none;
+
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}
+
+@include media-query(tablet) {
+     .related-items__title {
+         margin: 31px 0 0px 0;
+     }
+}

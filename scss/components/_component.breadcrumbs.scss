@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    $BREADCRUMBS
+\*------------------------------------*/
+
+$breadcrumbs__icon-color: $color__grey--base !default;
+$breadcrumbs__current-color: $color__grey--base !default;
+
+.breadcrumb {
+  background-color: transparent;
+  border-radius: 0;
+  list-style: none;
+  margin: 18px 0 16px;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    float: left;
+    font-size: $mobile-milli-size;
+    line-height: 21px;
+    padding-top: 0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.breadcrumb > .active {
+  color: $breadcrumbs__icon-color;
+}
+
+.breadcrumb > li:after {
+  color: $breadcrumbs__current-color;
+  content: "\203a";
+  font-size: $tablet-base-size;
+  font-weight: 700;
+  line-height: 14px;
+  padding: 0 6px 0 4px;
+}
+
+.breadcrumb > li + li:before {
+  content: none;
+}

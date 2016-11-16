@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    $EXTERNAL LINKS
+\*------------------------------------*/
+
+$external-link__size: 15px;
+$external-link__size--large: 17px;
+$external-link__size--small: 15px;
+$external-link__size--tablet: 17px;
+$external-link__size--tablet--large: 21px;
+$external-link__size--tablet--small: 15px;
+$external-link__icon-path: '../images/icons/arrows/';
+$external-link__icon-filename-prefix: 'ext_arrow_text';
+
+@mixin external-link-rules($size) {
+  $external-link-icon: get-link-icon($external-link__icon-path, $external-link__icon-filename-prefix, $size);
+
+  background-image: url($external-link-icon);
+  background-position: center right;
+  background-repeat: no-repeat;
+  padding-right: ($size + 5px);
+
+  @include image-2x(get2xImage($external-link-icon), $size, $size);
+
+  &:hover,
+  &:active {
+    $external-link-icon: get-link-icon($external-link__icon-path, $external-link__icon-filename-prefix, $size, '_hover');
+
+    background-image: url($external-link-icon);
+
+    @include image-2x(get2xImage($external-link-icon), $size, $size);
+  }
+}
+
+@mixin external-link-no-icon() {
+  &.no-icon {
+    background-image: none;
+    padding-right: 0;
+
+    &:hover {
+      background-image: none;
+    }
+
+    &:active {
+      background-image: none;
+    }
+  }
+}
+
+%external-link {
+  @include external-link-rules($external-link__size);
+  @include external-link-no-icon;
+}
+
+// external links within article elements
+article {
+  a[href^="//"]:not(.button),
+  a[href^="http://"]:not(.button),
+  a[href^="https://"]:not(.button) {
+    @include external-link-rules($external-link__size);
+    @include external-link-no-icon;
+  }
+
+  h2,
+  h3 {
+    a[href^="//"]:not(.button),
+    a[href^="http://"]:not(.button),
+    a[href^="https://"]:not(.button) {
+      @include external-link-rules($external-link__size--large);
+    }
+  }
+}
+
+// explicit external links
+a.external {
+  @include external-link-rules($external-link__size);
+  @include external-link-no-icon;
+}
+
+// explicit external links in headers
+h2, h3 {
+  a.external {
+    @include external-link-rules($external-link__size--large);
+  }
+}
+
+@include media-query(tablet) {
+
+  article {
+    a[href^="//"]:not(.button),
+    a[href^="http://"]:not(.button),
+    a[href^="https://"]:not(.button) {
+      @include external-link-rules($external-link__size--tablet);
+      @include external-link-no-icon;
+    }
+
+    .small {
+      a[href^="//"]:not(.button),
+      a[href^="http://"]:not(.button),
+      a[href^="https://"]:not(.button) {
+        @include external-link-rules($external-link__size--tablet--small);
+      }
+    }
+
+    h2,
+    h3 {
+      a[href^="//"]:not(.button),
+      a[href^="http://"]:not(.button),
+      a[href^="https://"]:not(.button) {
+        @include external-link-rules($external-link__size--tablet--large);
+      }
+    }
+  }
+
+  // explicit external links:
+  a.external {
+    @include external-link-rules($external-link__size--tablet);
+    @include external-link-no-icon;
+  }
+
+  // explicit small external links:
+  .small {
+    a.external {
+      @include external-link-rules($external-link__size--tablet--small);
+    }
+  }
+
+  // explicit external links in headers:
+  h2, h3 {
+    a.external {
+      @include external-link-rules($external-link__size--tablet--large);
+    }
+  }
+}

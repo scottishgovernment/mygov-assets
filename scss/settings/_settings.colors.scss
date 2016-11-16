@@ -1,5 +1,5 @@
 /*------------------------------------*\
-    #COLORS
+    $COLORS
 \*------------------------------------*/
 
 // Using a BEM-like syntax for variable names.
@@ -26,6 +26,7 @@ $color__grey--dark:     #333333 !default;
 $color__red--base:      #d32205 !default;
 $color__gold--base:     #ffb644 !default;
 $color__green--base:    #4e9d52 !default;
+$color__green--dark:    #458c49;
 $color__orange--base:   #e87621 !default; // used for ppt icon
 
 // Typography
@@ -48,6 +49,15 @@ $color__button--primary--active:        $color__blue--dark !default;
 $color__button--primary--active-text:   $color__white--selected !default;
 $color__button--primary--focus:         $color__blue--dark !default;
 $color__social__button:                 $color__blue--light !default;
+
+$color__button__secondary:              $color__blue--dark !default;
+$color__button__secondary--hover:       $color__blue--darker !default;
+$color__button--secondary--active:      $color__blue--darker !default;
+$color__button--secondary--active-text: $color__white--selected !default;
+$color__button--secondary--focus:       $color__blue--darker !default;
+
+$color__button__success:                $color__green--base !default;
+$color__button__success--hover:         $color__green--dark !default;
 
 // Form elements
 $color__input--focus:                   $color__blue--lighter !default;

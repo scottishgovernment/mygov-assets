@@ -1,0 +1,68 @@
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+
+  padding-top: rhythm(1, $mobile-list-size);
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+article,
+.content-area {
+
+  ol,
+  ul {
+    &:not(.no-margin) {
+        margin: 0 0 21px 21px;
+    }
+  }
+
+  ol {
+    &:not(.no-margin) {
+      margin-left: 25px;
+    }
+  }
+
+  p + ul,
+  p + ol {
+    margin-top: -14px;
+  }
+
+  ul + h2,
+  ol + h2 {
+    margin-top: rhythm(6);
+  }
+}
+
+dl {
+  dt {
+    font-weight: $bold;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  dl {
+    padding-left: $base-spacing-unit;
+    padding-left: pem($base-spacing-unit);
+  }
+
+  dt,
+  dd {
+    font-size: $mobile-base-size;
+    line-height: $base-line-height * 4;
+    margin-bottom: rhythm(1);
+  }
+}

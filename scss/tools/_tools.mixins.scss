@@ -1,0 +1,156 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+
+/* Default font size in pixels if not overridden. */
+$base-font-size: 18px !default;
+
+/* Convert PX units to EMs.
+Ex: margin-right: pem(16);
+*/
+@function pem($pxval, $base: $base-font-size) {
+  @return #{$pxval / $base}em;
+}
+
+@function get-link-icon($path, $filenameprefix, $size, $modifier: '', $extension: 'png') {
+  @return $path + $filenameprefix + '_' + $size + $modifier + '.' + $extension;
+}
+
+/* Used to convert PX to EMs for multiple properties or values or both.
+$base is an optional measurement that allows making measurements relative to the parent font size rather than the current. Also accepts a list of lists (instead a list of values) for properties that accept multiple lists of values. Only numbers of converted; everything else is passed through.
+
+Examples:
+
+@include scale(line-height, 30)
+@include scale(line-height, 30, 16)
+@include scale(width height, 125);
+@include scale(padding, 0 25, 16);
+@include scale(text-shadow, (#0d6e28 1 1) (#777 0 0 2), 16);
+@include scale(box-shadow, (inset 0 0 0 1 #2a9022) (inset 0 0 3 #459966), 16);
+*/
+@mixin scale($props, $sizes, $base: $base-font-size) {
+  $values: ();
+  $sublists: false;
+  @each $s in $sizes {
+    /* unwrap lists for values that have multiple list of values such as text-shadow */
+    @if type-of($s) == list {
+      $sublists: true;
+      $vv: ();
+      @each $ss in $s {
+        $vv: append($vv, if(type-of($ss) == number, #{$ss / $base}em, $ss));
+      }
+      $values: append($values, join((), $vv));
+    } @else {
+      $values: append($values, if(type-of($s) == number, #{$s / $base}em, $s));
+    }
+  }
+  $value: join((), $values, if($sublists, comma, space));
+  @each $prop in $props {
+    #{$prop}: $value
+  }
+}
+
+/*
+  Finds the closest dimension value that is on-grid, used to keep an element
+  roughly the same size if the baseline grid changes and its size is
+  dependent on the grid
+
+  @param {px} $input - pixel size we want to round to the nearest baseline grid interval
+  @param {px} $line-height - base line height
+
+  @returns {px} length
+*/
+@function baseline-nearest($input, $line-height: $base-line-height) {
+  @return rhythm(round($input / $line-height));
+}
+
+@mixin media-2x {
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dppx) {
+    @content;
+  }
+}
+
+/*
+  Mixin to add a media query for retina images.
+  Relies on naming convention where foo.png would have a retina image called foo_@2x.png
+  Only permits PNGs
+
+  @param {string} $file - image path
+  @param {px} $height - image display height
+  @param {px} $width - image display height
+
+*/
+@mixin image-retina($file, $width, $height) {
+  @warn 'Use mixin "image-2x" instead of "image-retina"';
+  $index: str-index($file, '.png');
+  $fileString: str-slice($file, 0, ($index - 1));
+
+  @include media-2x {
+    & {
+      background-image: url($fileString + '_@2x.png');
+      background-size: $width $height;
+    }
+  }
+}
+
+
+/**
+ * Mixin for retina-ready images.
+ * Retrieved from Signal vs Noise at:
+ * https://signalvnoise.com/posts/3271-easy-retina-ready-images-using-scss
+ *
+ * Example usage:
+ *     div.logo {
+ *         background: url("logo.png") no-repeat;
+ *         @include image-2x("logo2x.png", 100px, 25px);
+ *     }
+ */
+@mixin image-2x($image, $width, $height) {
+  @media only screen and (min--moz-device-pixel-ratio: 1.3),
+         only screen and (-o-min-device-pixel-ratio: 2.6/2),
+         only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (min-device-pixel-ratio: 1.3),
+         only screen and (min-resolution: 1.3dppx) {
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+@function get2xImage($file, $extension: 'png') {
+    $index: str-index($file, '.' + $extension);
+    $fileString: str-slice($file, 0, ($index - 1));
+
+    @return $fileString + '_@2x.' + $extension;
+}
+
+/**
+ * Mixin for SVG background images. Takes a path to an SVG and returns a pair of
+ * background-image declarations, using a hack that makes one work for IE8 and
+ * work for browsers that understand SVG. Assumes a .png with the same name as
+ * the .svg exists in the same directory as the .svg
+ */
+@mixin svg-background-with-fallback($svgpath) {
+    $index: str-index($svgpath, '.svg');
+    $fileString: str-slice($svgpath, 0, ($index - 1));
+
+    background-image: url($fileString + '.png');
+    background-image: none, url($svgpath);
+}
+
+/**
+ * Creates a RGBA tint of an input color.
+ * Not suitable for browsers that don't like RGBA.
+ */
+@function tint($color, $amount) {
+    @return rgba(red($color), green($color), blue($color), $amount);
+}
+
+/**
+ * Creates a solid tint of an input color against a supplied background color.
+ * Suitable for browsers that don't like RGBA.
+ * Basically an alias for MIX with a decimal for amount
+ */
+@function tint-solid($color, $background, $amount) {
+    @return mix($color, $background, $amount * 100);
+}

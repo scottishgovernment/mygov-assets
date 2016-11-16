@@ -1,0 +1,107 @@
+/*------------------------------------*\
+    $SEARCH BOX: HEADER BAR
+\*------------------------------------*/
+
+// for header search
+.header-bar .search-box {
+  height: auto;
+  left: 15px;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  @include transition(background-color, 0.1s);
+
+  &__input[type=text] {
+    font-size: 16px;
+    height: 35px;
+    padding: 0;
+    width: 0;
+
+    @include transition(width 0.1s);
+  }
+
+  &__button {
+    font-size: 15px;
+    height: 35px;
+    width: 35px;
+  }
+
+  // used for header search on smaller screen sizes
+  &--expanded {
+    background: $color__white;
+    z-index: 2;
+
+    .search-box__input[type=text] {
+      position: relative;
+      padding: 0 42px 0 25px;
+      width: 100%;
+      z-index: 3;
+    }
+  }
+}
+
+@include media-query(tablet) {
+  .header-bar .search-box {
+    top: 14px;
+
+    &__input[type=text] {
+      font-size: $tablet-milli-size;
+      height: 42px;
+    }
+
+    &--expanded {
+      background: transparent;
+
+      .search-box__input[type=text] {
+        padding-right: 49px;
+        width: 50%;
+      }
+    }
+
+    &__button {
+      font-size: 17px;
+      height: 42px;
+      width: 42px;
+    }
+  }
+}
+
+@include media-query(desktop) {
+  .header-bar .search-box {
+    top: 22px;
+
+    &__input[type=text] {
+      height: 49px;
+      padding: 0 56px 0 25px;
+      width: 284px;
+    }
+
+    &--expanded {
+      .search-box__input[type=text] {
+        width: 284px;
+      }
+    }
+
+    &__button {
+      font-size: 22px;
+      height: 49px;
+      width: 49px;
+    }
+  }
+}
+
+@include media-query(hd) {
+  .header-bar .search-box {
+    &__input[type=text] {
+      width: 350px;
+    }
+
+    &--expanded {
+      .search-box__input[type=text] {
+        width: 352px;
+      }
+    }
+  }
+}

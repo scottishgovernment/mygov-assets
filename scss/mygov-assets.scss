@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/*------------------------------------*\
+    $MYGOV ASSETS
+\*------------------------------------*/
+
+
+
+
+/* SASS Libraries
+========================================================================== */
+/*
+ * Global SASS libraries/helpers from Compass's built in mixins to aid
+ * compatibility and progressive enhancement methods.
+ */
+@import "compass";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/css3";
+
+
+
+
+/**
+ * GRID/LAYOUT
+ */
+
+// inuitcss layout module is not ready. Use CSS Wizardry grids instead
+$gutter: 30px;
+$pull: true;
+$push: true;
+
+// same breakpoints as gov.scot
+$breakpoints: (
+    'bigphone' '(min-width: 480px)',
+    'tablet' '(min-width: 768px)',
+    'desktop' '(min-width: 992px)',
+    'hd' '(min-width: 1200px)',
+
+    'bigphone-down' '(max-width: 479px)',
+    'tablet-down' '(max-width: 767px)',
+    'desktop-down' '(max-width: 991px)',
+    'bigphone-to-tablet' '(min-width: 480px) and (max-width: 767px)',
+    'tablet-to-desktop' '(min-width: 768px) and (max-width: 991px)',
+    'desktop-to-hd' '(min-width: 992px) and (max-width: 1199px)',
+    'hd-up' '(min-width: 1200px)',
+
+    'tablet-portrait' '(min-width: 768px) and (orientation: portrait) and (max-width : 1024px)',
+    'tablet-landscape' '(min-width: 768px) and (orientation: landscape)  and (max-width : 1024px)'
+);
+$breakpoint-has-widths: ('bigphone', 'tablet', 'desktop', 'hd');
+$breakpoint-has-push:   ('tablet', 'desktop', 'hd');
+$breakpoint-has-pull:   ('tablet', 'desktop', 'hd');
+
+@import "../node_modules/csswizardry-grids/csswizardry-grids.scss";
+
+
+
+
+/**
+ * SETTINGS
+ */
+$inuit-base-font-size: 15px;
+$inuit-base-line-height: 24px;
+@import "../node_modules/inuit-defaults/settings.defaults";
+@import "../node_modules/inuit-responsive-settings/settings.responsive";
+@import "settings/settings.base-spacing";
+@import "settings/settings.colors";
+@import "settings/settings.font";
+@import "settings/settings.transition";
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "../node_modules/inuit-functions/tools.functions";
+@import "../node_modules/inuit-mixins/tools.mixins";
+$inuit-use-fractions: false;
+@import "../node_modules/inuit-tools-widths/tools.widths";
+@import "../node_modules/inuit-responsive-tools/tools.responsive";
+@import "tools/tools.mixins";
+
+
+
+
+/**
+ * GENERIC
+ */
+@import "../node_modules/inuit-normalize/generic.normalize";
+@import "../node_modules/inuit-reset/generic.reset";
+@import "../node_modules/inuit-box-sizing/generic.box-sizing";
+
+
+
+
+
+/**
+ * BASE
+ */
+@import "base/base.base-spacing";
+@import "base/base.images";
+
+/* BASE: TYPE */
+@import "base/type/type.blockquote";
+@import "base/type/type.body";
+@import "base/type/type.headings";
+@import "base/type/type.lists";
+@import "base/type/type.small";
+
+/* BASE: BUTTONS AND LINKS */
+@import "base/base.buttons";
+@import "base/type/type.links";
+
+
+
+
+/**
+ * COMPONENTS
+ */
+@import "components/component.article-header";
+@import "components/component.breadcrumbs";
+@import "components/component.expandable";
+@import "components/component.external-links";
+@import "components/component.page-nav";
+@import "components/component.related-items";
+@import "components/component.search-box";
+
+
+
+
+/**
+ * TRUMPS
+ */
+@import "trumps/trump.header-search";

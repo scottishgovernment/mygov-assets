@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    #PAGE NAVIGATION
+    previous and next buttons
+\*------------------------------------*/
+
+$page-nav__icon-size: 56px !default;
+$page-nav__direction-link__icon-path: '../images/icons/arrows/' !default;
+$page-nav__prefix-color: $color__blue--darker !default;
+
+.page-nav {
+  margin-top: 56px;
+  margin-bottom: 49px;
+
+  &__text {
+    &:before {
+      color: $page-nav__prefix-color;
+      content: attr(data-label);
+      display: block;
+      font-size: 14px;
+      font-weight: $bold;
+      text-transform: uppercase;
+    }
+  }
+
+  // BEGIN: page-nav__button
+  &__button {
+    font-size: 16px;
+    line-height: 21px;
+    background: transparent;
+    text-decoration: none;
+    margin: 14px 0;
+    min-height: 42px;
+    display: inline-block;
+    position: relative;
+    @include transition(background $transition-out-time);
+
+    &:not([href]) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparent;
+      outline: none;
+      @include transition(background 0.2s);
+
+      &:before {
+        background-color: $color__button--primary--hover;
+      }
+
+      .page-nav__text-highlight {
+        text-decoration: underline;
+      }
+
+    }
+
+    &:active {
+      @include transition(background 0s);
+
+      .page-nav__text-highlight {
+        background: $color__blue--light;
+      }
+    }
+
+    .page-nav__text {
+      padding: 7px 15px;
+      display: inline-block;
+      text-decoration: inherit;
+    }
+
+    ///////////////////
+    // Variations    //
+    ///////////////////
+
+    // Shared styles for left and right variations
+    // :before is the circle
+    &--left:before,
+    &--right:before {
+      content: '';
+      height: $page-nav__icon-size;
+      width: $page-nav__icon-size;
+      background-color: $color__button--primary;
+      background-position: center;
+      border-radius: $page-nav__icon-size;
+      display: inline-block;
+      position: absolute;
+      top: 12px;
+
+      @include transition(background 1s);
+    }
+
+    // :after is the chevron
+    &--left:after,
+    &--right:after {
+        content: '';
+        height: $page-nav__icon-size;
+        width: $page-nav__icon-size;
+        position: absolute;
+        top: 12px;
+    }
+
+    &--left,
+    &--right {
+      &:active {
+        &:before {
+          @include transition(background 0s);
+        }
+
+        &:after {
+          opacity: 0.65;
+        }
+      }
+    }
+
+    // Left button variation
+    // BEGIN: page-nav__button--left
+    &--left {
+      padding-left: $page-nav__icon-size;
+      text-align: left;
+
+      &:before,
+      &:after {
+          left: 0;
+      }
+
+      &:after {
+        $link-icon: get-link-icon($page-nav__direction-link__icon-path, 'int_arrow_left', $page-nav__icon-size);
+
+        background-image: url($link-icon);
+        @include image-2x(get2xImage($link-icon), $page-nav__icon-size, $page-nav__icon-size);
+      }
+    }
+    // END: page-nav__button--left
+
+    // Right button variation
+    // BEGIN: page-nav__button--right
+    &--right {
+      float: right;
+      padding-right: $page-nav__icon-size;
+      text-align: right;
+
+      &:before,
+      &:after {
+        right: 0;
+      }
+
+      &:after {
+          $link-icon: get-link-icon($page-nav__direction-link__icon-path, 'int_arrow_right', $page-nav__icon-size);
+
+          background-image: url($link-icon);
+          @include image-2x(get2xImage($link-icon), $page-nav__icon-size, $page-nav__icon-size);
+      }
+    }
+    // END: page-nav__button--right
+
+  }
+  // END: page-nav__button
+
+  // correct placement of "next" label for IE8
+  .page-nav__button--right .page-nav__text:before {
+      text-align: right;
+  }
+}
+
+@include media-query(tablet) {
+    .page-nav {
+        margin-bottom: 56px;
+    }
+}

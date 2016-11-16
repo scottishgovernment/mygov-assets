@@ -1,0 +1,77 @@
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5 {
+  font-size: $mobile-base-size;
+}
+
+h1, h2, h3 {
+  font-weight: $bold;
+  text-rendering: optimizeLegibility;
+}
+
+h1, .alpha {
+  @include adjust-font-size-to($mobile-h1-size, 5);
+  margin: 28px 0 25px;
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-h1-size, 8);
+  }
+}
+
+h2, .beta {
+  @include adjust-font-size-to($mobile-h2-size, 4);
+  margin: 30px 0 5px;
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-h2-size, 5);
+    margin: (rhythm(3, $tablet-h2-size) + 1) 0 (rhythm(2, $tablet-h2-size) - 1);
+  }
+}
+
+h3, .gamma {
+  @include adjust-font-size-to($mobile-h3-size, 3);
+  margin: 0 0 rhythm(1, $mobile-h3-size);
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-h3-size, 4);
+    padding-top: 0;
+    margin-bottom: 7px;
+  }
+}
+
+h4, .delta {
+  @include adjust-font-size-to($mobile-h4-size, 4);
+  font-weight: $bold;
+  margin: 0;
+
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-h4-size, 4);
+  }
+}
+
+h5, .epsilon {
+  font-weight: $semibold;
+  @include adjust-font-size-to($mobile-h5-size, 4);
+  margin: 0;
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-h5-size, 4);
+  }
+}
+
+/* heading modifiers */
+
+h1, .alpha {
+    small {
+      color: $color__body;
+    }
+}
+
+h2.emphasis {
+  border-top: 7px solid $color__body;
+  display: inline-block;
+  margin: -1px 0 1px 0;
+}

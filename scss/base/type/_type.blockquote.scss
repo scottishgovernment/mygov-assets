@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    $BLOCKQUOTES
+\*------------------------------------*/
+
+$blockquote__icon: '../images/icons/note.png' !default;
+$blockquote__icon-size: 26px !default;
+$blockquote__font-size: 15px !default;
+$blockquote__font-size--tablet: 17px !default;
+$blockquote__line-height: 21px !default;
+$blockquote__line-height--tablet: 28px !default;
+$blockquote__border-color: $color__border--base !default;
+
+blockquote {
+  border: 1px solid $blockquote__border-color;
+  border-width: 1px 0;
+  clear: both;
+  font-size: $blockquote__font-size;
+  line-height: $blockquote__line-height;
+  margin: 33px 0 37px 0;
+  padding: 13px 10px 13px 49px;
+  position: relative;
+  top: 4px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  // icon
+  &:before {
+    background: url($blockquote__icon) no-repeat 0 0 transparent;
+    content: '';
+    height: $blockquote__icon-size;
+    left: 10px;
+    position: absolute;
+    top: 13px;
+    width: $blockquote__icon-size;
+
+    @include image-2x(get2xImage($blockquote__icon), $blockquote__icon-size, $blockquote__icon-size);
+  }
+}
+
+@include media-query(tablet) {
+  blockquote {
+    font-size: $blockquote__font-size--tablet;
+    line-height: $blockquote__line-height--tablet;
+    margin-right: 125px;
+    padding: 13px 35px 13px 49px;
+  }
+}
+
+@include media-query(desktop) {
+  blockquote {
+    margin-right: 81px;
+  }
+}
+
+@include media-query(hd) {
+  blockquote {
+    margin-right: 98px;
+  }
+}

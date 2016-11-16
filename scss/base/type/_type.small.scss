@@ -1,0 +1,16 @@
+/*------------------------------------*\
+    $SMALL
+\*------------------------------------*/
+
+small,
+.small {
+    font-size: 12px;
+    line-height: 21px;
+}
+
+@include media-query(tablet) {
+    small,
+    .small {
+        font-size: 14px;
+    }
+}

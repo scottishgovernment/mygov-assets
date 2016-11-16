@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    $ARTICLE HEADER
+    title block for articles
+\*------------------------------------*/
+
+.article-header {
+  margin: 12px 0 35px;
+
+  &__prefix {
+    line-height: 21px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__prefix + &__title {
+    margin-top: 0;
+  }
+
+  &__title + &__meta {
+
+  }
+}
+
+@include media-query(tablet) {
+  .article-header {
+    margin-top: 26px;
+
+    &.has-icon {
+      padding-left: 80px;
+      position: relative;
+
+      &:before {
+        content: '';
+        height: 94px;
+        left: 0;
+        position: absolute;
+        top: 3px;
+        width: 68px;
+      }
+    }
+  }
+}
