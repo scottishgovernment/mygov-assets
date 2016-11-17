@@ -11,6 +11,9 @@ $external-link__size--tablet--small: 15px;
 $external-link__icon-path: '../images/icons/arrows/';
 $external-link__icon-filename-prefix: 'ext_arrow_text';
 
+
+
+
 @mixin external-link-rules($size) {
   $external-link-icon: get-link-icon($external-link__icon-path, $external-link__icon-filename-prefix, $size);
 

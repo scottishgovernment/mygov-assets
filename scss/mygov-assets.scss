@@ -66,8 +66,8 @@ $inuit-base-line-height: 24px;
 @import "../node_modules/inuit-responsive-settings/settings.responsive";
 @import "settings/settings.base-spacing";
 @import "settings/settings.colors";
-@import "settings/settings.font";
 @import "settings/settings.transition";
+@import "settings/settings.type";
 
 
 
@@ -95,12 +95,25 @@ $inuit-use-fractions: false;
 
 
 
+/**
+ * HELPERS
+ */
+@import "helpers/helper.bleed";
+@import "helpers/helper.visibility";
+@import "helpers/helper.wrappers";
+
+
+
 
 /**
  * BASE
  */
 @import "base/base.base-spacing";
+@import "base/base.forms";
+@import "base/base.form-errors";
 @import "base/base.images";
+@import "base/base.rules";
+@import "base/base.tables";
 
 /* BASE: TYPE */
 @import "base/type/type.blockquote";
@@ -123,6 +136,8 @@ $inuit-use-fractions: false;
 @import "components/component.breadcrumbs";
 @import "components/component.expandable";
 @import "components/component.external-links";
+@import "components/component.in-article-form";
+@import "components/component.informational-notes";
 @import "components/component.page-nav";
 @import "components/component.related-items";
 @import "components/component.search-box";

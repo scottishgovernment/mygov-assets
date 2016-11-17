@@ -1,0 +1,163 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+$field__border-color: $color__border--base !default;
+$field__border-color--focus: $color__link--primary !default;
+$field__font-size: 16px !default; // anything lower causes iOS to zoom on focus
+$field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't like custom fonts on SELECT elements
+
+
+
+
+label {
+  clear: right;
+  display: block;
+  font-family: $font__default;
+  font-weight: $lighter;
+  margin: 0 0 rhythm(1);
+}
+
+select {
+  background: $color__white;
+  border: 1px solid $field__border-color;
+  border-radius: 0;
+  font-family: $field__font-family;
+  font-size: $field__font-size;
+  height: $base-line-height * 5;
+  line-height: $base-line-height * 2;
+  padding: 0 5px;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    border: 1px solid $field__border-color--focus;
+    outline: none;
+  }
+
+  @include media-query(tablet) {
+    @include adjust-font-size-to($tablet-milli-size);
+  }
+
+  @include media-query(desktop) {
+    @include adjust-font-size-to($desktop-milli-size);
+  }
+
+  option {
+    line-height: $base-line-height * 2;
+    padding: ($base-line-height / 2) 5px;
+  }
+}
+
+input[type=text],
+input[type=password] {
+  border: 1px solid $color__white;
+  border-radius: 0;
+  font-size: $field__font-size;
+  height: rhythm(6);
+
+
+  &.large {
+    height: rhythm(8);
+  }
+
+  &.grey {
+    border: 1px solid $color__grey--medium;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $field__border-color--focus;
+    outline: none;
+  }
+}
+
+input[type=button],
+input[type=submit] {
+  padding: 0 12px;
+
+  &.large {
+    height: rhythm(10);
+  }
+
+  &.black {
+    background: $color__grey--dark;
+    color: $color__white;
+  }
+}
+
+textarea {
+  border: 1px solid $field__border-color;
+  border-radius: 0;
+  font-size: $field__font-size;
+  min-width: 100%;
+  padding: 4px 8px;
+
+  &:focus {
+    border: 1px solid $field__border-color--focus;
+    outline: none;
+  }
+}
+
+aside select {
+  display: block;
+  margin: 0 0 rhythm(2);
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+  margin: rhythm(4) 0;
+  padding: 0;
+}
+
+@include media-query(tablet) {
+  input[type=text],
+  input[type=password] {
+    font-size: $field__font-size;
+  }
+
+  textarea {
+    font-size: $field__font-size;
+  }
+}
+
+/* from Bootstrap */
+.form-control {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 28px;
+
+  &.relative {
+      position: relative;
+  }
+}
+/* end from Bootstrap */
+.input-wrapper {
+    position: relative;
+}
+
+::-webkit-input-placeholder {
+  color: $color__placeholder;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $color__placeholder;
+}
+
+:-ms-input-placeholder {
+  color: $color__placeholder;
+}
+
+::-ms-clear {
+  height: 50%;
+}
+
+// fallback for browsers without placeholder
+.placeholder {
+  color: $color__placeholder;
+}

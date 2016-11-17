@@ -2,17 +2,13 @@
     $HEADINGS
 \*------------------------------------*/
 
-h1, h2, h3, h4, h5 {
-  font-size: $mobile-base-size;
-}
-
 h1, h2, h3 {
   font-weight: $bold;
   text-rendering: optimizeLegibility;
 }
 
 h1, .alpha {
-  @include adjust-font-size-to($mobile-h1-size, 5);
+  @include adjust-font-size-to($base-h1-size, 5);
   margin: 28px 0 25px;
 
   @include media-query(tablet) {
@@ -21,7 +17,7 @@ h1, .alpha {
 }
 
 h2, .beta {
-  @include adjust-font-size-to($mobile-h2-size, 4);
+  @include adjust-font-size-to($base-h2-size, 4);
   margin: 30px 0 5px;
 
   @include media-query(tablet) {
@@ -31,8 +27,8 @@ h2, .beta {
 }
 
 h3, .gamma {
-  @include adjust-font-size-to($mobile-h3-size, 3);
-  margin: 0 0 rhythm(1, $mobile-h3-size);
+  @include adjust-font-size-to($base-h3-size, 3);
+  margin: 0 0 rhythm(1, $base-h3-size);
 
   @include media-query(tablet) {
     @include adjust-font-size-to($tablet-h3-size, 4);
@@ -42,7 +38,7 @@ h3, .gamma {
 }
 
 h4, .delta {
-  @include adjust-font-size-to($mobile-h4-size, 4);
+  @include adjust-font-size-to($base-h4-size, 4);
   font-weight: $bold;
   margin: 0;
 
@@ -54,7 +50,7 @@ h4, .delta {
 
 h5, .epsilon {
   font-weight: $semibold;
-  @include adjust-font-size-to($mobile-h5-size, 4);
+  @include adjust-font-size-to($base-h5-size, 4);
   margin: 0;
 
   @include media-query(tablet) {

@@ -10,6 +10,10 @@ $info-note__attribution-border-color: $color__grey--dark !default;
 $info-note__blockquote-border-color: $color__blue--base !default;
 $info-note__image-note: '../images/icons/note.png' !default;
 $info-note__image-caution: '../images/icons/caution.png' !default;
+$tablet-note-size: 14px !default;
+
+
+
 
 .info-note {
     border-left: 4px solid $info-note__border-color;

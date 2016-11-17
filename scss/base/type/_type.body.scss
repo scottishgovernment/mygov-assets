@@ -4,16 +4,16 @@
 
 body {
   @extend %font__body;
-  @include adjust-font-size-to($mobile-base-size, 3);
+  @include adjust-font-size-to($base-font-size, 3);
   background: $color__white;
   color: $color__body;
   font-weight: $normal;
 
   @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-base-size, 4);
+    @include adjust-font-size-to($tablet-font-size, 4);
   }
 
   @include media-query(desktop) {
-    @include adjust-font-size-to($desktop-base-size, 4);
+    @include adjust-font-size-to($desktop-font-size, 4);
   }
 }

@@ -4,40 +4,57 @@
 
 $breadcrumbs__icon-color: $color__grey--base !default;
 $breadcrumbs__current-color: $color__grey--base !default;
+$breadcrumbs__font-size: 14px !default;
+$breadcrumbs__font-size--tablet: $breadcrumbs__font-size !default;
+$breadcrumbs__font-size--desktop: $breadcrumbs__font-size--tablet !default;
+$breadcrumbs__margin: 18px 0 16px !default;
+$breadcrumbs__margin--tablet: 14px 0 13px !default;
+$breadcrumbs__margin--desktop: 14px 0 13px !default;
 
-.breadcrumb {
-  background-color: transparent;
-  border-radius: 0;
-  list-style: none;
-  margin: 18px 0 16px;
-  overflow: hidden;
-  padding: 0;
 
-  li {
-    float: left;
-    font-size: $mobile-milli-size;
-    line-height: 21px;
-    padding-top: 0;
 
-    a {
-      text-decoration: underline;
+
+.breadcrumbs {
+  color: $breadcrumbs__current-color;
+  font-size: $breadcrumbs__font-size;
+  padding-left: 0;
+  margin: $breadcrumbs__margin;
+
+  &__item {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+
+    &:after {
+      color: $breadcrumbs__icon-color;
+      content: '\203a';
+      font-size: 19px;
+      font-weight: $bold;
+      line-height: 14px;
+      padding: 0 3px 0 3px;
     }
   }
 }
 
-.breadcrumb > .active {
-  color: $breadcrumbs__icon-color;
+.breadcrumbs__container {
+  padding-top: 14px;
 }
 
-.breadcrumb > li:after {
-  color: $breadcrumbs__current-color;
-  content: "\203a";
-  font-size: $tablet-base-size;
-  font-weight: 700;
-  line-height: 14px;
-  padding: 0 6px 0 4px;
+@include media-query(tablet) {
+  .breadcrumbs {
+    font-size: $breadcrumbs__font-size--tablet;
+    margin: $breadcrumbs__margin--tablet;
+  }
+
+  .breadcrumbs__container {
+    padding-top: 21px;
+  }
 }
 
-.breadcrumb > li + li:before {
-  content: none;
+@include media-query(desktop) {
+  .breadcrumbs {
+      font-size: $breadcrumbs__font-size--desktop;
+      margin: $breadcrumbs__margin--desktop;
+  }
 }

@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+
+$wrapper__padding: 15px !default;
+$wrapper__width--tablet: 750px !default;
+$wrapper__width--desktop: 970px !default;
+$wrapper__width--hd: 1170px !default;
+
+
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 $wrapper__padding;
+}
+
+@include media-query(tablet) {
+  .wrapper {
+    max-width: $wrapper__width--tablet;
+  }
+}
+
+@include media-query(desktop) {
+  .wrapper {
+    max-width: $wrapper__width--desktop;
+  }
+}
+
+@include media-query(hd) {
+  .wrapper {
+    max-width: $wrapper__width--hd;
+  }
+}
+
+
+/**
+ * Gives us a full-width (no wrapper) on mobile, but normal wrapper on
+ * wider screens.
+ */
+.wrapper--full-mobile  {
+  padding: 0;
+}
+
+@include media-query(tablet) {
+  .wrapper--full-mobile {
+    padding: 0 $wrapper__padding;
+  }
+}

@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $FORM ERRORS
+\*------------------------------------*/
+
+.form-error {
+  .error-text {
+    color: $color__error;
+  }
+
+  input[type=text],
+  input[type=password],
+  select,
+  textarea {
+    border: 1px solid $color__error;
+  }
+}
+
+.error-block {
+  color: $color__error;
+  margin: 14px 0;
+
+  h2 {
+    margin-bottom: 8px;
+  }
+}
+
+.js-has-error {
+    label {
+        color: $color__error;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        border: 1px solid $color__error;
+    }
+}

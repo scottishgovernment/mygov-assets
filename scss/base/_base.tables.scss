@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+
+$table__border-color: $color__grey--light !default;
+$table__border-color--header: $color__grey--dark !default;
+$table__row-background: transparent !default;
+$table__row-background--zebra: $color__grey--lighter !default;
+$table__cell-padding: 10px 5px !default;
+$table__cell-padding--end: 15px !default;
+$table__font-size: 14px !default;
+$table__font-size--tablet: 16px !default;
+
+
+
+
+%headercell {
+  border-bottom: 1px solid $table__border-color--header;
+  font-weight: $bold;
+  padding: $table__cell-padding;
+  text-align: left;
+  vertical-align: top;
+}
+
+%contentcell {
+  border-bottom: 1px solid $table__border-color;
+  padding: $table__cell-padding;
+  vertical-align: top;
+}
+
+table {
+  font-size: $table__font-size;
+  line-height: 19px;
+  margin: 28px 0;
+  width: 100%;
+}
+
+// for imported tables without correct thead/th markup
+tr:first-child td {
+  @extend %headercell;
+}
+
+td {
+  @extend %contentcell;
+}
+
+tr:nth-child(2n) td {
+  background: $table__row-background--zebra;
+}
+
+// for correctly structured tables
+th {
+  @extend %headercell;
+}
+
+thead + tbody {
+  tr:first-child td {
+    font-weight: $normal;
+    @extend %contentcell;
+  }
+
+  tr:nth-child(2n) td {
+    background: $table__row-background;
+  }
+
+  tr:nth-child(2n - 1) td {
+    background: $table__row-background--zebra;
+  }
+}
+
+@include media-query(tablet) {
+  table {
+    font-size: $table__font-size--tablet;
+    line-height: 21px;
+  }
+
+  tr:first-child td:first-child {
+    padding-left: $table__cell-padding--end;
+  }
+
+  tr:first-child td:last-child {
+    padding-right: $table__cell-padding--end;
+  }
+
+  tr >:first-child {
+    padding-left: $table__cell-padding--end;
+  }
+
+  tr >:last-child {
+    padding-right: $table__cell-padding--end;
+  }
+}

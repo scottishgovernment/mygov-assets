@@ -10,7 +10,7 @@ li {
     margin-bottom: 0;
   }
 
-  padding-top: rhythm(1, $mobile-list-size);
+  padding-top: rhythm(1, $base-font-size);
 }
 
 ul.no-bullets {
@@ -61,7 +61,7 @@ dl {
 
   dt,
   dd {
-    font-size: $mobile-base-size;
+    font-size: $base-font-size;
     line-height: $base-line-height * 4;
     margin-bottom: rhythm(1);
   }

@@ -1,0 +1,74 @@
+/*------------------------------------*\
+    #VISIBILITY
+\*------------------------------------*/
+
+.hidden {
+  left: -999em !important;
+  position: absolute !important;
+  right: auto !important;
+}
+
+/**
+ * responsive visibility, cribbed from Bootstrap 3
+ */
+@include media-query(tablet-down) {
+  .hidden-phone {
+    display: none !important;
+  }
+}
+@include media-query(bigphone-to-tablet) {
+  .hidden-bigphone {
+    display: none !important;
+  }
+}
+@include media-query(tablet-to-desktop) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+@include media-query(desktop-to-hd) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+@include media-query(hd-up) {
+  .hidden-hd {
+    display: none !important;
+  }
+}
+
+.visible-phone,
+.visible-bigphone,
+.visible-tablet,
+.visible-desktop,
+.visible-hd {
+  display: none !important;
+}
+
+@include media-query(tablet-down) {
+  .visible-phone {
+    display: block !important;
+  }
+}
+
+@include media-query(bigphone-to-tablet) {
+  .visible-bigphone {
+    display: block !important;
+  }
+}
+
+@include media-query(tablet-to-desktop) {
+  .visible-tablet {
+    display: block !important;
+  }
+}
+@include media-query(desktop-to-hd) {
+  .visible-desktop {
+    display: block !important;
+  }
+}
+@include media-query(hd-up) {
+  .visible-hd {
+    display: block !important;
+  }
+}

@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    $IN-ARTICLE FORM
+\*------------------------------------*/
+
+.in-article-form {
+    textarea + span,
+    input + span {
+        position: absolute;
+        top: -34px;
+        right: 0;
+        font-size: 80%;
+        font-weight: $normal;
+    }
+
+    label {
+        font-weight: $bold;
+        max-width: calc(100% - 60px);
+    }
+
+    .required-icon + label {
+        margin-left: 14px;
+    }
+
+    .required-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .error {
+        color: $color__error;
+    }
+}

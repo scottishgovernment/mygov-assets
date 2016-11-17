@@ -4,6 +4,9 @@
 
 $hard-rule__border-color: $color__border--light !default;
 
+
+
+
 hr {
   border: 0;
   @include trailing-border($border-style: solid $hard-rule__border-color);
@@ -11,7 +14,7 @@ hr {
   position: relative;
   top: floor($base-line-height / -2);
 
-  @include media-tablet {
+  @include media-query(tablet) {
     top: 1px;
   }
 }

@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #BLEED
+\*------------------------------------*/
+/**
+ * Bleeds allow one-whole grid items to extend to the screen edges.
+ * Exends .grid__item
+ */
+
+@include media-query(bigphone-down) {
+  .bleed--phone {
+    padding-left: 0;
+    position: relative;
+    right: -15px;
+  }
+}
