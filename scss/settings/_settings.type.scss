@@ -44,18 +44,6 @@ $desktop-h5-size: $desktop-font-size !default;
 $desktop-note-size: $tablet-note-size;
 $desktop-leader-size: $tablet-leader-size;
 
-// $desktop-base-size: 19px !default;
-// $desktop-h1-size: 49px !default;
-// $desktop-h2-size: 26px !default;
-// $desktop-h3-size: $desktop-base-size !default;
-// $desktop-h4-size: $desktop-base-size !default;
-// $desktop-h5-size: $desktop-base-size !default;
-// $desktop-list-size: $desktop-base-size !default;
-// $desktop-button-size: 17px !default;
-// $desktop-small-button-size: 15px !default;
-// $desktop-milli-size: 16px !default;
-// $desktop-micro-size: 14px !default;
-
 @include establish-baseline;
 
 /**
