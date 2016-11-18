@@ -1,5 +1,9 @@
 # Component: article header
 
+Styles for a complex header, such as a header with a title, a publication date, and a format description.
+
+Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](https://www.mygov.scot/apply-blue-badge/)
+
 ## Example HTML
 
     <header class="article-header has-icon has-icon--guide">

@@ -1,10 +1,10 @@
 # Helper: visibility
 
-## `hidden`
+## Class `.hidden`
 
 Class to hide elements. Their content is kept available to screen readers.
 
-## `hidden-[breakpoint]`
+## Class `.hidden-[breakpoint]`
 
 Classes to control when elements should be hidden only at particular breakpoints.
 
@@ -18,9 +18,9 @@ This `section` would be visible at all viewport sizes except for phone and table
 
     <section class="hidden-phone hidden-tablet"></section>
 
-## `visible-[breakpoint]`
+## Class `.visible-[breakpoint]`
 
-The opposite of `hidden-[breakpoint range]`. Classes to control when elements should be visible only at particular breakpoints.
+The opposite of `.hidden-[breakpoint range]`. Classes to control when elements should be visible only at particular breakpoints.
 
 ### Usage example
 

@@ -114,32 +114,6 @@ $button__margin--large: 44px 0 49px !default;
       }
   }
 
-  //   &.success {
-  //     background-color: $color__button__success;
-  //     opacity : 1;
-  //     margin: 0px;
-  //     &:hover,
-  //     &:focus {
-  //         background-color: $color__button__success--hover;
-  //     }
-  //
-  //     &:active {
-  //         color: rgba($button__text-color, 0.65);
-  //     }
-  //
-  //     @include media-query(tablet) {
-  //       margin-top: 44px;
-  //       margin-bottom: 0px;
-  //       padding-bottom: 0px;
-  //     }
-  //
-  //     @include media-query(tablet-portrait) {
-  //       margin-top: 0px !important;
-  //     }
-  //   }
-
-
-
   // color variant
   &--invert {
     background-color: $color__white;
