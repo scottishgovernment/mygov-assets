@@ -1,6 +1,6 @@
-#Component: article header
+# Component: article header
 
-##Example HTML
+## Example HTML
 
     <header class="article-header has-icon has-icon--guide">
         <p class="article-header__prefix">Guide</p>

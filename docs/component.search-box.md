@@ -1,6 +1,6 @@
-#Component: search box
+# Component: search box
 
-##Example HTML
+## Example HTML
 
     <div class="search-box">
         <form class="search-box__form" method="GET" action="/search/">

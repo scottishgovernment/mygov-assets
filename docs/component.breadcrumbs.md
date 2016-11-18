@@ -1,6 +1,6 @@
-#Component: breadcrumbs
+# Component: breadcrumbs
 
-##Example HTML
+## Example HTML
 
     <ol id="breadcrumbs" role="navigation" class="breadcrumbs">
         <li class="breadcrumbs__item" itemprop="url">
