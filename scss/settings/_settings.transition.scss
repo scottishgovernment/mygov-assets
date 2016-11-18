@@ -3,5 +3,5 @@
     Variables and helpers for CSS transitions
 \*------------------------------------*/
 
-$transition-in-time: 0.2s;
-$transition-out-time: 1s
+$transition-in-time: 0.2s !default;
+$transition-out-time: 1s !default;

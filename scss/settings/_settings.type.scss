@@ -55,11 +55,11 @@ $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 /**
  * Font weights
  */
-$lighter: 300;
-$normal: 400;
-$semibold: 500;
-$bold: 700;
-$heavy: 900;
+$lighter: 300 !default;
+$normal: 400 !default;
+$semibold: 500 !default;
+$bold: 700 !default;
+$heavy: 900 !default;
 
 /**
  * Default text font-family and font weights
