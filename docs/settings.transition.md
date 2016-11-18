@@ -16,12 +16,13 @@ Your values for these should be included before you include the SCSS file.
 
 ## Example usage
 
-```.a {
+```
+a {
   color: red;
   @include transition(color, $transition-out-time);
 }
 
-.a:hover {
+a:hover {
   color: blue;
   @include transition(color, $transition-in-time);
 }
