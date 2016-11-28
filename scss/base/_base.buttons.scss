@@ -115,6 +115,16 @@ $button__margin--large: 44px 0 49px !default;
   }
 
   // color variant
+  &--error,
+  &--negative {
+      background-color: $color__button__error;
+
+      &:hover {
+          background-color: $color__button__error--hover;
+      }
+  }
+
+  // color variant
   &--invert {
     background-color: $color__white;
     color: $color__blue--base;

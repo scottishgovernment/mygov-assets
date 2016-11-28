@@ -59,6 +59,9 @@ $color__button--secondary--focus:       $color__blue--darker !default;
 $color__button__success:                $color__green--base !default;
 $color__button__success--hover:         $color__green--dark !default;
 
+$color__button__error:                  $color__red--base !default;
+$color__button__error--hover:           $color__button__error !default;
+
 // Form elements
 $color__input--focus:                   $color__blue--lighter !default;
 $color__input--focus-outline:           $color__blue--light !default;
