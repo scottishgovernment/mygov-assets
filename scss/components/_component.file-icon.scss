@@ -1,0 +1,124 @@
+/*------------------------------------*\
+    FILE ICON
+\*------------------------------------*/
+$color__icon--default: $color__grey--text;
+$color__icon--image: $color__icon--default;
+$color__icon--word: $color__blue--base;
+$color__icon--pdf: $color__icon--default;
+$color__icon--excel: $color__green--base;
+$color__icon--ppt: $color__orange--base;
+$color__icon--txt: $color__icon--default;
+$color__icon--rtf: $color__icon--default;
+$color__icon--xml: $color__icon--default;
+$color__icon--geo: $color__icon--default;
+$color__icon--csv: $color__green--base;
+
+
+
+
+// a filetypegroup has: extensions, class modifier, border color
+$filetypegroups: ( (gif png jpg jpeg) image $color__icon--image, (doc docx) word $color__icon--word, (pdf) pdf $color__icon--pdf, (xls xlsx xlsm) excel $color__icon--excel, (ppt pptx pps ppsx) ppt $color__icon--ppt, (rtf) rtf $color__icon--rtf, (txt) txt $color__icon--txt, (xml, xsd) xml $color__icon--xml, (csv) csv $color__icon--csv, (kml, kmz) geo $color__icon--geo ) !default;
+
+$includeretina: true !default;
+@mixin icon-files($sizex, $sizey) {
+    background: url('../images/icons/documents/gen_#{$sizex}px.png') no-repeat center center $color__white;
+    @if $includeretina {
+         @include image-2x( '../images/icons/documents/gen_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
+    }
+    @each $filetypegroup in $filetypegroups {
+        $classList: '';
+        $iconname: nth($filetypegroup, 2);
+        $iconcolor: nth($filetypegroup, 3);
+        @each $extension in nth($filetypegroup, 1) {
+            $classList: '#{$classList} &.file-icon--#{to-upper-case($extension)}, ';
+        }
+
+        #{$classList} {
+            background-image: url('../images/icons/documents/#{$iconname}_#{$sizex}px.png');
+            @if $iconcolor != $color__icon--default {
+                border-color: $iconcolor;
+
+                &:before {
+                    border-left-color: $iconcolor;
+                }
+            }
+            @if $includeretina {
+                 @include image-2x( '../images/icons/documents/#{$iconname}_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
+            }
+        }
+    }
+}
+
+.file-icon {
+    $file-icon-width: 34px;
+    $file-icon-height: $file-icon-width * 1.441;
+
+    border: 1px solid $color__grey--base;
+    display: block;
+    position: relative;
+
+    width: $file-icon-width;
+    height: $file-icon-height;
+
+    &:before {
+        border-top: 9px solid $color__white;
+        border-left: 9px solid $color__grey--base;
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: -1px;
+    }
+    @include icon-files(34, 48);
+
+    // size variants
+    &--medium {
+        $file-icon-large-width: 100%;
+        $file-icon-large-height: $file-icon-large-width * 1.441;
+
+        padding-bottom: $file-icon-large-height;
+        width: $file-icon-large-width;
+
+        &:before {
+            border-top-width: 32px;
+            border-left-width: 32px;
+        }
+        @include icon-files(107, 152);
+    }
+
+    &--large {
+        $file-icon-large-width: 100%;
+        $file-icon-large-height: $file-icon-large-width * 1.441;
+
+        padding-bottom: $file-icon-large-height;
+        width: $file-icon-large-width;
+
+        &:before {
+            border-top-width: 49px;
+            border-left-width: 49px;
+        }
+        @include icon-files(165, 235);
+    }
+}
+
+// hover and active states for icon links
+a.file-icon {
+    @include transition(background-color $transition-out-time);
+
+    &:hover {
+        background-color: $color__grey--lighter;
+        @include transition-duration($transition-in-time);
+    }
+
+    &:active {
+        background-color: $color__blue--light;
+        outline: none;
+        @include transition(none);
+    }
+}
+
+// component-specific variants
+.publication-info__body .file-icon {
+    &:before {
+        border-top-color: $color__grey--lighter;
+    }
+}
