@@ -14,7 +14,7 @@
     "oocss",
     "css"
   ],
-  "devDependencies": {
+  "dependencies": {
     "csswizardry-grids": "^2.2.0",
     "inuit-box-sizing": "^0.2.0",
     "inuit-defaults": "^0.2.3",
