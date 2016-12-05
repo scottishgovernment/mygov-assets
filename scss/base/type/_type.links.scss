@@ -8,7 +8,8 @@ $link__background--active: $color__blue--light !default;
 /*
  * 1. This is the more widely-supported legacy property name. correct property name, overflow-wrap, is currently only supported in webkit browsers (23/12/2015)
  */
-a {
+a,
+.link {
   color: $color__link--primary;
   text-decoration: underline;
   word-wrap: break-word; /* [1] */
@@ -40,6 +41,12 @@ a {
   &.button {
     display: table;
   }
+}
+
+.link {
+    background: transparent;
+    border: 0;
+    padding: 0;
 }
 
 // no underline on header links

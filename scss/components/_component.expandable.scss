@@ -3,21 +3,21 @@
     Used for accordion-like panels
 \*------------------------------------*/
 
-$expandable__background-color: $color__white !default;
+$expandable__background-color: transparent !default;
 $expandable__body-color: $color__body !default;
-$expandable__body-background-color-open: $color__grey--lighter !default;
-$expandable__border-color: $color__grey--medium !default;
+$expandable__body-background-color-open: transparent !default;
+$expandable__border-color: $color__grey--light !default;
 $expandable__header-color-hover: inherit !default;
-$expandable__header-color-open: $color__white !default;
+$expandable__header-color-open: $expandable__body-color !default;
 $expandable__header_background-color: $expandable__background-color !default;
-$expandable__header-background-color-focus: $color__blue--lighter !default;
-$expandable__header-background-color-hover: $color__grey--lighter !default;
-$expandable__header-background-color-open: $color__link--primary !default;
-$expandable__icon-color: $color__link--primary !default;
-$expandable__icon-color-hover: $expandable__icon-color !default;
-$expandable__icon-color-open: $color__white !default;
+$expandable__header-background-color-focus: $color__blue--light !default;
+$expandable__header-background-color-hover: $color__blue--lighter !default;
+$expandable__header-background-color-open: $color__blue--lighter !default;
+$expandable__icon-color: transparent !default;
+$expandable__icon-color-hover: transparent !default;
+$expandable__icon-color-open: transparent !default;
 $expandable__icon-color-open-hover: $expandable__icon-color-open !default;
-$expandable__icon-image: '../images/icons/arrows/int_arrow_down_35px.png' !default;
+$expandable__icon-image: '../images/icons/arrows/int_arrow_down_blue_35px.png' !default;
 $expandable__icon-image-hover: $expandable__icon-image !default;
 $expandable__icon-image-open: '../images/icons/arrows/int_arrow_up_blue_35px.png' !default;
 $expandable__icon-image-open-hover: $expandable__icon-image-open !default;
@@ -29,6 +29,7 @@ $expandable__title-size: inherit !default;
 
 
 .expandable {
+
     h2 {
         margin-bottom: 20px;
         line-height: 28px;
@@ -39,6 +40,7 @@ $expandable__title-size: inherit !default;
     background-color: $expandable__background-color;
     border: 1px solid $expandable__border-color;
     border-width: 1px 0;
+    margin: 0 -15px;
 
     & + .expandable-item {
         margin-top: -1px;
@@ -55,7 +57,6 @@ $expandable__title-size: inherit !default;
     &__header {
         background-color: $expandable__header_background-color;
         border: 0;
-        color: $expandable__body-color;
         cursor: pointer;
         display: table;
         height: 55px;
@@ -110,6 +111,7 @@ $expandable__title-size: inherit !default;
     &__body {
         background-color: $expandable__body-background-color-open;
         display: none;
+        overflow: hidden;
         padding: 21px 15px 27px;
         position: relative;
 
@@ -120,7 +122,6 @@ $expandable__title-size: inherit !default;
                 margin-top: 0;
             }
         }
-        @extend %inner-shadow-top !optional;
     }
 
     &__link-trigger {
@@ -194,5 +195,15 @@ For disclaimers in forms
     .expandable-item--disclaimer .expandable-item__body {
         font-size: 16px;
         line-height: 21px;
+    }
+
+    .expandable-item {
+        margin-left: 0;
+        margin-right: 0;
+
+        &__body {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 }

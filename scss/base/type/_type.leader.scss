@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    #LEADER TEXT
+    Oversized text for leader paragraphs or sections
+\*------------------------------------*/
+
+%leader-text {
+  color: $color__grey--dark;
+  font-size: $base-leader-size;
+  line-height: 28px;
+  font-weight: 300;
+  margin: 0 0 28px 0;
+}
+
+.leader {
+  @extend %leader-text;
+
+  &--first-para {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: inherit;
+
+    > :first-child {
+      @extend %leader-text;
+    }
+
+    h2:first-child {
+      font-size: $base-h2-size;
+      line-height: 28px;
+      margin: 49px 0 14px 0;
+      font-weight: 500;
+    }
+  }
+}
+
+@include media-query(tablet) {
+  %tablet-leader-text {
+    font-size: $tablet-leader-size;
+    line-height: 35px;
+    font-weight: 300;
+    margin: 0 0 35px 0;
+  }
+
+  .leader {
+    @extend %tablet-leader-text;
+    font-size: $tablet-leader-size;
+    line-height: 35px;
+    font-weight: 300;
+    margin: 0 0 35px 0;
+
+    &--first-para {
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      margin: inherit;
+
+      > :first-child {
+        @extend %tablet-leader-text;
+      }
+
+      h2:first-child {
+        font-size: $tablet-h2-size;
+        line-height: 35px;
+        margin: 56px 0 14px 0;
+        font-weight: 500;
+      }
+    }
+  }
+}

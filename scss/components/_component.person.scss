@@ -1,0 +1,139 @@
+/*------------------------------------*\
+    #PERSON
+\*------------------------------------*/
+
+.person {
+  margin-bottom: 21px;
+  overflow: hidden;
+
+  &__link {
+    color: $color__body !important;
+    display: block;
+    text-decoration: none !important;
+  }
+
+  &__image-container {
+    clear: left;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    width: 130px;
+
+    &:after {
+      background: rgba(0, 0, 0, 0);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      @include transition(background-color $transition-out-time);
+    }
+  }
+
+  &__link:hover &__image-container:after {
+      background: rgba(0, 0, 0, 0.2);
+
+      @include transition-duration($transition-in-time);
+  }
+
+  &__text-container {
+    line-height: $base-line-height * 3;
+    padding-left: 150px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__name {
+    font-size: $base-h3-size;
+    margin: 0 0 7px 0;
+  }
+
+  &__roles {
+    font-size: $base-milli-size;
+    line-height: 21px;
+  }
+
+  &__role-link {
+      &:hover {
+          text-decoration: underline;
+      }
+  }
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  &--small {
+    margin-bottom: 14px !important;
+  }
+}
+
+
+@include media-query(tablet-down) {
+  .person {
+    &--bordered-mobile {
+      border: 1px solid $color__grey--pale;
+      border-width: 1px 0;
+      margin-bottom: 35px;
+      padding: 35px 0;
+    }
+
+    &__image-container--centred-mobile {
+      float: none;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@include media-query(bigphone) {
+  .person {
+    &__image-container {
+      width: 213px;
+    }
+
+    &__text-container {
+      padding-left: 233px;
+    }
+  }
+}
+
+
+@include media-query(tablet) {
+  .person {
+    margin-bottom: 56px;
+
+    &__image-container {
+      float: none;
+      margin: 0 0 14px 0;
+      width: 100%;
+    }
+
+    &__text-container {
+      float: none;
+      line-height: $base-line-height * 4;
+      padding-left: 0;
+    }
+
+    &__name {
+      font-size: $tablet-h3-size;
+      line-height: 28px;
+    }
+
+    &__roles {
+      font-size: $base-font-size;
+    }
+
+    &--small {
+      float: left;
+      width: 50%;
+    }
+  }
+}
