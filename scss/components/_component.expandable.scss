@@ -10,8 +10,9 @@ $expandable__border-color: $color__grey--light !default;
 $expandable__header-color-hover: inherit !default;
 $expandable__header-color-open: $expandable__body-color !default;
 $expandable__header_background-color: $expandable__background-color !default;
-$expandable__header-background-color-focus: $color__blue--light !default;
-$expandable__header-background-color-hover: $color__blue--lighter !default;
+$expandable__header-background-color-focus: $color__grey--lighter !default;
+$expandable__header-background-color-active: $color__blue--light !default;
+$expandable__header-background-color-hover: $color__grey--lighter !default;
 $expandable__header-background-color-open: $color__blue--lighter !default;
 $expandable__icon-color: transparent !default;
 $expandable__icon-color-hover: transparent !default;
@@ -79,9 +80,8 @@ $expandable__title-size: inherit !default;
             }
         }
 
-        &:focus {
-            background: $expandable__header-background-color-focus;
-            color: inherit;
+        &:active {
+            background-color: $expandable__header-background-color-active !important;
         }
     }
 
