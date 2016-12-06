@@ -252,6 +252,7 @@ $button__margin--large: 44px 0 49px !default;
 
   &--close {
     height: 27px;
+    padding: 0;
     width: 27px;
     background-image: url($button__close--icon);
     @include image-2x(get2xImage($button__close--icon), 27px, 27px);
