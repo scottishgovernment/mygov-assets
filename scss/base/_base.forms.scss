@@ -161,3 +161,7 @@ fieldset {
 .placeholder {
   color: $color__placeholder;
 }
+
+input.small {
+    width: 4em;
+}

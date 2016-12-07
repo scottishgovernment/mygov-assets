@@ -7,7 +7,7 @@ $expandable__background-color: transparent !default;
 $expandable__body-color: $color__body !default;
 $expandable__body-background-color-open: transparent !default;
 $expandable__border-color: $color__grey--light !default;
-$expandable__header-color-hover: inherit !default;
+$expandable__header-color-hover: $color__link--hover !default;
 $expandable__header-color-open: $expandable__body-color !default;
 $expandable__header_background-color: $expandable__background-color !default;
 $expandable__header-background-color-focus: $color__grey--lighter !default;
