@@ -17,7 +17,18 @@ $color__icon--csv: $color__green--base;
 
 
 // a filetypegroup has: extensions, class modifier, border color
-$filetypegroups: ( (gif png jpg jpeg) image $color__icon--image, (doc docx) word $color__icon--word, (pdf) pdf $color__icon--pdf, (xls xlsx xlsm) excel $color__icon--excel, (ppt pptx pps ppsx) ppt $color__icon--ppt, (rtf) rtf $color__icon--rtf, (txt) txt $color__icon--txt, (xml, xsd) xml $color__icon--xml, (csv) csv $color__icon--csv, (kml, kmz) geo $color__icon--geo ) !default;
+$filetypegroups: (
+    (gif png jpg jpeg) image $color__icon--image,
+    (doc docx) word $color__icon--word,
+    (pdf) pdf $color__icon--pdf,
+    (xls xlsx xlsm) excel $color__icon--excel,
+    (ppt pptx pps ppsx) ppt $color__icon--ppt,
+    (rtf) rtf $color__icon--rtf,
+    (txt) txt $color__icon--txt,
+    (xml, xsd) xml $color__icon--xml,
+    (csv) csv $color__icon--csv,
+    (kml, kmz) geo $color__icon--geo
+) !default;
 
 $includeretina: true !default;
 @mixin icon-files($sizex, $sizey) {
