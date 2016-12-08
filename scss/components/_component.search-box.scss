@@ -54,9 +54,9 @@ $search-box__background-color--focus: $color__blue--lighter !default;
   }
 
   &__icon {
-    height: 100%;
-    width: 100%;
+    display: block;
     padding: 16%;
+    width: 100%;
   }
 }
 
