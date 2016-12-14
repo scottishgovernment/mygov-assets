@@ -217,17 +217,20 @@ $button__margin--large: 44px 0 49px !default;
 
   // size variant
   &--large {
+    height: auto;
     min-height: $button__size--large;
   }
 
   // size variant
   &--medium {
+    height: auto;
     min-height: $button__size--medium;
   }
 
   // size variant
   &--small {
     font-size: 14px;
+    height: auto;
     min-height: $button__size--small;
     padding: 0 1em;
   }
@@ -235,6 +238,7 @@ $button__margin--large: 44px 0 49px !default;
   // size variant
   &--xsmall {
     font-size: 12px;
+    height: auto;
     min-height: $button__size--small;
     height: auto;
     margin: 0;
