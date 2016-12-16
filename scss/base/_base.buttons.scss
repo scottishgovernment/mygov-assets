@@ -200,6 +200,7 @@ $button__margin--large: 44px 0 49px !default;
     color: $color__link--primary;
 
     &:hover {
+      background-color: $color__blue--light;
       border-color: $color__link--hover;
       color: $color__link--hover;
     }
