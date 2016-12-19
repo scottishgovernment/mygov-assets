@@ -26,7 +26,7 @@ $button__margin--large: 44px 0 49px !default;
   font-size: $button__font-size;
   font-weight: bold;
   height: $button__size--large;
-  line-height: 22px;
+  line-height: 21px;
   margin: $button__margin--large;
   padding: $button__padding;
   position: relative;
@@ -163,7 +163,8 @@ $button__margin--large: 44px 0 49px !default;
     background-color: transparent;
     border: 1px solid $color__grey--dark;
     color: $color__grey--dark;
-    padding: 7px 10px;
+    font-size: 14px;
+    padding: 6px 15px;
 
     &:hover {
       background-color: $color__grey--lighter;
@@ -172,7 +173,6 @@ $button__margin--large: 44px 0 49px !default;
 
     &:focus {
       background-color: $color__grey--light;
-      color: tint-solid($color__grey--dark, $color__grey--light, 0.65);
       outline: none !important;
     }
   }
@@ -200,13 +200,13 @@ $button__margin--large: 44px 0 49px !default;
     color: $color__link--primary;
 
     &:hover {
-      background-color: $color__blue--light;
+      background-color: $color__grey--lighter;
       border-color: $color__link--hover;
       color: $color__link--hover;
     }
 
     &:focus {
-      color: tint-solid($color__link--hover, $color__grey--light, 0.65);
+      background-color: $color__blue--light;
     }
   }
 
