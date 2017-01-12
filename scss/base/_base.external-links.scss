@@ -2,17 +2,28 @@
     $EXTERNAL LINKS
 \*------------------------------------*/
 
-$external-link__size: 15px;
-$external-link__size--large: 17px;
-$external-link__size--small: 15px;
-$external-link__size--tablet: 17px;
-$external-link__size--tablet--large: 21px;
-$external-link__size--tablet--small: 15px;
-$external-link__icon-path: '../images/icons/arrows/';
-$external-link__icon-filename-prefix: 'ext_arrow_text';
+$external-link__size: 15px !default;
+$external-link__size--large: 17px !default;
+$external-link__size--small: 15px !default;
+$external-link__size--tablet: 17px !default;
+$external-link__size--tablet--large: 21px !default;
+$external-link__size--tablet--small: 15px !default;
+$external-link__icon-path: '../images/icons/arrows/' !default;
+$external-link__icon-filename-prefix: 'ext_arrow_text' !default;
+$external-link__excluded-sites: () !default;
 
 
 
+
+@function add-excluded-urls() {
+    $output: '';
+
+    @each $excluded-site in $external-link__excluded-sites {
+        $output: $output + ':not([href*="' + $excluded-site + '"])';
+    }
+
+    @return $output;
+}
 
 @mixin external-link-rules($size) {
   $external-link-icon: get-link-icon($external-link__icon-path, $external-link__icon-filename-prefix, $size);
@@ -56,18 +67,18 @@ $external-link__icon-filename-prefix: 'ext_arrow_text';
 
 // external links within article elements
 article {
-  a[href^="//"]:not(.button),
-  a[href^="http://"]:not(.button),
-  a[href^="https://"]:not(.button) {
+  a[href^="//"]:not(.button)#{add-excluded-urls()},
+  a[href^="http://"]:not(.button)#{add-excluded-urls()},
+  a[href^="https://"]:not(.button)#{add-excluded-urls()} {
     @include external-link-rules($external-link__size);
     @include external-link-no-icon;
   }
 
   h2,
   h3 {
-    a[href^="//"]:not(.button),
-    a[href^="http://"]:not(.button),
-    a[href^="https://"]:not(.button) {
+    a[href^="//"]:not(.button)#{add-excluded-urls()},
+    a[href^="http://"]:not(.button)#{add-excluded-urls()},
+    a[href^="https://"]:not(.button)#{add-excluded-urls()} {
       @include external-link-rules($external-link__size--large);
     }
   }
@@ -89,26 +100,26 @@ h2, h3 {
 @include media-query(tablet) {
 
   article {
-    a[href^="//"]:not(.button),
-    a[href^="http://"]:not(.button),
-    a[href^="https://"]:not(.button) {
+    a[href^="//"]:not(.button)#{add-excluded-urls()},
+    a[href^="http://"]:not(.button)#{add-excluded-urls()},
+    a[href^="https://"]:not(.button)#{add-excluded-urls()} {
       @include external-link-rules($external-link__size--tablet);
       @include external-link-no-icon;
     }
 
     .small {
-      a[href^="//"]:not(.button),
-      a[href^="http://"]:not(.button),
-      a[href^="https://"]:not(.button) {
+      a[href^="//"]:not(.button)#{add-excluded-urls()},
+      a[href^="http://"]:not(.button)#{add-excluded-urls()},
+      a[href^="https://"]:not(.button)#{add-excluded-urls()} {
         @include external-link-rules($external-link__size--tablet--small);
       }
     }
 
     h2,
     h3 {
-      a[href^="//"]:not(.button),
-      a[href^="http://"]:not(.button),
-      a[href^="https://"]:not(.button) {
+      a[href^="//"]:not(.button)#{add-excluded-urls()},
+      a[href^="http://"]:not(.button)#{add-excluded-urls()},
+      a[href^="https://"]:not(.button)#{add-excluded-urls()} {
         @include external-link-rules($external-link__size--tablet--large);
       }
     }

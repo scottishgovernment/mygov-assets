@@ -23,26 +23,26 @@ $base-leader-size: 19px !default;
 $base-lineheight: $base-line-height * 3 !default;
 
 // tablet
-$tablet-font-size: 19px;
-$tablet-milli-size: 16px;
-$tablet-h1-size: 49px;
-$tablet-h2-size: 26px;
+$tablet-font-size: 19px !default;
+$tablet-milli-size: 16px !default;
+$tablet-h1-size: 49px !default;
+$tablet-h2-size: 26px !default;
 $tablet-h3-size: $tablet-font-size !default;
 $tablet-h4-size: $tablet-font-size !default;
 $tablet-h5-size: $tablet-font-size !default;
-$tablet-note-size: 14px;
-$tablet-leader-size: 22px;
+$tablet-note-size: 14px !default;
+$tablet-leader-size: 22px !default;
 
 // desktop
-$desktop-font-size: $tablet-font-size;
-$desktop-milli-size: $tablet-milli-size;
-$desktop-h1-size: $tablet-h1-size;
-$desktop-h2-size: $tablet-h2-size;
+$desktop-font-size: $tablet-font-size !default;
+$desktop-milli-size: $tablet-milli-size !default;
+$desktop-h1-size: $tablet-h1-size !default;
+$desktop-h2-size: $tablet-h2-size !default;
 $desktop-h3-size: $desktop-font-size !default;
 $desktop-h4-size: $desktop-font-size !default;
 $desktop-h5-size: $desktop-font-size !default;
-$desktop-note-size: $tablet-note-size;
-$desktop-leader-size: $tablet-leader-size;
+$desktop-note-size: $tablet-note-size !default;
+$desktop-leader-size: $tablet-leader-size !default;
 
 @include establish-baseline;
 

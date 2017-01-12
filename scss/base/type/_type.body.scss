@@ -8,6 +8,7 @@ body {
   background: $color__white;
   color: $color__body;
   font-weight: $normal;
+  margin: 0;
 
   @include media-query(tablet) {
     @include adjust-font-size-to($tablet-font-size, 4);

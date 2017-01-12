@@ -33,17 +33,22 @@ $wrapper__width--hd: 1170px !default;
   }
 }
 
-
 /**
- * Gives us a full-width (no wrapper) on mobile, but normal wrapper on
- * wider screens.
+ * Full-width (no wrapper) on mobile only
  */
-.wrapper--full-mobile  {
-  padding: 0;
+
+@include media-query(tablet-down) {
+  .wrapper--full-mobile {
+    padding: 0;
+  }
 }
 
-@include media-query(tablet) {
-  .wrapper--full-mobile {
-    padding: 0 $wrapper__padding;
+/**
+ * Full-width (no wrapper) on tablet only
+ */
+@include media-query(tablet-to-desktop) {
+  .wrapper--full-tablet {
+    padding: 0;
+    max-width: none;
   }
 }
