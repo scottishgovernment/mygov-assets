@@ -23,26 +23,26 @@ $base-leader-size: 19px !default;
 $base-lineheight: $base-line-height * 3 !default;
 
 // tablet
-$tablet-font-size: 19px !default;
-$tablet-milli-size: 16px !default;
-$tablet-h1-size: 49px !default;
-$tablet-h2-size: 26px !default;
-$tablet-h3-size: $tablet-font-size !default;
-$tablet-h4-size: $tablet-font-size !default;
-$tablet-h5-size: $tablet-font-size !default;
-$tablet-note-size: 14px !default;
-$tablet-leader-size: 22px !default;
+$medium-font-size: 19px !default;
+$medium-milli-size: 16px !default;
+$medium-h1-size: 49px !default;
+$medium-h2-size: 26px !default;
+$medium-h3-size: $medium-font-size !default;
+$medium-h4-size: $medium-font-size !default;
+$medium-h5-size: $medium-font-size !default;
+$medium-note-size: 14px !default;
+$medium-leader-size: 22px !default;
 
 // desktop
-$desktop-font-size: $tablet-font-size !default;
-$desktop-milli-size: $tablet-milli-size !default;
-$desktop-h1-size: $tablet-h1-size !default;
-$desktop-h2-size: $tablet-h2-size !default;
-$desktop-h3-size: $desktop-font-size !default;
-$desktop-h4-size: $desktop-font-size !default;
-$desktop-h5-size: $desktop-font-size !default;
-$desktop-note-size: $tablet-note-size !default;
-$desktop-leader-size: $tablet-leader-size !default;
+$large-font-size: $medium-font-size !default;
+$large-milli-size: $medium-milli-size !default;
+$large-h1-size: $medium-h1-size !default;
+$large-h2-size: $medium-h2-size !default;
+$large-h3-size: $large-font-size !default;
+$large-h4-size: $large-font-size !default;
+$large-h5-size: $large-font-size !default;
+$large-note-size: $medium-note-size !default;
+$large-leader-size: $medium-leader-size !default;
 
 @include establish-baseline;
 
