@@ -191,7 +191,7 @@ For disclaimers in forms
         }
     }
 }
-@include media-query(tablet) {
+@include media-query(medium) {
     .expandable-item--disclaimer .expandable-item__body {
         font-size: 16px;
         line-height: 21px;

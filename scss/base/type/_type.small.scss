@@ -8,7 +8,7 @@ small,
     line-height: 21px;
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
     small,
     .small {
         font-size: 14px;

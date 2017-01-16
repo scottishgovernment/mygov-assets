@@ -11,8 +11,8 @@ h1, .alpha {
   @include adjust-font-size-to($base-h1-size, 5);
   margin: 28px 0 25px;
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-h1-size, 8);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-h1-size, 8);
   }
 }
 
@@ -20,9 +20,9 @@ h2, .beta {
   @include adjust-font-size-to($base-h2-size, 4);
   margin: 30px 0 5px;
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-h2-size, 5);
-    margin: (rhythm(3, $tablet-h2-size) + 1) 0 (rhythm(2, $tablet-h2-size) - 1);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-h2-size, 5);
+    margin: (rhythm(3, $medium-h2-size) + 1) 0 (rhythm(2, $medium-h2-size) - 1);
   }
 }
 
@@ -30,8 +30,8 @@ h3, .gamma {
   @include adjust-font-size-to($base-h3-size, 3);
   margin: 0 0 rhythm(1, $base-h3-size);
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-h3-size, 4);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-h3-size, 4);
     padding-top: 0;
     margin-bottom: 7px;
   }
@@ -43,8 +43,8 @@ h4, .delta {
   margin: 0;
 
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-h4-size, 4);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-h4-size, 4);
   }
 }
 
@@ -53,8 +53,8 @@ h5, .epsilon {
   @include adjust-font-size-to($base-h5-size, 4);
   margin: 0;
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-h5-size, 4);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-h5-size, 4);
   }
 }
 

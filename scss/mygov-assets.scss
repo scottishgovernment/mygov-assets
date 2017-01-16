@@ -32,25 +32,25 @@ $push: true;
 
 // same breakpoints as gov.scot
 $breakpoints: (
-    'bigphone' '(min-width: 480px)',
-    'tablet' '(min-width: 768px)',
-    'desktop' '(min-width: 992px)',
-    'hd' '(min-width: 1200px)',
+    'small' '(min-width: 480px)',
+    'medium' '(min-width: 768px)',
+    'large' '(min-width: 992px)',
+    'xlarge' '(min-width: 1200px)',
 
-    'bigphone-down' '(max-width: 479px)',
-    'tablet-down' '(max-width: 767px)',
-    'desktop-down' '(max-width: 991px)',
-    'bigphone-to-tablet' '(min-width: 480px) and (max-width: 767px)',
-    'tablet-to-desktop' '(min-width: 768px) and (max-width: 991px)',
-    'desktop-to-hd' '(min-width: 992px) and (max-width: 1199px)',
-    'hd-up' '(min-width: 1200px)',
+    'small-down' '(max-width: 479px)',
+    'medium-down' '(max-width: 767px)',
+    'large-down' '(max-width: 991px)',
+    'small-to-medium' '(min-width: 480px) and (max-width: 767px)',
+    'medium-to-large' '(min-width: 768px) and (max-width: 991px)',
+    'large-to-xlarge' '(min-width: 992px) and (max-width: 1199px)',
+    'xlarge-up' '(min-width: 1200px)',
 
-    'tablet-portrait' '(min-width: 768px) and (orientation: portrait) and (max-width : 1024px)',
-    'tablet-landscape' '(min-width: 768px) and (orientation: landscape)  and (max-width : 1024px)'
+    'medium-portrait' '(min-width: 768px) and (orientation: portrait) and (max-width : 1024px)',
+    'medium-landscape' '(min-width: 768px) and (orientation: landscape)  and (max-width : 1024px)'
 );
-$breakpoint-has-widths: ('bigphone', 'tablet', 'desktop', 'hd');
-$breakpoint-has-push:   ('tablet', 'desktop', 'hd');
-$breakpoint-has-pull:   ('tablet', 'desktop', 'hd');
+$breakpoint-has-widths: ('small', 'medium', 'large', 'xlarge');
+$breakpoint-has-push:   ('medium', 'large', 'xlarge');
+$breakpoint-has-pull:   ('medium', 'large', 'xlarge');
 
 @import "../node_modules/csswizardry-grids/csswizardry-grids.scss";
 
@@ -120,7 +120,6 @@ $inuit-use-fractions: false;
 @import "base/type/type.blockquote";
 @import "base/type/type.body";
 @import "base/type/type.headings";
-@import "base/type/type.header-emphasis";
 @import "base/type/type.lists";
 @import "base/type/type.small";
 

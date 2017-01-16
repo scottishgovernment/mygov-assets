@@ -35,12 +35,12 @@ select {
     outline: none;
   }
 
-  @include media-query(tablet) {
-    @include adjust-font-size-to($tablet-milli-size);
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-milli-size);
   }
 
-  @include media-query(desktop) {
-    @include adjust-font-size-to($desktop-milli-size);
+  @include media-query(large) {
+    @include adjust-font-size-to($large-milli-size);
   }
 
   option {
@@ -111,7 +111,7 @@ fieldset {
   padding: 0;
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   input[type=text],
   input[type=password] {
     font-size: $field__font-size;

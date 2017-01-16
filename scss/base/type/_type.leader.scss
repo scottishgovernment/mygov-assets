@@ -34,17 +34,17 @@
   }
 }
 
-@include media-query(tablet) {
-  %tablet-leader-text {
-    font-size: $tablet-leader-size;
+@include media-query(medium) {
+  %medium-leader-text {
+    font-size: $medium-leader-size;
     line-height: 35px;
     font-weight: 300;
     margin: 0 0 35px 0;
   }
 
   .leader {
-    @extend %tablet-leader-text;
-    font-size: $tablet-leader-size;
+    @extend %medium-leader-text;
+    font-size: $medium-leader-size;
     line-height: 35px;
     font-weight: 300;
     margin: 0 0 35px 0;
@@ -57,11 +57,11 @@
       margin: inherit;
 
       > :first-child {
-        @extend %tablet-leader-text;
+        @extend %medium-leader-text;
       }
 
       h2:first-child {
-        font-size: $tablet-h2-size;
+        font-size: $medium-h2-size;
         line-height: 35px;
         margin: 56px 0 14px 0;
         font-weight: $semibold;

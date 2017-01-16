@@ -9,7 +9,7 @@ $table__row-background--zebra: $color__grey--lighter !default;
 $table__cell-padding: 10px 5px !default;
 $table__cell-padding--end: 15px !default;
 $table__font-size: 14px !default;
-$table__font-size--tablet: 16px !default;
+$table__font-size--medium: 16px !default;
 
 
 
@@ -68,9 +68,9 @@ thead + tbody {
   }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   table {
-    font-size: $table__font-size--tablet;
+    font-size: $table__font-size--medium;
     line-height: 21px;
   }
 

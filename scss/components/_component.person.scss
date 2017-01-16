@@ -76,7 +76,7 @@
 }
 
 
-@include media-query(tablet-down) {
+@include media-query(medium-down) {
   .person {
     &--bordered-mobile {
       border: 1px solid $color__grey--pale;
@@ -93,7 +93,7 @@
 }
 
 
-@include media-query(bigphone) {
+@include media-query(small) {
   .person {
     &__image-container {
       width: 213px;
@@ -106,7 +106,7 @@
 }
 
 
-@include media-query(tablet) {
+@include media-query(medium) {
   .person {
     margin-bottom: 56px;
 
@@ -123,7 +123,7 @@
     }
 
     &__name {
-      font-size: $tablet-h3-size;
+      font-size: $medium-h3-size;
       line-height: 28px;
     }
 

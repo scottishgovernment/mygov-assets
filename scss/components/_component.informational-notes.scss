@@ -10,7 +10,7 @@ $info-note__attribution-border-color: $color__grey--dark !default;
 $info-note__blockquote-border-color: $color__blue--base !default;
 $info-note__image-note: '../images/icons/note.png' !default;
 $info-note__image-caution: '../images/icons/caution.png' !default;
-$tablet-note-size: 14px !default;
+$medium-note-size: 14px !default;
 
 
 
@@ -96,7 +96,7 @@ $tablet-note-size: 14px !default;
         background: $info-note__attribution-background-color;
         background-color: inherit;
         border-left: 4px solid $info-note__attribution-border-color;
-        font-size: $tablet-note-size;
+        font-size: $medium-note-size;
         padding: 3px 35px 4px 10px;
     }
 
@@ -120,10 +120,10 @@ $tablet-note-size: 14px !default;
         }
     }
 }
-@include media-query(tablet) {
+@include media-query(medium) {
     .info-note {
         border-left: 4px solid $info-note__border-color;
-        font-size: $tablet-font-size;
+        font-size: $medium-font-size;
         line-height: 28px;
         padding-right: 35px;
         top: 0;

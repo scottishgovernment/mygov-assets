@@ -32,7 +32,7 @@
     }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
      .related-items__title {
          margin: 31px 0 0px 0;
      }

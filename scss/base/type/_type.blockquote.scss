@@ -5,9 +5,9 @@
 $blockquote__icon: '../images/icons/note.png' !default;
 $blockquote__icon-size: 26px !default;
 $blockquote__font-size: 15px !default;
-$blockquote__font-size--tablet: 17px !default;
+$blockquote__font-size--medium: 17px !default;
 $blockquote__line-height: 21px !default;
-$blockquote__line-height--tablet: 28px !default;
+$blockquote__line-height--medium: 28px !default;
 $blockquote__border-color: $color__border--base !default;
 
 
@@ -42,22 +42,22 @@ blockquote {
   }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   blockquote {
-    font-size: $blockquote__font-size--tablet;
-    line-height: $blockquote__line-height--tablet;
+    font-size: $blockquote__font-size--medium;
+    line-height: $blockquote__line-height--medium;
     margin-right: 125px;
     padding: 13px 35px 13px 49px;
   }
 }
 
-@include media-query(desktop) {
+@include media-query(large) {
   blockquote {
     margin-right: 81px;
   }
 }
 
-@include media-query(hd) {
+@include media-query(xlarge) {
   blockquote {
     margin-right: 98px;
   }

@@ -42,12 +42,12 @@
   }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   .header-bar .search-box {
     top: 14px;
 
     &__input[type=text] {
-      font-size: $tablet-milli-size;
+      font-size: $medium-milli-size;
       height: 42px;
     }
 
@@ -68,7 +68,7 @@
   }
 }
 
-@include media-query(desktop) {
+@include media-query(large) {
   .header-bar .search-box {
     top: 22px;
 
@@ -92,7 +92,7 @@
   }
 }
 
-@include media-query(hd) {
+@include media-query(xlarge) {
   .header-bar .search-box {
     &__input[type=text] {
       width: 350px;

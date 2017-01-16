@@ -12,64 +12,64 @@
 /**
  * responsive visibility, cribbed from Bootstrap 3
  */
-@include media-query(tablet-down) {
-  .hidden-phone {
+@include media-query(medium-down) {
+  .hidden-xsmall {
     display: none !important;
   }
 }
-@include media-query(bigphone-to-tablet) {
-  .hidden-bigphone {
+@include media-query(small-to-medium) {
+  .hidden-small {
     display: none !important;
   }
 }
-@include media-query(tablet-to-desktop) {
-  .hidden-tablet {
+@include media-query(medium-to-large) {
+  .hidden-medium {
     display: none !important;
   }
 }
-@include media-query(desktop-to-hd) {
-  .hidden-desktop {
+@include media-query(large-to-xlarge) {
+  .hidden-large {
     display: none !important;
   }
 }
-@include media-query(hd-up) {
-  .hidden-hd {
+@include media-query(xlarge-up) {
+  .hidden-xlarge {
     display: none !important;
   }
 }
 
-.visible-phone,
-.visible-bigphone,
-.visible-tablet,
-.visible-desktop,
-.visible-hd {
+.visible-xsmall,
+.visible-small,
+.visible-medium,
+.visible-large,
+.visible-xlarge {
   display: none !important;
 }
 
-@include media-query(tablet-down) {
-  .visible-phone {
+@include media-query(medium-down) {
+  .visible-xsmall {
     display: block !important;
   }
 }
 
-@include media-query(bigphone-to-tablet) {
-  .visible-bigphone {
+@include media-query(small-to-medium) {
+  .visible-small {
     display: block !important;
   }
 }
 
-@include media-query(tablet-to-desktop) {
-  .visible-tablet {
+@include media-query(medium-to-large) {
+  .visible-medium {
     display: block !important;
   }
 }
-@include media-query(desktop-to-hd) {
-  .visible-desktop {
+@include media-query(large-to-xlarge) {
+  .visible-large {
     display: block !important;
   }
 }
-@include media-query(hd-up) {
-  .visible-hd {
+@include media-query(xlarge-up) {
+  .visible-xlarge {
     display: block !important;
   }
 }

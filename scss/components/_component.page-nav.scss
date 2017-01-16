@@ -166,7 +166,7 @@ $page-nav__prefix-color: $color__blue--darker !default;
   }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
     .page-nav {
         margin-bottom: 56px;
     }

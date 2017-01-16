@@ -5,11 +5,11 @@
 $breadcrumbs__icon-color: $color__grey--base !default;
 $breadcrumbs__current-color: $color__grey--base !default;
 $breadcrumbs__font-size: 14px !default;
-$breadcrumbs__font-size--tablet: $breadcrumbs__font-size !default;
-$breadcrumbs__font-size--desktop: $breadcrumbs__font-size--tablet !default;
+$breadcrumbs__font-size--medium: $breadcrumbs__font-size !default;
+$breadcrumbs__font-size--large: $breadcrumbs__font-size--medium !default;
 $breadcrumbs__margin: 18px 0 16px !default;
-$breadcrumbs__margin--tablet: 14px 0 13px !default;
-$breadcrumbs__margin--desktop: 14px 0 13px !default;
+$breadcrumbs__margin--medium: 14px 0 13px !default;
+$breadcrumbs__margin--large: 14px 0 13px !default;
 
 
 
@@ -41,10 +41,10 @@ $breadcrumbs__margin--desktop: 14px 0 13px !default;
   padding-top: 14px;
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   .breadcrumbs {
-    font-size: $breadcrumbs__font-size--tablet;
-    margin: $breadcrumbs__margin--tablet;
+    font-size: $breadcrumbs__font-size--medium;
+    margin: $breadcrumbs__margin--medium;
   }
 
   .breadcrumbs__container {
@@ -52,9 +52,9 @@ $breadcrumbs__margin--desktop: 14px 0 13px !default;
   }
 }
 
-@include media-query(desktop) {
+@include media-query(large) {
   .breadcrumbs {
-      font-size: $breadcrumbs__font-size--desktop;
-      margin: $breadcrumbs__margin--desktop;
+      font-size: $breadcrumbs__font-size--large;
+      margin: $breadcrumbs__margin--large;
   }
 }

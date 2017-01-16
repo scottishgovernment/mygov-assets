@@ -14,7 +14,7 @@ hr {
   position: relative;
   top: floor($base-line-height / -2);
 
-  @include media-query(tablet) {
+  @include media-query(medium) {
     top: 1px;
   }
 }

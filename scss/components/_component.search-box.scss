@@ -3,10 +3,10 @@
 \*------------------------------------*/
 
 $search-box__font-size: 15px !default;
-$search-box__font-size--tablet: 14px !default;
-$search-box__font-size--desktop: 16px !default;
+$search-box__font-size--medium: 14px !default;
+$search-box__font-size--large: 16px !default;
 $search-box__size: 42px !default;
-$search-box__size--tablet: 49px !default;
+$search-box__size--medium: 49px !default;
 $search-box__border-radius: 30px !default;
 $search-box__background-color: $color__grey--light !default;
 $search-box__background-color--focus: $color__blue--lighter !default;
@@ -58,29 +58,33 @@ $search-box__background-color--focus: $color__blue--lighter !default;
     padding: 16%;
     width: 100%;
   }
+
+  &--large {
+      margin-bottom: 42px;
+  }
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   .search-box {
-    font-size: $search-box__font-size--tablet;
-    height: $search-box__size--tablet;
+    font-size: $search-box__font-size--medium;
+    height: $search-box__size--medium;
     top: 0;
 
     &__input[type=text] {
-      height: $search-box__size--tablet;
+      height: $search-box__size--medium;
       padding-right: 56px;
     }
 
     &__button {
       font-size: 22px;
-      height: $search-box__size--tablet;
-      width: $search-box__size--tablet;
+      height: $search-box__size--medium;
+      width: $search-box__size--medium;
     }
   }
 }
 
-@include media-query(desktop) {
+@include media-query(large) {
   .search-box {
-    font-size: $search-box__font-size--desktop;
+    font-size: $search-box__font-size--large;
   }
 }

@@ -6,8 +6,8 @@
  * Extends .grid__item
  */
 
-@include media-query(bigphone-down) {
-  .bleed--phone {
+@include media-query(small-down) {
+  .bleed--xsmall {
     padding-left: 0;
     position: relative;
     right: -15px;

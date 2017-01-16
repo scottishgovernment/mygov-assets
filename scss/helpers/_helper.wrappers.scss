@@ -3,9 +3,9 @@
 \*------------------------------------*/
 
 $wrapper__padding: 15px !default;
-$wrapper__width--tablet: 750px !default;
-$wrapper__width--desktop: 970px !default;
-$wrapper__width--hd: 1170px !default;
+$wrapper__width--medium: 750px !default;
+$wrapper__width--large: 970px !default;
+$wrapper__width--xlarge: 1170px !default;
 
 
 
@@ -15,21 +15,21 @@ $wrapper__width--hd: 1170px !default;
   padding: 0 $wrapper__padding;
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   .wrapper {
-    max-width: $wrapper__width--tablet;
+    max-width: $wrapper__width--medium;
   }
 }
 
-@include media-query(desktop) {
+@include media-query(large) {
   .wrapper {
-    max-width: $wrapper__width--desktop;
+    max-width: $wrapper__width--large;
   }
 }
 
-@include media-query(hd) {
+@include media-query(xlarge) {
   .wrapper {
-    max-width: $wrapper__width--hd;
+    max-width: $wrapper__width--xlarge;
   }
 }
 
@@ -37,7 +37,7 @@ $wrapper__width--hd: 1170px !default;
  * Full-width (no wrapper) on mobile only
  */
 
-@include media-query(tablet-down) {
+@include media-query(medium-down) {
   .wrapper--full-mobile {
     padding: 0;
   }
@@ -46,7 +46,7 @@ $wrapper__width--hd: 1170px !default;
 /**
  * Full-width (no wrapper) on tablet only
  */
-@include media-query(tablet-to-desktop) {
+@include media-query(medium-to-large) {
   .wrapper--full-tablet {
     padding: 0;
     max-width: none;

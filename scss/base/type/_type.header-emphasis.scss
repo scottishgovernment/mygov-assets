@@ -25,7 +25,7 @@ h3.emphasis,
   text-transform: uppercase;
 }
 
-@include media-query(tablet) {
+@include media-query(medium) {
   h3.emphasis,
   .gamma.emphasis {
     font-size: 19px;
@@ -52,7 +52,7 @@ h3.emphasis,
     width: 65px;
   }
 
-  @include media-query(tablet) {
+  @include media-query(medium) {
     font-size: 35px;
     line-height: 42px;
   }
