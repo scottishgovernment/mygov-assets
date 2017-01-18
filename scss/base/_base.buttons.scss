@@ -75,8 +75,7 @@ $button__margin--large: 44px 0 49px !default;
   &--secondary {
     background-color: $color__blue--dark;
     font-size: 15px;
-    height: auto;
-    min-height: $button__size;
+    height: $button__size;
     line-height: 18px;
     min-width: 90px;
     width: auto !important;
@@ -218,29 +217,25 @@ $button__margin--large: 44px 0 49px !default;
 
   // size variant
   &--large {
-    height: auto;
-    min-height: $button__size--large;
+    height: $button__size--large;
   }
 
   // size variant
   &--medium {
-    height: auto;
-    min-height: $button__size--medium;
+    height: $button__size--medium;
   }
 
   // size variant
   &--small {
     font-size: 14px;
-    height: auto;
-    min-height: $button__size--small;
+    height: $button__size--small;
     padding: 0 1em;
   }
 
   // size variant
   &--xsmall {
     font-size: 12px;
-    height: auto;
-    min-height: $button__size--small;
+    height: $button__size--small;
     height: auto;
     margin: 0;
     padding: 0 0.5em;
