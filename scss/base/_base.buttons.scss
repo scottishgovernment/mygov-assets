@@ -27,7 +27,6 @@ $button__margin--large: 44px 0 49px !default;
   font-weight: bold;
   height: $button__size--large;
   line-height: 21px;
-  margin: $button__margin--large;
   padding: $button__padding;
   position: relative;
   text-align: center;
@@ -302,6 +301,10 @@ $button__margin--large: 44px 0 49px !default;
     display: table-cell;
     vertical-align: middle;
   }
+}
+
+.body-content .button {
+  margin: $button__margin--large;
 }
 
 // sidebar button sizes
