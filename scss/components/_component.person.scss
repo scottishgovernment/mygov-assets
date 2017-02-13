@@ -49,7 +49,7 @@
   }
 
   &__name {
-    font-size: $base-h3-size;
+    font-size: 16px;
     margin: 0 0 7px 0;
   }
 
@@ -123,17 +123,12 @@
     }
 
     &__name {
-      font-size: $medium-h3-size;
+      font-size: 19px;
       line-height: 28px;
     }
 
     &__roles {
       font-size: $base-font-size;
-    }
-
-    &--small {
-      float: left;
-      width: 50%;
     }
   }
 }
