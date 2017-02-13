@@ -24,7 +24,7 @@ Your values for these should be included before you include the SCSS file.
 
 ## External links in article content
 
-External links inside `<article>` elements have the icon applied automatically. This happens for any links starting with `http://`, `https://`, or `//`. *Important:* internal links should all use internal paths to avoid being displayed as external links
+External links inside `<article>` elements have the icon applied automatically. This happens for any links starting with `http://`, `https://`, or `//`. *Important:* internal links should all use relative paths to avoid being displayed as external links
 
     <article>
         <a href="https://www.gov.scot">Gov.scot website</a>

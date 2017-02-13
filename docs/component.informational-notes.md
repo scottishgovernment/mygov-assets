@@ -47,7 +47,7 @@ Your values for these should be included before you include the SCSS file.
 
 ## Blockquote `info-note.blockquote`
 
-    <blockquote class="info-note caution">
+    <blockquote class="info-note blockquote">
         Don’t meddle with other people’s ideas when you have all the work cut out of you in trying to express your own.
         <cite>Charles Rennie MacKintosh</cite>
     </blockquote>

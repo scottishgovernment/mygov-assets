@@ -1,4 +1,4 @@
-# Settings: type
+# Settings: transition
 
 Defines variables for use in CSS transitions and animation to enforce consistency across a site.
 
@@ -23,5 +23,5 @@ Your values for these should be included before you include the SCSS file.
 
     a:hover {
       color: blue;
-      @include transition(color, $transition-in-time);
+      @include transition-duration($transition-in-time);
     }
