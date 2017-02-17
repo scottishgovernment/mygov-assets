@@ -39,12 +39,6 @@ Your values for these should be included before you include the SCSS file.
         Information provided by Disclosure Scotland
     </div>
 
-## Small print `info-note.smallprint`
-
-    <div class="info-note smallprint">
-        Call charges may apply.
-    </div>
-
 ## Blockquote `info-note.blockquote`
 
     <blockquote class="info-note blockquote">

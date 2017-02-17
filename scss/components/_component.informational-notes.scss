@@ -83,15 +83,6 @@ $medium-note-size: 14px !default;
         }
     }
 
-    &.smallprint {
-        background-color: inherit;
-        font-size: 12px;
-        line-height: 21px;
-        font-weight: 400;
-        padding: 0;
-        margin: 21px 0;
-    }
-
     &.attribution {
         background: $info-note__attribution-background-color;
         background-color: inherit;
@@ -141,12 +132,6 @@ $medium-note-size: 14px !default;
             padding-right: 35px;
             padding-left: 64px;
             font-size: 18px !important;
-        }
-
-        &.smallprint {
-            font-size: 14px;
-            line-height: 21px;
-            margin: 28px 0;
         }
 
         &.attribution {
