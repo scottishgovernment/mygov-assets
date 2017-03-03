@@ -40,12 +40,13 @@ $button__margin--large: 44px 0 49px !default;
 
   &:hover {
     text-decoration: none;
-    color: $color__white;
+    color: $button__text-color;
     @include transition-duration($transition-in-time);
   }
 
   &:focus {
     @include transition-duration($transition-in-time);
+    color: $button__text-color;
 
     .icon {
       opacity: 0.65;
