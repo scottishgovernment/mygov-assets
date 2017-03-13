@@ -1,0 +1,156 @@
+/*------------------------------------*\
+  #LISTED CONTENT ITEM
+  For when you want a list of content items as links, such as a set of search results
+\*------------------------------------*/
+
+.listed-content-item {
+    margin: 0;
+    padding-top: 0;
+
+    &__link {
+        color: $color__body !important;
+        display: block;
+        padding-top: 0;
+        position: relative;
+        text-decoration: none;
+        @include transition(background-color $transition-out-time);
+
+        &:hover {
+            background-color: $color__grey--lighter;
+            text-decoration: none;
+            @include transition-duration($transition-in-time);
+
+            .listed-content-item__title {
+                text-decoration: underline;
+                color: $color__link--hover;
+            }
+        }
+
+        &:active {
+            background: $color__blue--light;
+            outline: none;
+            @include transition(none);
+        }
+    }
+
+    &__article {
+        border-bottom: 1px solid $color__grey--light;
+        margin: 0 15px;
+        overflow: hidden;
+        padding: 21px 0 20px;
+
+        &--top-border {
+            border-top: 1px solid $color__grey--pale;
+        }
+
+        &--no-border {
+            border: 0;
+        }
+    }
+
+    &__title {
+        color: $color__link--primary;
+        margin: 1px 0 6px;
+        padding-right: 90px;
+        text-decoration: none;
+    }
+
+    &__label {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        margin: 0 0 7px;
+        text-transform: uppercase;
+    }
+
+    &__role {
+        font-weight: 500;
+        margin-bottom: 7px;
+    }
+
+    &__date {
+        color: $color__grey--text;
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 7px;
+        text-decoration: none;
+    }
+
+    &__meta {
+        margin-bottom: 21px;
+        position: relative;
+
+        &--has-icon {
+            padding-left: 45px;
+        }
+    }
+
+    &__meta-right {
+        float: right;
+        margin-left: 10px;
+    }
+
+    &__summary {
+        margin-bottom: 0;
+    }
+
+    &__image {
+        background-color: $color__grey--light;
+        float: right;
+        height: 84px;
+        margin: 0 0 10px 20px;
+        width: 84px;
+    }
+
+    &__icon {
+        left: 0;
+        position: absolute;
+        top: -12px;
+    }
+
+    &__info-label {
+      color: $color__grey--base;
+      display: none;
+      font-size: 14px;
+      font-weight: 700;
+      position: absolute;
+      right: 15px;
+      text-transform: uppercase;
+      top: 20px;
+
+      &--Closed {
+        display: block;
+      }
+  }
+}
+
+@include media-query(medium) {
+    .listed-content-item {
+
+        &__article {
+            margin: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        &__label {
+            font-size: 14px;
+        }
+
+        &__date {
+            font-size: 14px;
+        }
+
+        &__image {
+            height: 144px;
+            width: 144px;
+        }
+    }
+
+    .listed-content-item__article--has-image {
+        .listed-content-item__wrapper {
+            margin-right: 159px;
+        }
+    }
+}

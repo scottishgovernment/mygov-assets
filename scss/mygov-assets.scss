@@ -99,6 +99,7 @@ $inuit-use-fractions: false;
  * HELPERS
  */
 @import "helpers/helper.bleed";
+@import "helpers/helper.overflows";
 @import "helpers/helper.visibility";
 @import "helpers/helper.wrappers";
 
@@ -119,7 +120,9 @@ $inuit-use-fractions: false;
 /* BASE: TYPE */
 @import "base/type/type.blockquote";
 @import "base/type/type.body";
+@import "base/type/type.header-emphasis";
 @import "base/type/type.headings";
+@import "base/type/type.leader";
 @import "base/type/type.lists";
 @import "base/type/type.small";
 
@@ -141,6 +144,8 @@ $inuit-use-fractions: false;
 @import "components/component.file-icon";
 @import "components/component.in-article-form";
 @import "components/component.informational-notes";
+@import "components/component.listed-content-item";
+@import "components/component.page-group";
 @import "components/component.page-nav";
 @import "components/component.person";
 @import "components/component.related-items";
