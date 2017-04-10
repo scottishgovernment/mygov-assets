@@ -50,11 +50,19 @@
   .visible-xsmall {
     display: block !important;
   }
+
+  .visible-xsmall--inline {
+    display: inline !important;
+  }
 }
 
 @include media-query(small-to-medium) {
   .visible-small {
     display: block !important;
+  }
+
+  .visible-small--inline {
+    display: inline !important;
   }
 }
 
@@ -62,14 +70,26 @@
   .visible-medium {
     display: block !important;
   }
+
+  .visible-medium--inline {
+    display: inline !important;
+  }
 }
 @include media-query(large-to-xlarge) {
   .visible-large {
     display: block !important;
   }
+
+  .visible-large--inline {
+    display: inline !important;
+  }
 }
 @include media-query(xlarge-up) {
   .visible-xlarge {
     display: block !important;
+  }
+
+  .visible-xlarge--inline {
+    display: inline !important;
   }
 }
