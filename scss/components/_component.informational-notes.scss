@@ -51,6 +51,8 @@ $medium-note-size: 14px !default;
         border-style: solid;
         font-size: 15px;
         padding-left: 49px;
+        line-height: 21px;
+        font-weight: 400;
 
         p {
             padding-top: 0;
@@ -77,6 +79,7 @@ $medium-note-size: 14px !default;
         background-color: inherit;
         padding: 20px 10px 27px 59px;
         font-weight: 700;
+        line-height: 21px;
 
         p {
             padding-top: 4px;
@@ -122,6 +125,8 @@ $medium-note-size: 14px !default;
         &.note {
             font-size: 17px;
             padding: 13px 35px 13px 49px;
+            line-height: 28px;
+            font-weight: 400;
         }
 
         &.caution {
@@ -132,6 +137,7 @@ $medium-note-size: 14px !default;
             padding-right: 35px;
             padding-left: 64px;
             font-size: 18px !important;
+            line-height: 28px;
         }
 
         &.attribution {
