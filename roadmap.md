@@ -19,9 +19,9 @@
 * Dynamically generated docs from source code
 * Investigate including handlebars partials supporting components in this repo so that
   projects relying on this repo can consume the partials in addition to the
-  CSS and JS.
+  CSS and JS
 * Investigate layout testing to ensure stability of look and feel from commit
-  to commit.
+  to commit
 * Source and compiled assets are committed to the repo
 * Production-ready JS package + production-ready JS components
 * Production-ready CSS package
