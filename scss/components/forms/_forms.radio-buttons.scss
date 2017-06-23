@@ -1,0 +1,71 @@
+/*------------------------------------*\
+    $FORMS - RADIO BUTTONS
+    custom styling for radio buttons
+\*------------------------------------*/
+
+input[type="radio"].fancy-radio {
+    display: inline-block;
+    width: 1px; /* having them 0px wide causes Safari to not tab through them */
+    font-size: 40px;
+    margin: 21px 0 0px 10px;
+}
+
+label.fancy-radio {
+  position: relative;
+  padding-left: 41px;
+  margin-top: 21px;
+  margin-left: 0px;
+  white-space: nowrap;
+
+  &:first-of-type {
+    margin-top: 14px;
+  }
+}
+
+input.fancy-radio {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+}
+
+input + label.fancy-radio:before, label.fancy-radio:before {
+  background-color: $color__white;
+  border: 3px solid $color__grey--base;
+  border-radius: 50%;
+  content: '';
+  float: left;
+  font-size: 10px;
+  height: 28px;
+  left: 0;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  width: 28px;
+  font-family: 'FontAwesome';
+  box-sizing: border-box;
+}
+
+/* CHECKED STATE */
+
+input:checked + label.fancy-radio:before {
+  border-color: $color__blue--base;
+  color: $color__blue--base;
+  background-color: $color__white;
+  content: '\f111';
+}
+
+/* FOCUS STATE */
+
+input:focus + label.fancy-radio:before {
+    border-color: $color__blue--base;
+    color: $color__blue--base;
+    background-color: $color__blue--lighter;
+    border-width: 4px;
+    line-height: 20px;
+}
+
+/* ERROR STATE */
+
+.input-error + label.fancy-radio:before {
+  border-color: $color__red--base;
+  color: $color__red--base;
+}

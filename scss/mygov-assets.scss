@@ -152,6 +152,14 @@ $inuit-use-fractions: false;
 @import "components/component.search-box";
 
 
+/**
+ * FORMS
+ */
+
+@import "components/forms/forms.checkboxes";
+@import "components/forms/forms.date-entry";
+@import "components/forms/forms.dropdowns";
+@import "components/forms/forms.radio-buttons";
 
 
 /**

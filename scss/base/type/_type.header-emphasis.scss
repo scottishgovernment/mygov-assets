@@ -5,7 +5,7 @@
 .emphasis {
   display: inline-block;
   font-weight: 500;
-  padding-top: 20px;
+  padding-top: 21px;
   position: relative;
 
   &:before {
@@ -18,7 +18,18 @@
     right: 0;
     top: 0;
   }
+
+  form & {
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 70px;
+
+    @include media-query(medium) {
+      font-size: 26px;
+    }
+  }
 }
+
 
 h3.emphasis,
 .gamma.emphasis {

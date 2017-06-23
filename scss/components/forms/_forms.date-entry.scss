@@ -1,0 +1,53 @@
+/*------------------------------------*\
+    $FORMS - DATE ENTRY
+    custom styling for date entry inputs
+\*------------------------------------*/
+
+.date-entry {
+    margin-bottom: 21px;
+    position: relative;
+
+    + .date-entry {
+        margin-top: -7px;
+    }
+
+    &__input-group {
+        position: relative;
+    }
+
+    &__input {
+        margin-right: 60px;
+        width: calc(100% - 60px);
+    }
+
+    &__calendar {
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        margin-top: 7px;
+        max-height: 0;
+        overflow: hidden;
+        max-width: 345px;
+        @include transition(max-height 0.2s);
+
+        &--open {
+            max-height: 260px;
+            max-width: 345px;
+        }
+    }
+}
+
+button.date-entry__trigger {
+  background-image: url("../images/icons/date_picker.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  bottom: 0;
+  height: 48px;
+  margin: 0px !important;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  text-indent: -999em;
+  width: 50px;
+  @include image-2x( '../images/icons/date_picker_@2x.png', 48px, 48px);
+  vertical-align: baseline;
+
+}
