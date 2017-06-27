@@ -1,5 +1,5 @@
 # MyGov Assets
-  
+
 This repository provides static web assets for websites and web applications for the Scottish Government and other Scottish public sector bodies.
 
 
@@ -7,11 +7,11 @@ This repository provides static web assets for websites and web applications for
 
 ## CSS/SCSS
 
-Source SCSS files can be found in the `/scss` folder, along with a sample `main.scss` you can use as a base for your own site's CSS.
+Source SCSS files can be found in the `/scss` folder along with a sample "main" SCSS file, `mygov-assets.scss`, that you can use as a base for your own site's CSS.
 
 We use [Compass](http://compass-style.org/) as an authoring framework. Check out their [installation instructions](http://compass-style.org/install/) for setup.
 
-Use `$ compass compile` in the `mygov-assets` folder to compile `main.scss`.
+Use `$ compass compile` in the `mygov-assets` folder to compile `mygov-assets.scss`.
 
 
 
