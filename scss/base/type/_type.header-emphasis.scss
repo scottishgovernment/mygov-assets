@@ -27,9 +27,12 @@
     @include media-query(medium) {
       font-size: 26px;
     }
+
+    &:first-child {
+      margin-top: 7px;
+    }
   }
 }
-
 
 h3.emphasis,
 .gamma.emphasis {
