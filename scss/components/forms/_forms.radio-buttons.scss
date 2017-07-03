@@ -25,6 +25,7 @@ label.fancy-radio {
 input.fancy-radio {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+  position: absolute;
 }
 
 input + label.fancy-radio:before, label.fancy-radio:before {

@@ -3134,65 +3134,126 @@ h2 a.external:hover, h2 a.external:active, h3 a.external:hover, h3 a.external:ac
 /*------------------------------------*\
     $FORMS
 \*------------------------------------*/
-label {
+/* from Bootstrap */
+.form-control {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 28px;
+  margin-top: 42px;
+}
+.form-group.relative {
+  position: relative;
+}
+.form-group p {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+@media (min-width: 768px) {
+  .form-group {
+    margin-top: 49px;
+  }
+  .form-group p {
+    font-size: 17px;
+  }
+}
+/* end from Bootstrap */
+/* LABELS AND LEGENDS */
+label, legend {
   clear: right;
   display: block;
   font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin: 0 0 7px;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  line-height: 21px;
+}
+label.disabled, legend.disabled {
+  color: #b3b3b3;
+}
+label span.disabled, legend span.disabled {
+  color: #b3b3b3;
 }
 
-select {
-  background: #ffffff;
-  border: 1px solid #b3b3b3;
-  border-radius: 0;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  height: 35px;
-  line-height: 14px;
-  padding: 0 5px;
-  width: 100%;
-}
-select:focus, select:active {
-  border: 1px solid #0065bd;
-  outline: none;
-}
 @media (min-width: 768px) {
-  select {
-    font-size: 16px;
-    line-height: 21px;
+  legend, label {
+    font-size: 19px;
+    line-height: 28px;
   }
 }
-@media (min-width: 992px) {
-  select {
-    font-size: 16px;
-    line-height: 21px;
-  }
-}
-select option {
-  line-height: 14px;
-  padding: 3.5px 5px;
+fieldset label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 30px;
+  font-size: 16px;
 }
 
+label.consent {
+  font-size: 16px;
+  white-space: normal !important;
+  max-width: 100%;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.optional {
+  color: #727272;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .optional {
+    font-size: 17px;
+  }
+}
+p.word-count {
+  color: #727272;
+  font-size: 14px;
+}
+
+/* INPUTS */
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=tel],
+input[type=email],
+input[type=number] {
   border: 1px solid #ffffff;
   border-radius: 0;
   font-size: 16px;
   height: 42px;
+  margin-top: 7px;
 }
 input[type=text].large,
-input[type=password].large {
+input[type=password].large,
+input[type=tel].large,
+input[type=email].large,
+input[type=number].large {
   height: 56px;
 }
 input[type=text].grey,
-input[type=password].grey {
-  border: 1px solid #b3b3b3;
+input[type=password].grey,
+input[type=tel].grey,
+input[type=email].grey,
+input[type=number].grey {
+  border: 1px solid #727272;
 }
 input[type=text]:focus, input[type=text]:active,
 input[type=password]:focus,
-input[type=password]:active {
-  border: 1px solid #0065bd;
+input[type=password]:active,
+input[type=tel]:focus,
+input[type=tel]:active,
+input[type=email]:focus,
+input[type=email]:active,
+input[type=number]:focus,
+input[type=number]:active {
+  border: 2px solid #0065bd;
+  background: #e5f0f8;
   outline: none;
 }
 
@@ -3210,15 +3271,21 @@ input[type=submit].black {
   color: #ffffff;
 }
 
+input:disabled {
+  border: 1px solid #e3e3e3 !important;
+}
+
 textarea {
-  border: 1px solid #b3b3b3;
+  border: 1px solid #727272;
   border-radius: 0;
   font-size: 16px;
   min-width: 100%;
-  padding: 4px 8px;
+  padding: 13px 12px;
+  line-height: 21px;
 }
 textarea:focus {
-  border: 1px solid #0065bd;
+  border: 2px solid #0065bd;
+  background: #e5f0f8;
   outline: none;
 }
 
@@ -3244,21 +3311,6 @@ fieldset {
     font-size: 16px;
   }
 }
-/* from Bootstrap */
-.form-control {
-  display: block;
-  padding: 6px 12px;
-  width: 100%;
-}
-
-.form-group {
-  margin-bottom: 28px;
-}
-.form-group.relative {
-  position: relative;
-}
-
-/* end from Bootstrap */
 .input-wrapper {
   position: relative;
 }
@@ -3284,8 +3336,104 @@ fieldset {
   color: #727272;
 }
 
+select {
+  background: #ffffff;
+  border: 1px solid #727272;
+  border-radius: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: 35px;
+  line-height: 14px;
+  padding: 0 5px;
+  width: 100%;
+}
+select:focus, select:active {
+  border: 2px solid #0065bd;
+  background: #e5f0f8;
+  outline: none;
+}
+@media (min-width: 768px) {
+  select {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+@media (min-width: 992px) {
+  select {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+select option {
+  line-height: 14px;
+  padding: 3.5px 5px;
+}
+
+/* INPUT SIZING */
+.input--small, .input--medium, .input--large {
+  width: 100%;
+}
+
+.input__datepicker {
+  width: calc(100% - 60px);
+  display: inline-block;
+}
+
+@media (min-width: 480px) {
+  .input--small {
+    width: 41.6666%;
+  }
+
+  .input--medium {
+    width: 50%;
+  }
+
+  .input__datepicker {
+    width: calc(41.6666% - 46px);
+    display: inline-block;
+  }
+}
+@media (min-width: 768px) {
+  .input--small {
+    width: 40%;
+  }
+
+  .input__datepicker {
+    width: calc(40% - 46px);
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .input--small {
+    width: 37.5%;
+  }
+
+  .input__datepicker {
+    width: calc(37.5% - 46px);
+    display: inline-block;
+  }
+
+  .push--medium--one-twelfth {
+    left: 0px;
+  }
+}
+/* ADDITIONAL STYLES */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* LEGACY STYLES - stopgap for older forms */
 input.small {
   width: 4em;
+}
+
+#disclosure-pvg-form .form-group, #disclosure-bdo-form .form-group, #brexit-form .form-group,
+#business-rates-calculator .form-group, #feedbackForm .form-group {
+  margin-top: 0px;
 }
 
 /*------------------------------------*\
@@ -3316,6 +3464,64 @@ input.small {
 .js-has-error select,
 .js-has-error textarea {
   border: 1px solid #d32205;
+}
+
+/* errors */
+.form-group .current-errors, fieldset .current-errors, .form-group .server-side-errors, .form-group .field-errors {
+  font-size: 16px;
+  line-height: 21px;
+  color: #d32205;
+  font-weight: normal;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 0;
+}
+
+.form-errors {
+  margin-bottom: 21px;
+}
+
+.current-errors li, .server-side-errors li {
+  padding-top: 0px;
+}
+
+.form-group .field-errors {
+  margin-left: 12px;
+}
+
+.server-side-errors.server-side-neutral {
+  color: #727272;
+}
+
+.error-grey, .error-grey a {
+  color: #727272;
+}
+
+.error a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error a .underline {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/* Fieldset errors */
+fieldset .input-wrapper.input-error {
+  display: inline-block;
+  background-color: #f4e2df;
+  border: 1px dashed #d32205;
+  border-radius: 6px;
+  padding-bottom: 14px;
+}
+
+.input-error {
+  border: 2px solid #d32205 !important;
+}
+
+.input-error:focus {
+  background-color: #e5f0f8;
 }
 
 /*------------------------------------*\
@@ -3520,7 +3726,7 @@ body {
 .emphasis {
   display: inline-block;
   font-weight: 500;
-  padding-top: 20px;
+  padding-top: 21px;
   position: relative;
 }
 .emphasis:before {
@@ -3532,6 +3738,19 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+}
+form .emphasis {
+  font-size: 22px;
+  margin-bottom: 0px;
+  margin-top: 70px;
+}
+@media (min-width: 768px) {
+  form .emphasis {
+    font-size: 26px;
+  }
+}
+form .emphasis:first-child {
+  margin-top: 7px;
 }
 
 h3.emphasis,
@@ -4911,6 +5130,12 @@ a.file-icon:active {
 /*------------------------------------*\
     $IN-ARTICLE FORM
 \*------------------------------------*/
+.in-article-form {
+  /*    label {
+          font-weight: $bold;
+          max-width: calc(100% - 60px);
+      }*/
+}
 .in-article-form textarea + span,
 .in-article-form input + span {
   position: absolute;
@@ -4918,10 +5143,6 @@ a.file-icon:active {
   right: 0;
   font-size: 80%;
   font-weight: 400;
-}
-.in-article-form label {
-  font-weight: 700;
-  max-width: calc(100% - 60px);
 }
 .in-article-form .required-icon + label {
   margin-left: 14px;
@@ -5388,6 +5609,20 @@ a.file-icon:active {
   position: absolute;
   left: 0;
   top: 16px;
+}
+
+.page-group__item--disabled {
+  background-color: #ebebeb;
+  color: #727272;
+}
+
+.page-group__item--disabled .page-group__text {
+  color: #727272;
+}
+
+.page-group__item--disabled .page-group__text:before {
+  background-color: #727272;
+  color: #ebebeb;
 }
 
 ul.page-group__list .page-group__item a:before,
@@ -5955,6 +6190,314 @@ ol.page-group__list .page-group__item span:before {
 }
 
 /**
+ * FORMS
+ */
+/*------------------------------------*\
+    $FORMS - CHECKBOXES
+    custom styling for checkboxes
+\*------------------------------------*/
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1px;
+  /* having them 0px wide causes Safari to not tab through them */
+  font-size: 40px;
+  margin: 21px 0 0px 10px;
+}
+
+label.fancy-checkbox {
+  position: relative;
+  padding-left: 41px;
+  margin-top: 21px;
+  margin-left: 0px;
+  white-space: nowrap;
+}
+
+input.fancy-checkbox {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+  position: absolute;
+}
+
+input + label.fancy-checkbox:before {
+  background-color: #ffffff;
+  border: 1px solid #727272;
+  content: '';
+  float: left;
+  font-size: 18px;
+  height: 28px;
+  left: 0;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 28px;
+  font-family: 'FontAwesome';
+}
+
+/* CHECKED STATE */
+input:checked + label.fancy-checkbox:before {
+  border: 1px solid #0065bd;
+  color: #0065bd;
+  background-color: #ffffff;
+  content: '\f00c';
+}
+
+/* FOCUS STATE */
+input:focus + label.fancy-checkbox:before {
+  background-color: #e5f0f8;
+  border: 2px solid #0065bd;
+  line-height: 24px;
+}
+
+/* ERROR STATE */
+.input-error label.fancy-checkbox:before {
+  border-color: #d32205;
+  border-width: 2px;
+}
+
+/*------------------------------------*\
+    $FORMS - DATE ENTRY
+    custom styling for date entry inputs
+\*------------------------------------*/
+.date-entry {
+  margin-bottom: 21px;
+  position: relative;
+}
+.date-entry + .date-entry {
+  margin-top: -7px;
+}
+.date-entry__input-group {
+  position: relative;
+}
+.date-entry__input {
+  margin-right: 60px;
+  width: calc(100% - 60px);
+}
+.date-entry__calendar {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 7px;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 345px;
+  -moz-transition: max-height 0.2s;
+  -o-transition: max-height 0.2s;
+  -webkit-transition: max-height 0.2s;
+  transition: max-height 0.2s;
+}
+.date-entry__calendar--open {
+  max-height: 260px;
+  max-width: 345px;
+}
+
+button.date-entry__trigger {
+  background-image: url("../images/icons/date_picker.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  margin: 0px !important;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  text-indent: -999em;
+  width: 50px;
+  vertical-align: baseline;
+  height: 42px;
+  width: 42px;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx) {
+  button.date-entry__trigger {
+    background-image: url("../images/icons/date_picker_@2x.png");
+    background-size: 42px 42px;
+  }
+}
+
+/*------------------------------------*\
+    $FORMS - DROPDOWN MENUS
+    custom styling for <select> dropdown menus
+\*------------------------------------*/
+/* Make select arrows hidden in IE 10 */
+form select::-ms-expand {
+  display: none;
+}
+
+.create-select {
+  height: 42px;
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  border: 1px solid #727272;
+  border-radius: 5px;
+  color: #333333;
+  margin-right: 0;
+  padding-left: 10px;
+  margin-top: 7px;
+}
+
+.create-select__arrow {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.create-select__arrow:after {
+  content: " ";
+  background: url("../images/icons/arrows/dd_arrows_35px.png");
+  width: 35px;
+  height: 42px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  margin-top: 7px;
+}
+@media only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 2.6 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-device-pixel-ratio: 1.3), only screen and (min-resolution: 1.3dppx) {
+  .create-select__arrow:after {
+    background-image: url("../images/icons/arrows/dd_arrows_35px_@2x.png");
+    background-size: 35px 42px;
+  }
+}
+
+@media (min-width: 768px) {
+  .create-select__arrow:after {
+    background: url("../images/icons/arrows/dd_arrows.png");
+    width: 42px;
+  }
+}
+@media only screen and (min-width: 768px) and (min--moz-device-pixel-ratio: 1.3), only screen and (min-width: 768px) and (-o-min-device-pixel-ratio: 2.6 / 2), only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min-width: 768px) and (min-device-pixel-ratio: 1.3), only screen and (min-width: 768px) and (min-resolution: 1.3dppx) {
+  .create-select__arrow:after {
+    background-image: url("../images/icons/arrows/dd_arrows_@2x.png");
+    background-size: 42px 42px;
+  }
+}
+
+.input--other {
+  margin-left: 56px;
+}
+
+.postcode-search, .button--inline-block {
+  display: inline-block;
+}
+
+.postcode-search {
+  text-transform: uppercase;
+}
+
+.form-group--inline {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.form-group--add {
+  padding-top: 20px;
+}
+
+.button--keep, .button--edit, .button--remove {
+  display: inline-block;
+  width: initial;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+}
+
+.button--keep:hover, .button--keep.button--active {
+  background-color: #4e9d52;
+  color: #fff;
+}
+
+.button--edit:hover, .button--edit.button--active {
+  background-color: #ffb644;
+  color: #333;
+}
+
+.button--remove:hover, .button--remove.button--active {
+  background-color: #d32205;
+  color: #fff;
+}
+
+textarea.success {
+  border: 4px solid #4e9d52;
+}
+
+textarea.remove {
+  border: 4px solid #d32205;
+  color: #b3b3b3;
+  text-decoration: line-through #727272;
+}
+
+#tenant-responsibilities textarea {
+  border-width: 4px;
+}
+
+/*------------------------------------*\
+    $FORMS - RADIO BUTTONS
+    custom styling for radio buttons
+\*------------------------------------*/
+input[type="radio"].fancy-radio {
+  display: inline-block;
+  width: 1px;
+  /* having them 0px wide causes Safari to not tab through them */
+  font-size: 40px;
+  margin: 21px 0 0px 10px;
+}
+
+label.fancy-radio {
+  position: relative;
+  padding-left: 41px;
+  margin-top: 21px;
+  margin-left: 0px;
+  white-space: nowrap;
+}
+label.fancy-radio:first-of-type {
+  margin-top: 14px;
+}
+
+input.fancy-radio {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+  position: absolute;
+}
+
+input + label.fancy-radio:before, label.fancy-radio:before {
+  background-color: #ffffff;
+  border: 3px solid #727272;
+  border-radius: 50%;
+  content: '';
+  float: left;
+  font-size: 10px;
+  height: 28px;
+  left: 0;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  width: 28px;
+  font-family: 'FontAwesome';
+  box-sizing: border-box;
+}
+
+/* CHECKED STATE */
+input:checked + label.fancy-radio:before {
+  border-color: #0065bd;
+  color: #0065bd;
+  background-color: #ffffff;
+  content: '\f111';
+}
+
+/* FOCUS STATE */
+input:focus + label.fancy-radio:before {
+  border-color: #0065bd;
+  color: #0065bd;
+  background-color: #e5f0f8;
+  border-width: 4px;
+  line-height: 20px;
+}
+
+/* ERROR STATE */
+.input-error + label.fancy-radio:before {
+  border-color: #d32205;
+  color: #d32205;
+}
+
+/**
  * TRUMPS
  */
 /*------------------------------------*\
@@ -5976,6 +6519,7 @@ ol.page-group__list .page-group__item span:before {
   font-size: 16px;
   height: 35px;
   padding: 0;
+  margin-top: 0;
   width: 0;
   -moz-transition: width 0.1s;
   -o-transition: width 0.1s;

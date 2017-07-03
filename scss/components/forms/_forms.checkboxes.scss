@@ -21,6 +21,7 @@ label.fancy-checkbox {
 input.fancy-checkbox {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+  position: absolute;
 }
 
 input + label.fancy-checkbox:before {
@@ -62,4 +63,3 @@ input:focus + label.fancy-checkbox:before {
   border-color: $color__red--base;
   border-width: 2px;
 }
-

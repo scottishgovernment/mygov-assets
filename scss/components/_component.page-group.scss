@@ -198,6 +198,20 @@ $page-group-pip-size: 12px;
   }
 }
 
+.page-group__item--disabled {
+    background-color: $color__grey--light;
+    color: $color__grey--base;
+}
+
+.page-group__item--disabled .page-group__text {
+    color: $color__grey--base;
+}
+
+.page-group__item--disabled .page-group__text:before {
+    background-color: $color__grey--base;
+    color: $color__grey--light;
+}
+
 ul.page-group__list {
     .page-group__item {
         a:before,
