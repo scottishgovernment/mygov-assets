@@ -5,6 +5,13 @@ This repository provides static web assets for websites and web applications for
 
 
 
+## Additional documentation
+
+Detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `/docs` folder.
+
+
+
+
 ## CSS/SCSS
 
 Source SCSS files can be found in the `/scss` folder along with a sample "main" SCSS file, `mygov-assets.scss`, that you can use as a base for your own site's CSS.
