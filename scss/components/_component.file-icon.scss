@@ -90,13 +90,27 @@ $includeretina: true !default;
         width: $file-icon-large-width;
 
         &:before {
+            border-top-width: 22px;
+            border-left-width: 22px;
+        }
+        @include icon-files(70, 100);
+    }
+
+    &--large {
+        $file-icon-large-width: 100%;
+        $file-icon-large-height: $file-icon-large-width * 1.441;
+
+        padding-bottom: $file-icon-large-height;
+        width: $file-icon-large-width;
+
+        &:before {
             border-top-width: 32px;
             border-left-width: 32px;
         }
         @include icon-files(107, 152);
     }
 
-    &--large {
+    &--xlarge {
         $file-icon-large-width: 100%;
         $file-icon-large-height: $file-icon-large-width * 1.441;
 
