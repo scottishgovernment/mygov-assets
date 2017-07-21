@@ -4,6 +4,8 @@ Previous and next buttons, e.g. for use at the bottom of multiple-page articles.
 
 Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](https://www.mygov.scot/apply-blue-badge/)
 
+Code example: [https://codepen.io/jsutcliffe/pen/evBZaE](CodePen page navigation example)
+
 ## Configuration options
 
 `.page-nav` has a handful of fairly self-explanatory configuration options.

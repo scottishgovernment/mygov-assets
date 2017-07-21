@@ -4,6 +4,8 @@ Styles for a complex header, such as a header with a title, a publication date, 
 
 Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](https://www.mygov.scot/apply-blue-badge/)
 
+Code example: [https://codepen.io/jsutcliffe/pen/BWQzLj](CodePen article header example example)
+
 ## Example HTML
 
     <header class="article-header has-icon has-icon--guide">

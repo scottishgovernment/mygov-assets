@@ -198,6 +198,20 @@ $page-group-pip-size: 12px;
   }
 }
 
+.page-group__item--disabled {
+    background-color: $color__grey--light;
+    color: $color__grey--base;
+}
+
+.page-group__item--disabled .page-group__text {
+    color: $color__grey--base;
+}
+
+.page-group__item--disabled .page-group__text:before {
+    background-color: $color__grey--base;
+    color: $color__grey--light;
+}
+
 ul.page-group__list {
     .page-group__item {
         a:before,
@@ -230,6 +244,10 @@ ol.page-group__list {
   border-top: 1px solid $color__grey--light;
   border-bottom: 1px solid $color__grey--light;
   margin-bottom: -1px;
+
+  &:active {
+      outline: none;
+  }
 
   &--no-link {
     background-color: $color__blue--lighter;
@@ -297,6 +315,17 @@ ol.page-group__list {
         @include background-image(linear-gradient($color__white, $color__grey--light));
     }
 
+    &--right {
+        border-left: 1px solid $color__grey--light;
+        border-right: 0;
+
+        &:before,
+        &:after {
+            left: -1px;
+            right: auto;
+        }
+    }
+
     &--section-nav {
       a {
         color: $color__body;
@@ -352,6 +381,15 @@ ol.page-group__list {
         width: 0;
       }
     }
+  }
+
+  .page-group--right .page-group__text--no-link:after {
+      $page-group-triangle-size: 15px;
+
+      border-left: 0;
+      border-right: $page-group-triangle-size solid $color__blue--lighter;
+      left: $page-group-triangle-size * -1;
+      right: auto;
   }
 
     ul.page-group__list {

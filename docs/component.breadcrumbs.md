@@ -1,5 +1,7 @@
 # Component: breadcrumbs
 
+Code example: [https://codepen.io/jsutcliffe/pen/mWOEEb](CodePen expandable example)
+
 ## Configuration options
 
 * `$breadcrumbs__icon-color` - color used for separator icons

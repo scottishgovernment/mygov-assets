@@ -4,6 +4,8 @@ Expandable blocks for accordion-like content. Keyboard-navigable for accessibili
 
 Example on mygov.scot: [https://www.mygov.scot/help-redundancy/](https://www.mygov.scot/help-redundancy/)
 
+Code example: [https://codepen.io/jsutcliffe/pen/mWOrbr](Expandable example on CodePen)
+
 ## Configuration options
 
 Expandable has many configuration options:
