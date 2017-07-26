@@ -2,12 +2,13 @@
 	margin-left: 56px;
 }
 
-.postcode-search, .button--inline-block {
+.input--inline, .button--inline-block {
 	display: inline-block;
 }
 
 .postcode-search {
 	text-transform: uppercase;
+	display: inline-block;
 }
 
 .form-group--inline {
@@ -53,4 +54,37 @@ textarea.remove {
 
 #tenant-responsibilities textarea {
 	border-width: 4px;
+}
+
+input.currency {
+	padding-left: 30px;
+}
+
+span.pound-span {
+
+	&:before {
+	    content: '£';
+	    float: left;
+	    font-size: 24px;
+	    font-weight: bold;
+	    left: 10px;
+	    line-height: 56px;
+	    position: relative;
+	    width: 0px;
+	}
+}
+
+.multi-page-form .form-box {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    padding: 6px 9px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
 }
