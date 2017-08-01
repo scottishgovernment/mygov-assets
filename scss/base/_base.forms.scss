@@ -312,6 +312,12 @@ input.small {
 }
 
 #disclosure-pvg-form .form-group, #disclosure-bdo-form .form-group, #brexit-form .form-group,
-#business-rates-calculator .form-group, #feedbackForm .form-group {
+#business-rates-calculator .form-group, #feedbackForm .form-group, #search-box {
   margin-top: 0px;
 }
+
+#business-rates-calculator input:focus {
+  background-color: #ffffff;
+  border-width: 1px;
+}
+
