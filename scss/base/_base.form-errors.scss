@@ -35,3 +35,73 @@
         border: 1px solid $color__error;
     }
 }
+
+
+/* errors */
+
+.form-group .current-errors, fieldset .current-errors, .form-group .server-side-errors, .form-group .field-errors {
+  font-size: 16px;
+  line-height: 21px;
+  color: #d32205;
+  font-weight: normal;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 0;
+}
+
+.form-errors {
+  margin-bottom: 21px;
+}
+
+.current-errors li, .server-side-errors li {
+  padding-top: 0px;
+  list-style-type: none;
+}
+
+.form-group .field-errors {
+  margin-left: 12px;
+}
+
+.server-side-errors.server-side-neutral {
+  color: #727272;
+}
+
+.error-grey, .error-grey a {
+  color: #727272;
+}
+
+.error a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.error a .underline {
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+/* Input field errors */
+
+.input-error {
+  border: 2px solid $color__red--base !important;
+}
+
+.input-error:focus {
+  background-color: $color__blue--lighter;
+}
+
+/* Fieldset errors */
+
+fieldset.input-error {
+  border: 0px !important;
+}
+
+fieldset .input-wrapper.input-error {
+  display: inline-block;
+  background-color: #f4e2df;
+  border: 1px dashed #d32205 !important;
+  border-radius: 6px;
+  padding-bottom: 14px;
+}
+
+

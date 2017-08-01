@@ -2,72 +2,130 @@
     $FORMS
 \*------------------------------------*/
 
-$field__border-color: $color__border--base !default;
+$field__border-color: $color__grey--base !default;
 $field__border-color--focus: $color__link--primary !default;
 $field__font-size: 16px !default; // anything lower causes iOS to zoom on focus
 $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't like custom fonts on SELECT elements
 
+/* from Bootstrap */
+.form-control {
+  display: block;
+  padding: 6px 12px;
+  width: 100%;
+}
 
+.form-group {
+  margin-bottom: 28px;
+  margin-top: 42px;
 
+  &.relative {
+      position: relative;
+  }
 
-label {
+  p {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .form-group {
+    margin-top: 49px;
+  
+    p {
+      font-size: 17px;
+    }
+  }
+
+}
+/* end from Bootstrap */
+
+/* LABELS AND LEGENDS */
+
+label, legend {
   clear: right;
   display: block;
   font-family: $font__default;
-  font-weight: $lighter;
-  margin: 0 0 rhythm(1);
-}
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  line-height: 21px;
 
-select {
-  background: $color__white;
-  border: 1px solid $field__border-color;
-  border-radius: 0;
-  font-family: $field__font-family;
-  font-size: $field__font-size;
-  height: $base-line-height * 5;
-  line-height: $base-line-height * 2;
-  padding: 0 5px;
-  width: 100%;
-
-  &:focus,
-  &:active {
-    border: 1px solid $field__border-color--focus;
-    outline: none;
+  &.disabled {
+      color: $color__grey--medium;
   }
 
-  @include media-query(medium) {
-    @include adjust-font-size-to($medium-milli-size);
-  }
-
-  @include media-query(large) {
-    @include adjust-font-size-to($large-milli-size);
-  }
-
-  option {
-    line-height: $base-line-height * 2;
-    padding: ($base-line-height / 2) 5px;
+  span.disabled {
+    color: $color__grey--medium;
   }
 }
+
+@media (min-width: 768px) {
+  legend, label {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+
+fieldset label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 30px;
+  font-size: 16px;
+}
+
+label.consent {
+  font-size: 16px;
+  white-space: normal !important;
+  max-width: 100%;
+  margin-right: 10px;
+  margin-left: 0px;
+}
+
+.optional {
+  color: $color__grey--base;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@include media-query(medium) {
+  .optional {
+    font-size: 17px;
+  }
+}
+
+p.word-count {
+    color: $color__grey--base;
+    font-size: 14px;
+}
+
+/* INPUTS */
 
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=tel],
+input[type=email], 
+input[type=number] {
   border: 1px solid $color__white;
   border-radius: 0;
   font-size: $field__font-size;
   height: rhythm(6);
-
+  margin-top: rhythm(1);
 
   &.large {
     height: rhythm(8);
   }
 
   &.grey {
-    border: 1px solid $color__grey--medium;
+    border: 1px solid $color__grey--base;
   }
 
   &:focus,
   &:active {
-    border: 1px solid $field__border-color--focus;
+    border: 2px solid $field__border-color--focus;
+    background: $color__blue--lighter;
     outline: none;
   }
 }
@@ -86,15 +144,21 @@ input[type=submit] {
   }
 }
 
+input:disabled {
+  border: 1px solid $color__grey--pale !important;
+}
+
 textarea {
   border: 1px solid $field__border-color;
   border-radius: 0;
   font-size: $field__font-size;
   min-width: 100%;
-  padding: 4px 8px;
+  padding: 13px 12px;
+  line-height: 21px;
 
   &:focus {
-    border: 1px solid $field__border-color--focus;
+    border: 2px solid $field__border-color--focus;
+    background: $color__blue--lighter;
     outline: none;
   }
 }
@@ -122,21 +186,6 @@ fieldset {
   }
 }
 
-/* from Bootstrap */
-.form-control {
-  display: block;
-  padding: 6px 12px;
-  width: 100%;
-}
-
-.form-group {
-  margin-bottom: 28px;
-
-  &.relative {
-      position: relative;
-  }
-}
-/* end from Bootstrap */
 .input-wrapper {
     position: relative;
 }
@@ -162,6 +211,113 @@ fieldset {
   color: $color__placeholder;
 }
 
-input.small {
-    width: 4em;
+select {
+  background: $color__white;
+  border: 1px solid $field__border-color;
+  border-radius: 0;
+  font-family: $field__font-family;
+  font-size: $field__font-size;
+  height: $base-line-height * 5;
+  line-height: $base-line-height * 2;
+  padding: 0 5px;
+  width: 100%;
+
+  &:focus,
+  &:active {
+    border: 2px solid $field__border-color--focus;
+    background: $color__blue--lighter;
+    outline: none;
+  }
+
+  @include media-query(medium) {
+    @include adjust-font-size-to($medium-milli-size);
+  }
+
+  @include media-query(large) {
+    @include adjust-font-size-to($large-milli-size);
+  }
+
+  option {
+    line-height: $base-line-height * 2;
+    padding: ($base-line-height / 2) 5px;
+  }
 }
+
+/* INPUT SIZING */
+
+.input--small, .input--medium, .input--large {
+  width: 100%;
+}
+
+.input__datepicker {
+  width: calc(100% - 60px);
+  display: inline-block;
+}
+
+@media (min-width: 480px) {
+  .input--small {
+    width: 41.6666%;
+  }
+
+  .input--medium {
+    width: 50%;
+  }
+
+  .input__datepicker {
+    width: calc(41.6666% - 46px);
+    display: inline-block;
+  }
+}
+
+@include media-query(medium) {
+  .input--small {
+    width: 40%;
+  }
+
+  .input__datepicker {
+    width: calc(40% - 46px);
+    display: inline-block;
+  }
+}
+
+@include media-query(large) {
+  .input--small {
+    width: 37.5%;
+  }
+
+  .input__datepicker {
+    width: calc(37.5% - 46px);
+    display: inline-block;
+  }
+
+  .push--medium--one-twelfth {
+    left: 0px;
+  }
+}
+
+/* ADDITIONAL STYLES */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* LEGACY STYLES - stopgap for older forms */
+
+input.small {
+  width: 4em;
+}
+
+#disclosure-pvg-form .form-group, #disclosure-bdo-form .form-group, #brexit-form .form-group,
+#business-rates-calculator .form-group, #feedbackForm .form-group, #search-box {
+  margin-top: 0px;
+}
+
+#business-rates-calculator input:focus {
+  background-color: #ffffff;
+  border-width: 1px;
+}
+

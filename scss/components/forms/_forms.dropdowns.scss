@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    $FORMS - DROPDOWN MENUS
+    custom styling for <select> dropdown menus
+\*------------------------------------*/
+
+
+/* Make select arrows hidden in IE 10 */
+form select::-ms-expand {
+  display: none;
+}
+
+.create-select {
+  height: 42px;
+  -webkit-appearance: button;
+  -moz-appearance: none;
+  border: 1px solid $color__grey--base;
+  border-radius: 5px;
+  color: $color__body;
+  margin-right: 0;
+  padding-left: 10px;
+  margin-top: 7px;
+}
+
+.create-select__arrow {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.create-select__arrow:after {
+  content: " ";
+  background: url('../images/icons/arrows/dd_arrows_35px.png');
+  @include image-2x("../images/icons/arrows/dd_arrows_35px_@2x.png", 35px, 42px);
+  width: 35px;
+  height: 42px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  margin-top: 7px;
+}
+
+@include media-query(medium) {
+
+  .create-select__arrow:after {
+    background: url('../images/icons/arrows/dd_arrows.png');
+    @include image-2x("../images/icons/arrows/dd_arrows_@2x.png", 42px, 42px);
+    width: 42px;
+  }
+
+}

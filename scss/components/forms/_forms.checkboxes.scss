@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    $FORMS - CHECKBOXES
+    custom styling for checkboxes
+\*------------------------------------*/
+
+input[type="checkbox"] {
+	display: inline-block;
+	width: 1px; /* having them 0px wide causes Safari to not tab through them */
+	font-size: 40px;
+	margin: 21px 0 0px 10px;
+}
+
+label.fancy-checkbox {
+  position: relative;
+  padding-left: 41px;
+  margin-top: 21px;
+  margin-left: 0px;
+  white-space: nowrap;
+}
+
+input.fancy-checkbox {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+}
+
+input + label.fancy-checkbox:before {
+  background-color: $color__white;
+  border: 1px solid $color__grey--base;
+  content: '';
+  float: left;
+  font-size: 18px;
+  height: 28px;
+  left: 0;
+  line-height: 26px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 28px;
+  font-family: 'FontAwesome';
+}
+
+/* CHECKED STATE */
+
+input:checked + label.fancy-checkbox:before {
+  border: 1px solid $color__blue--base;
+  color: $color__blue--base;
+  background-color: $color__white;
+  content: '\f00c';
+}
+
+/* FOCUS STATE */
+
+input:focus + label.fancy-checkbox:before {
+  background-color: $color__blue--lighter;
+  border: 2px solid $color__blue--base;
+  line-height: 24px;
+}
+
+/* ERROR STATE */
+
+.input-error label.fancy-checkbox:before {
+  border-color: $color__red--base;
+  border-width: 2px;
+}
+
