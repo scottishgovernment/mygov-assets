@@ -23,6 +23,10 @@ input.fancy-checkbox {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
 }
 
+input.fancy-consent-checkbox {
+	display: none;
+}
+
 input + label.fancy-checkbox:before {
   background-color: $color__white;
   border: 1px solid $color__grey--base;
@@ -62,4 +66,3 @@ input:focus + label.fancy-checkbox:before {
   border-color: $color__red--base;
   border-width: 2px;
 }
-

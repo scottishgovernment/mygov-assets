@@ -217,9 +217,9 @@ ul.page-group__list {
         a:before,
         span:before {
           content: '';
-          background: url(../images/icons/arrows/guide_LH_nav_arrow.png) no-repeat 0 center $color__link--primary;
+          background: url(../images/icons/arrows/guide_lh_nav_arrow.png) no-repeat 0 center $color__link--primary;
 
-          @include image-2x(get2xImage('../images/icons/arrows/guide_LH_nav_arrow.png'), 21px, 21px);
+          @include image-2x(get2xImage('../images/icons/arrows/guide_lh_nav_arrow.png'), 21px, 21px);
         }
     }
 }
