@@ -2,313 +2,388 @@
     #BUTTONS
 \*------------------------------------*/
 
-$button__size: 56px !default;
-$button__size--large: 70px !default;
-$button__size--medium: 42px !default;
-$button__size--small: 28px !default;
-$button__font-size: 17px !default;
-$button__external--icon: '../images/icons/arrows/ext_arrow_text_17px_white.png' !default;
-$button__close--icon: '../images/icons/close-grey.png' !default;
-$button__text-color: $color__white !default;
-$button__padding: 7px 40px !default;
-$button__margin--large: 44px 0 49px !default;
+
+
+
+$button__padding-x: 15px !default;
+$button__padding-x--large: 40px !default;
+$button__padding-y: 17px !default;
+$button__secondary-border-width: 2px !default;
+$button__secondary-border-width--active: 3px !default;
+$external-link__excluded-sites: () !default;
+
+
+
+
+@function add-excluded-urls() {
+    $output: '';
+
+    @each $excluded-site in $external-link__excluded-sites {
+        $output: $output + ':not([href*="' + $excluded-site + '"])';
+    }
+
+    @return $output;
+}
+
+
+
+
+button {
+    border: 0;
+    background: transparent;
+
+    &:focus {
+        background-color: $color__blue--lighter;
+    }
+}
 
 
 
 
 .button {
-  align-items: flex-start;
-  background: $color__grey--base;
-  border: 0;
-  color: $button__text-color;
-  cursor: pointer;
-  display: table;
-  font-size: $button__font-size;
-  font-weight: bold;
-  height: $button__size--large;
-  line-height: 21px;
-  padding: $button__padding;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  vertical-align: middle;
-  width: 100%;
-
-  @include transition(background $transition-out-time);
-
-  &:hover {
+    background-color: $color__blue--base;
+    border: 0;
+    color: $color__white;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21px;
+    margin: 35px 0;
+    min-height: 56px;
+    outline: 0;
+    padding: $button__padding-y $button__padding-x;
+    position: relative;
+    text-align: center;
     text-decoration: none;
-    color: $button__text-color;
-    @include transition-duration($transition-in-time);
-  }
+    text-transform: uppercase;
+    vertical-align: top;
 
-  &:focus {
-    @include transition-duration($transition-in-time);
-    color: $button__text-color;
+    @include transition(outline-color 1s, background-color 1s, color 1s);
 
-    .icon {
-      opacity: 0.65;
+    &:focus {
+        color: $color__white;
     }
-  }
-
-  &--primary {
-    background-color: $color__link--primary;
 
     &:hover {
-      background-color: $color__button--primary--hover
-    }
-
-    &:focus  {
-      background-color: $color__button--primary--focus;
+        @include transition-duration(0.2s);
+        color: $color__white;
     }
 
     &:active {
-      background-color: $color__button--primary--active;
-      color: $color__button--primary--active-text;
-      outline: none !important;
+        color: rgba(red($color__white), green($color__white), blue($color__white), 0.65);
+        outline: 0;
+
+        @include transition-duration(0s);
     }
-  }
+}
 
-  // color variant
-  &--secondary {
-    background-color: $color__blue--dark;
-    font-size: 15px;
-    height: $button__size;
-    line-height: 18px;
-    min-width: 90px;
-    width: auto !important;
-
-    &:hover,
-    &:focus {
-      background: $color__button--secondary--hover;
-    }
-  }
-
-  // color variant
-  &--dark {
-    background-color: $color__button--secondary;
-  }
-
-  // color variant
-  &--clear {
-    background-color: transparent;
-    color: $color__link--primary;
-
-    @include transition(color $transition-out-time);
+.button--primary {
+    background-color: $color__blue--base;
+    width: 290px;
 
     &:hover {
-      color: $color__link--hover;
+        background-color: $color__blue--dark;
     }
-  }
 
-  // color variant
-  &--success,
-  &--positive {
-      background-color: $color__button__success;
+    &:active {
+        background-color: $color__blue--dark;
+    }
+}
 
-      &:hover {
-          background-color: $color__button__success--hover;
-      }
-  }
-
-  // color variant
-  &--error,
-  &--negative {
-      background-color: $color__button__error;
-
-      &:hover {
-          background-color: $color__button__error--hover;
-      }
-  }
-
-  // color variant
-  &--invert {
+.button--secondary {
     background-color: $color__white;
+    outline: 2px solid $color__blue--base;
+    outline-offset: -2px;
     color: $color__blue--base;
 
-    @include transition(color $transition-out-time);
+    &:hover,
+    &:active {
+        outline-color: $color__blue--dark;
+        outline-width: 3px;
+        outline-offset: -3px;
+        outline-style: solid;
+        color: $color__blue--dark !important;
+    }
+
+    &:focus {
+        color: $color__blue--base;
+    }
 
     &:hover {
-      color: $color__link--hover;
-    }
-  }
-
-  // color variant
-  &--cancel {
-    background: $color__white;
-    border: 1px solid $color__grey--base;
-    color: $color__body !important;
-
-    &.light-text {
-      color: $color__grey--base;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $color__grey--lighter;
-      border-color: $color__grey--dark;
+        background-color: $color__grey--lighter;
     }
 
     &:active {
-      background-color: $color__grey--light;
-      color: rgba($color__grey--dark, 0.65);
+        background-color: $color__blue--light;
     }
-  }
+}
 
-  // type variant
-  &--ghost {
-    background-color: transparent;
-    border: 1px solid $color__grey--dark;
-    color: $color__grey--dark;
-    font-size: 14px;
-    padding: 6px 15px;
-
-    &:hover {
-      background-color: $color__grey--lighter;
-      color: $color__grey--dark;
-    }
+// "cancel" is essentially a secondary colorway
+.button--cancel {
+    @extend .button--secondary;
+    outline-color: $color__body;
+    color: $color__body;
 
     &:focus {
-      background-color: $color__grey--light;
-      outline: none !important;
+        color: $color__body;
     }
-  }
-
-  // type variant
-  &--external {
-    &:after {
-      background: url($button__external--icon);
-      content: '';
-      height: 17px;
-      position: absolute;
-      right: 6px;
-      top: 6px;
-      width: 17px;
-
-      @include transition(opacity $transition-out-time);
-
-      @include image-2x(get2xImage($button__external--icon), 17px, 17px);
-    }
-  }
-
-  // color variant
-  &--ghost-primary {
-    border-color: $color__link--primary;
-    color: $color__link--primary;
 
     &:hover {
-      background-color: $color__grey--lighter;
-      border-color: $color__link--hover;
-      color: $color__link--hover;
+        background-color: $color__white;
+        color: $color__blue--dark;
     }
 
-    &:focus {
-      background-color: $color__blue--light;
+    &:active {
+        background-color: $color__blue--light;
     }
-  }
+}
 
-  // color variant
-  &--ghost-invert {
-    border-color: $color__white;
-    color: $color__white;
-  }
-
-  // size variant
-  &--large {
-    height: $button__size--large;
-  }
-
-  // size variant
-  &--medium {
-    height: $button__size--medium;
-  }
-
-  // size variant
-  &--small {
-    font-size: 14px;
-    height: $button__size--small;
-    padding: 0 1em;
-  }
-
-  // size variant
-  &--xsmall {
-    font-size: 12px;
-    height: $button__size--small;
-    margin: 0;
-    padding: 0 0.5em;
-
-    @include media-query(medium) {
-        font-size: 13px;
-    }
-  }
-
-  // display in a textlike (no padding)
-  &--text {
+.button--tertiary {
     background: transparent;
-    color: $color__grey--text;
-    padding: 0;
-  }
+    border-bottom: 1px solid $color__blue--light;
+    color: $color__blue--base;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    min-height: 35px;
+    padding: 7px 5px;
+    text-transform: none;
 
-  &--close {
+    &:hover {
+        background-color: $color__grey--lighter;
+        border-color: $color__blue--dark;
+        color: $color__blue--dark;
+    }
+
+    &:active {
+        background-color: $color__blue--light;
+        color: $color__blue--dark;
+        border-color: $color__blue--dark;
+    }
+
+    &:focus {
+        color: currentColor;
+    }
+}
+
+
+
+
+// sizes
+.button--large {
+    // this is the default
+
+}
+
+.button--medium {
+    $button__padding-x: 15px;
+    $button__padding-y: 10px;
+
+    min-height: 42px;
+    padding: $button__padding-y $button__padding-x;
+    width: 175px;
+}
+
+.button--small {
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 174px;
+    min-width: 56px;
+    padding: $button__padding-y $button__padding-x;
+    width: auto;
+}
+
+// not specced in link/button language but added for guide mobile nav
+// todo: keep this in a "mygov-buttons" scss file
+.button--xsmall {
+    font-size: 12px;
+    margin: 7px 0;
+    min-height: 28px;
+    padding: 4px 15px 3px;
+    width: auto;
+}
+
+
+
+
+// widths
+.button--primary--small-variable {
+    $button__padding-x: 15px;
+    $button__padding-y: 14px;
+
+    padding: $button__padding-y $button__padding-x;
+    width: auto;
+}
+
+.button--primary--fluid,
+.button--primary--fluid-persistent {
+    min-width: 140px;
+    width: calc(50% - 5px);
+}
+
+@include media-query(medium) {
+    .button--primary--fluid {
+        max-width: 220px;
+        width: auto;
+    }
+
+    .button--primary--fluid-persistent {
+        max-width: 379px;
+        width: auto;
+    }
+}
+
+.button--secondary--medium-fixed {
+    width: 140px;
+}
+
+@include media-query(medium) {
+    .button--secondary--large-fixed {
+        width: 290px;
+    }
+}
+
+
+
+
+// external link buttons
+.button[href^="//"]#{add-excluded-urls()},
+.button[href^="http://"]#{add-excluded-urls()},
+.button[href^="https://"]#{add-excluded-urls()} {
+    position: relative;
+}
+
+.button--secondary[href^="//"]#{add-excluded-urls()},
+.button--secondary[href^="http://"]#{add-excluded-urls()},
+.button--secondary[href^="https://"]#{add-excluded-urls()} {
+    &:after {
+        background-image: url(../images/icons/svg/external-17-blue.svg);
+    }
+
+    &:hover:after {
+        background-image: url(../images/icons/svg/external-17-dkblue.svg);
+    }
+}
+
+.button--cancel[href^="//"]#{add-excluded-urls()},
+.button--cancel[href^="http://"]#{add-excluded-urls()},
+.button--cancel[href^="https://"]#{add-excluded-urls()} {
+    &:after {
+        background-image: url(../images/icons/svg/external-17.svg);
+    }
+}
+
+
+
+
+// miscellaneous modifiers
+.button--margin-right {
+    margin-right: 10px;
+}
+
+.button--no-margin {
+    margin: 0;
+}
+
+
+
+
+// close cross
+.close-button {
+    background: transparent url(../images/icons/close-grey.png) center no-repeat;
+    @include image-2x(get2xImage('../images/icons/close-grey.png'), 27px, 27px);
+    border: 0;
+    display: inline-block;
     height: 27px;
     margin-bottom: 0;
     margin-top: 0;
     padding: 0;
     width: 27px;
-    background-image: url($button__close--icon);
-    @include image-2x(get2xImage($button__close--icon), 27px, 27px);
-  }
+}
 
-  // display variant
-  &--pill {
-    border-radius: 100px;
-    display: inline-block;
-    height: auto;
-    line-height: 21px;
-    padding: 7px 24px 7px 10px;
-    text-transform: none;
-    width: auto;
 
-    @extend %small-arrow-right !optional;
-    @extend %small-arrow-right--white !optional;
-    & + & {
-      margin-left: 10px;
-    }
 
-    @include media-query(medium) {
-      padding-left: 12px;
-      padding-right: 22px;
-    }
-  }
 
-  &--no-margin {
-      margin: 0 !important;
-  }
+// icons -- could be pulled out to a separate SCSS file
+$icon__height: 21px;
+$icon__height--medium: 17px;
+.mg-icon {
+    background: no-repeat url() center;
+    background-size: contain;
+    height: $icon__height;
+    width: $icon__height;
+}
 
-  /**
-   * Button icon placement
-   */
-  .button__icon--right {
-    margin-top: -10px;
+.mg-icon--inline {
+    float: left;
+    margin-right: 10px;
+}
+
+.mg-icon--medium {
+    height: $icon__height--medium;
+    width: $icon__height--medium;
+}
+
+.mg-icon--absolute {
+    margin-top: round(-$icon__height/2);
     position: absolute;
-    right: 1em;
     top: 50%;
-  }
-
-  .link-text {
-    display: table-cell;
-    vertical-align: middle;
-  }
 }
 
-.body-content .button {
-  margin: $button__margin--large;
+.mg-icon--absolute.mg-icon--medium {
+    margin-top: round(-$icon__height--medium/2)
 }
 
-// sidebar button sizes
-#sidebar button,
-#sidebar a.button {
-  width: 100%;
+.mg-icon--left {
+    left: 5px;
+}
+
+.mg-icon--right {
+    right: 5px;
+}
+
+.mg-icon--chevron-left {
+    background-image: url(../images/icons/svg/chevron-left-grey.svg);
+}
+
+.mg-icon--chevron-right {
+    background-image: url(../images/icons/svg/chevron-right-grey.svg);
+}
+
+.button--primary .mg-icon--chevron-left {
+    background-image: url(../images/icons/svg/chevron-left-white.svg);
+}
+
+.button--primary:active .mg-icon--chevron-left,
+.button--primary:active .mg-icon--chevron-right {
+    opacity: 0.65;
+}
+
+.button--primary .mg-icon--chevron-right {
+    background-image: url(../images/icons/svg/chevron-right-white.svg);
+}
+
+.button--secondary .mg-icon--chevron-left {
+    background-image: url(../images/icons/svg/chevron-left-dkblue.svg);
+}
+
+.button--secondary .mg-icon--chevron-right {
+    background-image: url(../images/icons/svg/chevron-right-dkblue.svg);
+}
+
+.button--cancel .mg-icon--chevron-left {
+    background-image: url(../images/icons/svg/chevron-left-grey.svg);
+}
+
+.button--cancel:hover .mg-icon--chevron-left {
+    background-image: url(../images/icons/svg/chevron-left-dkblue.svg);
+}
+
+.button--cancel .mg-icon--chevron-right {
+    background-image: url(../images/icons/svg/chevron-right-grey.svg);
+}
+
+.button--cancel:hover .mg-icon--chevron-right {
+    background-image: url(../images/icons/svg/chevron-right-dkblue.svg);
 }

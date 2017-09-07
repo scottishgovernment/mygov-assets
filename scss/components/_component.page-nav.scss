@@ -13,68 +13,33 @@ $page-nav__prefix-color: $color__blue--darker !default;
 .page-nav {
   margin-top: 56px;
   margin-bottom: 49px;
+}
 
-  &__text {
-    &:before {
-      color: $page-nav__prefix-color;
-      content: attr(data-label);
-      display: block;
-      font-size: 14px;
-      font-weight: $bold;
-      text-transform: uppercase;
-    }
-  }
 
-  // BEGIN: page-nav__button
-  &__button {
+
+
+.page-nav__button {
+    background: transparent;
+    border-radius: 8px;
+    display: inline-block;
     font-size: 16px;
     line-height: 21px;
-    background: transparent;
-    text-decoration: none;
     margin: 14px 0;
-    min-height: 42px;
-    display: inline-block;
+    min-height: 91px;
+    outline: none !important;
+    padding: 14px 5px;
     position: relative;
+    text-decoration: none;
+    width: 100%;
     @include transition(background $transition-out-time);
 
     &:not([href]) {
       display: none;
     }
 
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: transparent;
-      outline: none;
-      @include transition(background 0.2s);
-
-      &:before {
-        background-color: $color__button--primary--hover;
-      }
-
-      .page-nav__text-highlight {
-        text-decoration: underline;
-      }
-
+    &--right {
+        text-align: right;
     }
-
-    &:active {
-      @include transition(background 0s);
-
-      .page-nav__text-highlight {
-        background: $color__blue--light;
-      }
-    }
-
-    .page-nav__text {
-      padding: 7px 15px;
-      display: inline-block;
-      text-decoration: inherit;
-    }
-
-    ///////////////////
-    // Variations    //
-    ///////////////////
 
     // Shared styles for left and right variations
     // :before is the circle
@@ -103,28 +68,15 @@ $page-nav__prefix-color: $color__blue--darker !default;
         top: 12px;
     }
 
-    &--left,
-    &--right {
-      &:active {
-        &:before {
-          @include transition(background 0s);
-        }
-
-        &:after {
-          opacity: 0.65;
-        }
-      }
-    }
-
     // Left button variation
     // BEGIN: page-nav__button--left
     &--left {
-      padding-left: $page-nav__icon-size;
+      padding-left: ($page-nav__icon-size + 5px + 12px);
       text-align: left;
 
       &:before,
       &:after {
-          left: 0;
+          left: 5px;
       }
 
       &:after {
@@ -140,12 +92,12 @@ $page-nav__prefix-color: $color__blue--darker !default;
     // BEGIN: page-nav__button--right
     &--right {
       float: right;
-      padding-right: $page-nav__icon-size;
+      padding-right: ($page-nav__icon-size + 5px + 12px);
       text-align: right;
 
       &:before,
       &:after {
-        right: 0;
+        right: 5px;
       }
 
       &:after {
@@ -156,14 +108,49 @@ $page-nav__prefix-color: $color__blue--darker !default;
       }
     }
     // END: page-nav__button--right
+}
 
-  }
-  // END: page-nav__button
+.page-nav__button:hover {
+    background-color: $color__grey--lighter;
+    @include transition-duration(0.2s);
 
-  // correct placement of "next" label for IE8
-  .page-nav__button--right .page-nav__text:before {
-      text-align: right;
-  }
+    .page-nav__text {
+        text-decoration: underline;
+    }
+
+    &:before {
+        background-color: $color__blue--dark;
+    }
+}
+
+.page-nav__button:active {
+    background-color: $color__blue--light;
+
+    &:before {
+        background-color: $color__blue--dark;
+    }
+
+    &:after {
+        opacity: 0.65;
+    }
+}
+
+.page-nav__text {
+    display: inline-block;
+    padding-top: 21px;
+    position: relative;
+
+    &:before {
+        color: $page-nav__prefix-color;
+        content: attr(data-label);
+        font-size: 14px;
+        font-weight: $bold;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-transform: uppercase;
+        top: 0;
+    }
 }
 
 @include media-query(medium) {
