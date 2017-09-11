@@ -1,0 +1,368 @@
+/*------------------------------------*\
+    #DOCUMENT INFO
+\*------------------------------------*/
+
+$document-info__border-color: $color__grey--light !default;
+$document-info__background-color: $color__grey--lighter !default;
+$document-info__preview__border: $color__grey--medium !default;
+$document-info__preview__background: $color__grey--light !default;
+$document-info__preview__background--focus: $color__blue--lighter !default;
+$document-info__button-size: 49px !default;
+$document-info__large-button-size: 70px !default;
+$document-info__button-color--focus:$color__blue--base !default;
+$document-info__button-color--hover:$color__blue--dark !default;
+
+$document-info__text-margin: 20px;
+
+
+.document-info-cell {
+    overflow: hidden;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid $color__grey--pale;
+        padding-bottom: 34px; // 35px - border
+    }
+}
+
+
+.document-info {
+  clear: both;
+  margin: 35px 0;
+  overflow: hidden;
+  position: relative;
+
+  @extend .document-info-cell;
+
+  &__title {
+    font-weight: 400;
+    margin-top: 0;
+
+    a {
+      text-decoration: underline;
+    }
+
+    &--upper {
+      display: block;
+    }
+    &--lower {
+      display: none;
+    }
+  }
+
+  &__text {
+      margin-left: 70px + $document-info__text-margin;
+  }
+
+  &--limelight &__text {
+      margin-left: 107px + $document-info__text-margin;
+  }
+
+  &__thumbnail {
+    float: left;
+    margin: 0 $document-info__text-margin 0 0;
+    position: relative;
+    width: 70px;
+
+    &--main {
+      padding-bottom: $document-info__button-size;
+    }
+
+    &--pdf {
+      .document-info__thumbnail-link {
+        &:after {
+          content: 'PDF'
+        }
+      }
+    }
+
+    &--rtf {
+      .document-info__thumbnail-link {
+        &:after {
+          content: 'RTF'
+        }
+      }
+    }
+
+    &--xls,
+    &--xlsx {
+      .document-info__thumbnail-link {
+        &:after {
+          content: 'XLS'
+        }
+      }
+    }
+
+    &--doc,
+    &--docx {
+      .document-info__thumbnail-link {
+        &:after {
+          content: 'DOC'
+        }
+      }
+    }
+  }
+
+  &--limelight &__thumbnail {
+      width: 107px;
+  }
+
+  &__thumbnail-link {
+    background-color: $document-info__preview__background;
+    border: 1px solid $document-info__preview__border;
+    display: block;
+    outline: none !important;
+    width: 100%;
+
+    // hide default external link icon
+    padding-right: 0 !important;
+    background-image: none !important;
+
+    &:after {
+      font-size: 26px;
+      font-weight: 300;
+      left: 0;
+      line-height: 0;
+      opacity: 0;
+      display: none;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 50%;
+
+      @include transition(opacity 0.2s);
+    }
+
+    &:focus,
+    &:hover {
+      .document-info__thumbnail-image {
+        opacity: 0.25;
+        @include transition-duration(0.2s);
+      }
+
+      &:after {
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+
+  &__thumbnail-button {
+    bottom: 0;
+    font-size: 14px;
+    height: 49px;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    &:focus {
+      color: $document-info__button-color--focus;
+    }
+    &:hover {
+      color: $document-info__button-color--hover;
+    }
+  }
+
+  &__thumbnail-image {
+    display: block;
+    width: 100%;
+
+    @include transition(opacity 0.2s);
+  }
+
+  &__file-details {
+    line-height: 28px;
+    margin-bottom: 21px;
+  }
+
+  &__page-count,
+  &__file-size {
+    margin: 0 0 14px;
+    padding: 0 8px;
+  }
+
+  &__page-count {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  &__file-size {
+    font-size: 26px;
+    font-weight: 300;
+  }
+
+  &__meta {
+    dd {
+      display: inline;
+    }
+
+    dd:not(:first-of-type) {
+      border-left: 1px solid $color__body;
+      margin-left: 8px;
+      padding-left: 10px;
+    }
+  }
+
+  &__disclaimer {
+    color: $color__grey--text;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__inline-title {
+    text-transform: uppercase;
+  }
+
+  &__download-wrapper {
+    display: none;
+  }
+}
+
+.document-info .button {
+    width: 100%;
+}
+
+@include media-query(medium) {
+
+  .document-info {
+    margin-bottom: 35px;
+
+    &--limelight .document-info__thumbnail {
+      width: 107px;
+    }
+
+    /*
+     * alternative columnar display
+     */
+    &--columns {
+      text-align: left;
+
+      .document-info__title {
+        &--upper {
+          display: none;
+        }
+        &--lower {
+          display: block;
+        }
+      }
+
+      .document-info__thumbnail {
+        float: left;
+        padding-bottom: 0;
+        width: 70px;
+      }
+
+      .document-info__thumbnail-button {
+        display: none;
+      }
+
+      .document-info__text {
+        margin-left: 107px + $document-info__text-margin;
+      }
+
+      .document-info__page-count,
+      .document-info__file-size {
+        display: block;
+        padding: 0;
+      }
+
+      .document-info__footer {
+        clear: both;
+        display: table;
+        margin-top: 14px;
+      }
+
+      .document-info__download-wrapper {
+        display: block;
+        padding-right: 20px;
+        width: 185px;
+      }
+
+      .document-info__cell {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+
+    &__download {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__text {
+        margin-right: 197px;
+    }
+  }
+}
+
+
+
+/*
+Legacy stuff, pre-MGS-3144
+*/
+.document-info--old-style {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+
+    &:not(.document-info--main) {
+        border-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .document-info__title {
+        font-weight: 500;
+    }
+
+    .document-info__thumbnail {
+        float: none;
+        margin: 0 auto;
+        padding-bottom: 49px;
+        width: 107px;
+    }
+
+    .document-info__text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .document-info__file-details {
+        margin-top: 21px;
+    }
+
+    /*
+    Legacy stuff (?), APS pubs
+    */
+    &.document-info--main {
+        background-color: $document-info__background-color;
+        border: 1px solid $document-info__border-color;
+        border-width: 1px 0;
+        margin: 0 -15px;
+        padding: 35px 15px;
+    }
+
+    @include media-query(medium) {
+        &.document-info--main {
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            padding: 35px 0;
+        }
+    }
+
+    @include media-query(medium) {
+        &.document-info--columns {
+            text-align: left;
+        }
+
+        &.document-info--columns .document-info__thumbnail {
+            float: left;
+            padding-bottom: 0;
+            width: 165px;
+        }
+
+        &.document-info--columns .document-info__text {
+            margin-left: (165px + $document-info__text-margin);
+        }
+    }
+}
