@@ -149,12 +149,13 @@ input:disabled {
 }
 
 textarea {
-  border: 2px solid $field__border-color;
+  border: 1px solid $field__border-color;
   border-radius: 0;
   font-size: $field__font-size;
   min-width: 100%;
   padding: 13px 12px;
   line-height: 21px;
+  margin-top: 7px;
 
   &:focus {
     border: 2px solid $field__border-color--focus;

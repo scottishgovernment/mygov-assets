@@ -3277,12 +3277,13 @@ input:disabled {
 }
 
 textarea {
-  border: 2px solid #727272;
+  border: 1px solid #727272;
   border-radius: 0;
   font-size: 16px;
   min-width: 100%;
   padding: 13px 12px;
   line-height: 21px;
+  margin-top: 7px;
 }
 textarea:focus {
   border: 2px solid #0065bd;
@@ -5966,6 +5967,7 @@ ol.page-group__list .page-group__item span:before {
     right: -15px;
     top: 50%;
     width: 0;
+    z-index: 100;
   }
 
   .page-group--right .page-group__text--no-link:after {
