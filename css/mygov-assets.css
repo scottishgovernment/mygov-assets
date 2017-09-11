@@ -4490,6 +4490,289 @@ h2 > a:hover {
   }
 }
 /*------------------------------------*\
+    #DOCUMENT INFO
+\*------------------------------------*/
+.document-info-cell, .document-info {
+  overflow: hidden;
+}
+.document-info-cell:not(:last-child), .document-info:not(:last-child) {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 34px;
+}
+
+.document-info {
+  clear: both;
+  margin: 35px 0;
+  overflow: hidden;
+  position: relative;
+}
+.document-info__title {
+  font-weight: 400;
+  margin-top: 0;
+}
+.document-info__title a {
+  text-decoration: underline;
+}
+.document-info__title--upper {
+  display: block;
+}
+.document-info__title--lower {
+  display: none;
+}
+.document-info__text {
+  margin-left: 90px;
+}
+.document-info--limelight .document-info__text {
+  margin-left: 127px;
+}
+.document-info__thumbnail {
+  float: left;
+  margin: 0 20px 0 0;
+  position: relative;
+  width: 70px;
+}
+.document-info__thumbnail--main {
+  padding-bottom: 49px;
+}
+.document-info__thumbnail--pdf .document-info__thumbnail-link:after {
+  content: "PDF";
+}
+.document-info__thumbnail--rtf .document-info__thumbnail-link:after {
+  content: "RTF";
+}
+.document-info__thumbnail--xls .document-info__thumbnail-link:after, .document-info__thumbnail--xlsx .document-info__thumbnail-link:after {
+  content: "XLS";
+}
+.document-info__thumbnail--doc .document-info__thumbnail-link:after, .document-info__thumbnail--docx .document-info__thumbnail-link:after {
+  content: "DOC";
+}
+.document-info--limelight .document-info__thumbnail {
+  width: 107px;
+}
+.document-info__thumbnail-link {
+  background-color: #ebebeb;
+  border: 1px solid #b3b3b3;
+  display: block;
+  outline: none !important;
+  width: 100%;
+  padding-right: 0 !important;
+  background-image: none !important;
+}
+.document-info__thumbnail-link:after {
+  font-size: 26px;
+  font-weight: 300;
+  left: 0;
+  line-height: 0;
+  opacity: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.document-info__thumbnail-link:focus .document-info__thumbnail-image, .document-info__thumbnail-link:hover .document-info__thumbnail-image {
+  opacity: 0.25;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.document-info__thumbnail-link:focus:after, .document-info__thumbnail-link:hover:after {
+  opacity: 1;
+  display: block;
+}
+.document-info__thumbnail-button {
+  bottom: 0;
+  font-size: 14px;
+  height: 49px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+.document-info__thumbnail-button:focus {
+  color: #0065bd;
+}
+.document-info__thumbnail-button:hover {
+  color: #00437e;
+}
+.document-info__thumbnail-image {
+  display: block;
+  width: 100%;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+.document-info__file-details {
+  line-height: 28px;
+  margin-bottom: 21px;
+}
+.document-info__page-count, .document-info__file-size {
+  margin: 0 0 14px;
+  padding: 0 8px;
+}
+.document-info__page-count {
+  font-size: 18px;
+  font-weight: bold;
+}
+.document-info__file-size {
+  font-size: 26px;
+  font-weight: 300;
+}
+.document-info__meta dd {
+  display: inline;
+}
+.document-info__meta dd:not(:first-of-type) {
+  border-left: 1px solid #333333;
+  margin-left: 8px;
+  padding-left: 10px;
+}
+.document-info__disclaimer {
+  color: #727272;
+  font-size: 14px;
+  line-height: 21px;
+}
+.document-info__inline-title {
+  text-transform: uppercase;
+}
+.document-info__download-wrapper {
+  display: none;
+}
+
+.document-info .button {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .document-info {
+    margin-bottom: 35px;
+    /*
+     * alternative columnar display
+     */
+  }
+  .document-info--limelight .document-info__thumbnail {
+    width: 107px;
+  }
+  .document-info--columns {
+    text-align: left;
+  }
+  .document-info--columns .document-info__title--upper {
+    display: none;
+  }
+  .document-info--columns .document-info__title--lower {
+    display: block;
+  }
+  .document-info--columns .document-info__thumbnail {
+    float: left;
+    padding-bottom: 0;
+    width: 70px;
+  }
+  .document-info--columns .document-info__thumbnail-button {
+    display: none;
+  }
+  .document-info--columns .document-info__text {
+    margin-left: 127px;
+  }
+  .document-info--columns .document-info__page-count,
+  .document-info--columns .document-info__file-size {
+    display: block;
+    padding: 0;
+  }
+  .document-info--columns .document-info__footer {
+    clear: both;
+    display: table;
+    margin-top: 14px;
+  }
+  .document-info--columns .document-info__download-wrapper {
+    display: block;
+    padding-right: 20px;
+    width: 185px;
+  }
+  .document-info--columns .document-info__cell {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .document-info__download {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .document-info__text {
+    margin-right: 197px;
+  }
+}
+/*
+Legacy stuff, pre-MGS-3144
+*/
+.document-info--old-style {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+  /*
+  Legacy stuff (?), APS pubs
+  */
+}
+.document-info--old-style:not(.document-info--main) {
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.document-info--old-style .document-info__title {
+  font-weight: 500;
+}
+.document-info--old-style .document-info__thumbnail {
+  float: none;
+  margin: 0 auto;
+  padding-bottom: 49px;
+  width: 107px;
+}
+.document-info--old-style .document-info__text {
+  margin-left: 0;
+  margin-right: 0;
+}
+.document-info--old-style .document-info__file-details {
+  margin-top: 21px;
+}
+.document-info--old-style.document-info--main {
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  border-width: 1px 0;
+  margin: 0 -15px;
+  padding: 35px 15px;
+}
+@media (min-width: 768px) {
+  .document-info--old-style.document-info--main {
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 35px 0;
+  }
+}
+@media (min-width: 768px) {
+  .document-info--old-style.document-info--columns {
+    text-align: left;
+  }
+  .document-info--old-style.document-info--columns .document-info__thumbnail {
+    float: left;
+    padding-bottom: 0;
+    width: 165px;
+  }
+  .document-info--old-style.document-info--columns .document-info__text {
+    margin-left: 185px;
+  }
+}
+
+/*------------------------------------*\
+    #DOCUMENT SECTION
+\*------------------------------------*/
+.document-section {
+  margin-bottom: 91px;
+}
+
+/*------------------------------------*\
     #EXPAND
 \*------------------------------------*/
 /**
