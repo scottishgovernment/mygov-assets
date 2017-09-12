@@ -366,6 +366,7 @@ ol.page-group__list {
     }
 
     &__text--no-link {
+
       &:after {
         $page-group-triangle-size: 15px;
 
@@ -379,6 +380,7 @@ ol.page-group__list {
         right: $page-group-triangle-size * -1;
         top: 50%;
         width: 0;
+        z-index: 100;
       }
     }
   }
