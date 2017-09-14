@@ -2,7 +2,8 @@
     $HEADINGS
 \*------------------------------------*/
 
-h1, h2, h3 {
+h1, h2, h3,
+.alpha, .beta, .gamma {
   font-weight: $bold;
   text-rendering: optimizeLegibility;
 }
