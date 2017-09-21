@@ -3284,6 +3284,7 @@ textarea {
   padding: 13px 12px;
   line-height: 21px;
   margin-top: 7px;
+  display: block;
 }
 textarea:focus {
   border: 2px solid #0065bd;
@@ -3806,7 +3807,8 @@ h3.emphasis,
 /*------------------------------------*\
     $HEADINGS
 \*------------------------------------*/
-h1, h2, h3 {
+h1, h2, h3,
+.alpha, .beta, .gamma {
   font-weight: 700;
   text-rendering: optimizeLegibility;
 }
@@ -4726,7 +4728,7 @@ Legacy stuff, pre-MGS-3144
 .document-info--old-style .document-info__thumbnail {
   float: none;
   margin: 0 auto;
-  padding-bottom: 49px;
+  padding-bottom: 56px;
   width: 107px;
 }
 .document-info--old-style .document-info__text {
@@ -4906,6 +4908,13 @@ Legacy stuff, pre-MGS-3144
   padding: 6px 42px 7px 0;
   text-align: left;
   vertical-align: middle;
+  width: 100%;
+}
+.expandable-item__title--right {
+  display: block;
+  margin-bottom: 0;
+  padding: 6px 0 7px 42px;
+  text-align: right;
 }
 .expandable-item__icon {
   background: url("../images/icons/arrows/int_arrow_down_blue_35px.png") no-repeat center transparent;
@@ -6691,11 +6700,12 @@ ol.page-group__list .page-group__item span:before {
     custom styling for checkboxes
 \*------------------------------------*/
 input[type="checkbox"] {
-  display: inline-block;
+  display: block;
   width: 1px;
   /* having them 0px wide causes Safari to not tab through them */
+  height: 1px;
   font-size: 40px;
-  margin: 21px 0 0px 10px;
+  margin: 0px 0px 0px 10px;
 }
 
 label.fancy-checkbox {
@@ -6760,9 +6770,6 @@ input:focus + label.fancy-checkbox:before {
   margin-bottom: 21px;
   position: relative;
 }
-.date-entry + .date-entry {
-  margin-top: -7px;
-}
 .date-entry__input-group {
   position: relative;
 }
@@ -6798,7 +6805,7 @@ button.date-entry__trigger {
   display: inline-block;
   text-indent: -999em;
   width: 50px;
-  vertical-align: baseline;
+  vertical-align: bottom;
   height: 42px;
   width: 42px;
 }

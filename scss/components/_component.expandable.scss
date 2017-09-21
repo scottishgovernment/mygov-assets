@@ -97,6 +97,14 @@ $expandable__title-size: inherit !default;
         padding: 6px 42px 7px 0;
         text-align: left;
         vertical-align: middle;
+        width: 100%;
+
+        &--right {
+            display: block;
+            margin-bottom: 0;
+            padding: 6px 0 7px 42px;
+            text-align: right;
+        }
     }
 
     &__icon {
