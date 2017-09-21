@@ -156,6 +156,7 @@ textarea {
   padding: 13px 12px;
   line-height: 21px;
   margin-top: 7px;
+  display: block;
 
   &:focus {
     border: 2px solid $field__border-color--focus;

@@ -7,10 +7,6 @@
     margin-bottom: 21px;
     position: relative;
 
-    + .date-entry {
-        margin-top: -7px;
-    }
-
     &__input-group {
         position: relative;
     }
@@ -48,7 +44,7 @@ button.date-entry__trigger {
   text-indent: -999em;
   width: 50px;
   @include image-2x( '../images/icons/date_picker_@2x.png', 42px, 42px);
-  vertical-align: baseline;
+  vertical-align: bottom;
   height: 42px;
   width: 42px;
 }

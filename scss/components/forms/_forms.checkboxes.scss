@@ -4,10 +4,11 @@
 \*------------------------------------*/
 
 input[type="checkbox"] {
-	display: inline-block;
+	display: block;
 	width: 1px; /* having them 0px wide causes Safari to not tab through them */
+  height: 1px;
 	font-size: 40px;
-	margin: 21px 0 0px 10px;
+	margin: 0px 0px 0px 10px;
 }
 
 label.fancy-checkbox {
