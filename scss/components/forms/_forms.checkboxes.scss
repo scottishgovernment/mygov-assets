@@ -16,7 +16,10 @@ label.fancy-checkbox {
   padding-left: 41px;
   margin-top: 21px;
   margin-left: 0px;
-  white-space: nowrap;
+
+  @include media-query(medium) {
+    white-space: nowrap;
+  }
 }
 
 input.fancy-checkbox {
