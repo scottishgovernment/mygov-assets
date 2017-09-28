@@ -62,6 +62,7 @@ button {
 
     &:focus {
         color: $color__white;
+        background-color: $color__blue--dark;
     }
 
     &:hover {
@@ -74,6 +75,12 @@ button {
         outline: 0;
 
         @include transition-duration(0s);
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.25;
+        pointer-events: none;
     }
 }
 
@@ -107,6 +114,7 @@ button {
 
     &:focus {
         color: $color__blue--base;
+        background-color: $color__blue--lighter;
     }
 
     &:hover {
@@ -126,6 +134,7 @@ button {
 
     &:focus {
         color: $color__body;
+        background-color: $color__blue--lighter;
     }
 
     &:hover {
