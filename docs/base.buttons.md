@@ -28,39 +28,13 @@ This is the most common button type for primary calls to action.
 `class="button  button--secondary"`  
 Smaller and darker buttons for secondary actions.
 
-`class="button  button--dark"`  
-A hybrid of primary and secondary. Primary-sized and secondary-coloured.
-
-`class="button  button--clear"`  
-Has a transparent background and default link text colour.
-
-`class="button  button--invert"`  
-Like button-clear but has a white background.
-
-`class="button  button--success"`  
-`class="button  button--positive"`  
-Has a green background (by default).
-
-`class="button  button--error"`  
-`class="button  button--negative"`  
-As button--success but for negative actions. Has a red background (by default).
-
-`class="button  button--ghost"`  
-Transparent with body-text colour border and text. It's a ghost button.
-
-`class="button  button--ghost button--ghost-primary"`  
-A ghost button variant with a link-coloured border and text.
-
-`class="button  button--ghost button--ghost-invert"`  
-A ghost button variant with a white border and text for use against dark backgrounds.
-
 `class="button  button--cancel"`  
-A similar style to ghost button with lighter border and text.
+Transparent with light colour border and text. 
 
 
 ## Modifiers
 
-There are a number of modifiers available for button styles. These should be used in conjunction with colour classes, for example `class="button  button--primary  button--external"`.
+There are a number of modifiers available for button styles. These should be used in conjunction with colour classes, for example `class="button  button--primary  button--xsmall"`.
 
 `button--large`  
 `button--medium`  
@@ -68,8 +42,4 @@ There are a number of modifiers available for button styles. These should be use
 `button--xsmall`  
 Size variants that can be applied to all button types.
 
-`button--external`  
-Adds an external link icon to a button in the upper right.
 
-`button--pill`  
-Has rounded corners and does not convert button text to uppercase.
