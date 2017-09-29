@@ -171,6 +171,7 @@ button {
     }
 
     &:focus {
+        background-color: $color__blue--lighter;
         color: currentColor;
     }
 }
