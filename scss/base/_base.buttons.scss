@@ -194,18 +194,6 @@ button {
     width: 175px;
 }
 
-.button--secondary,
-.button--cancel {
-    &.button--medium {
-        padding: (10px - $button__secondary-border-width) (15px - $button__secondary-border-width);
-
-        &:hover,
-        &:active {
-            padding: (10px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active);
-        }
-    }
-}
-
 .button--small {
     font-size: 14px;
     line-height: 21px;
@@ -223,6 +211,36 @@ button {
     min-height: 28px;
     padding: 4px 15px 3px;
     width: auto;
+}
+
+.button--secondary,
+.button--cancel {
+    &.button--medium {
+        padding: (10px - $button__secondary-border-width) (15px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (10px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active);
+        }
+    }
+
+    &.button--small {
+        padding: (10px - $button__secondary-border-width) (15px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (10px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active);
+        }
+    }
+
+    &.button--xsmall {
+        padding: (4px - $button__secondary-border-width) (15px - $button__secondary-border-width) (3px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (4px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active) (3px - $button__secondary-border-width--active);
+        }
+    }
 }
 
 
