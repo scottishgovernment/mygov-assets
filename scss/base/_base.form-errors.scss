@@ -39,10 +39,12 @@
 
 /* errors */
 
-.form-group .current-errors, fieldset .current-errors, .form-group .server-side-errors, .form-group .field-errors {
+.current-errors,
+.server-side-errors,
+.field-errors {
   font-size: 16px;
   line-height: 21px;
-  color: #d32205;
+  color: $color__red--base;
   font-weight: normal;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -53,12 +55,13 @@
   margin-bottom: 21px;
 }
 
-.current-errors li, .server-side-errors li {
+.current-errors li,
+.server-side-errors li {
   padding-top: 0px;
   list-style-type: none;
 }
 
-.form-group .field-errors {
+.field-errors {
   margin-left: 12px;
 }
 
@@ -66,7 +69,8 @@
   color: #727272;
 }
 
-.error-grey, .error-grey a {
+.error-grey,
+.error-grey a {
   color: #727272;
 }
 
@@ -99,9 +103,7 @@ fieldset.input-error {
 fieldset .input-wrapper.input-error {
   display: inline-block;
   background-color: #f4e2df;
-  border: 1px dashed #d32205 !important;
+  border: 1px dashed $color__red--base !important;
   border-radius: 6px;
   padding-bottom: 14px;
 }
-
-
