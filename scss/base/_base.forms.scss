@@ -24,7 +24,7 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
 
   p {
     font-size: 16px;
-    margin-bottom: 7px;
+    margin: 7px 0px;
   }
 }
 
@@ -49,7 +49,7 @@ label, legend {
   font-family: $font__default;
   font-weight: 700;
   font-size: 18px;
-  margin-top: 7px;
+  margin-top: 21px;
   margin-bottom: 0px;
   line-height: 21px;
 
