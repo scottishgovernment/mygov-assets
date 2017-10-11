@@ -3,8 +3,7 @@
 \*------------------------------------*/
 
 .in-article-form {
-    textarea + span,
-    input + span {
+    .js-count {
         position: absolute;
         top: -34px;
         right: 0;

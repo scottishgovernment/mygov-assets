@@ -99,17 +99,16 @@ button {
 
 .button--secondary {
     background-color: $color__white;
-    outline: 2px solid $color__blue--base;
-    outline-offset: -2px;
+    border: $button__secondary-border-width solid $color__blue--base;
     color: $color__blue--base;
+    padding: ($button__padding-y - $button__secondary-border-width) ($button__padding-x - $button__secondary-border-width);
 
     &:hover,
     &:active {
-        outline-color: $color__blue--dark;
-        outline-width: 3px;
-        outline-offset: -3px;
-        outline-style: solid;
+        border-color: $color__blue--dark;
+        border-width: $button__secondary-border-width--active;
         color: $color__blue--dark !important;
+        padding: ($button__padding-y - $button__secondary-border-width--active) ($button__padding-x - $button__secondary-border-width--active);
     }
 
     &:focus {
@@ -129,7 +128,7 @@ button {
 // "cancel" is essentially a secondary colorway
 .button--cancel {
     @extend .button--secondary;
-    outline-color: $color__body;
+    border-color: $color__body;
     color: $color__body;
 
     &:focus {
@@ -172,6 +171,7 @@ button {
     }
 
     &:focus {
+        background-color: $color__blue--lighter;
         color: currentColor;
     }
 }
@@ -213,6 +213,36 @@ button {
     width: auto;
 }
 
+.button--secondary,
+.button--cancel {
+    &.button--medium {
+        padding: (10px - $button__secondary-border-width) (15px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (10px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active);
+        }
+    }
+
+    &.button--small {
+        padding: (10px - $button__secondary-border-width) (15px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (10px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active);
+        }
+    }
+
+    &.button--xsmall {
+        padding: (4px - $button__secondary-border-width) (15px - $button__secondary-border-width) (3px - $button__secondary-border-width);
+
+        &:hover,
+        &:active {
+            padding: (4px - $button__secondary-border-width--active) (15px - $button__secondary-border-width--active) (3px - $button__secondary-border-width--active);
+        }
+    }
+}
+
 
 
 
@@ -228,7 +258,7 @@ button {
 .button--primary--fluid,
 .button--primary--fluid-persistent {
     min-width: 140px;
-    width: calc(50% - 8px);
+    width: calc(50% - 5px);
 }
 
 @include media-query(medium) {
@@ -345,11 +375,33 @@ $icon__height--medium: 17px;
 }
 
 .mg-icon--left {
-    left: 5px;
+    left: 7px;
 }
 
 .mg-icon--right {
-    right: 5px;
+    right: 7px;
+}
+
+.button--secondary,
+.button--cancel {
+    .mg-icon--left {
+        left: 7px - $button__secondary-border-width;
+    }
+
+    .mg-icon--right {
+        right: 7px - $button__secondary-border-width;
+    }
+
+    &:hover,
+    &:active {
+        .mg-icon--left {
+            left: 7px - $button__secondary-border-width--active;
+        }
+
+        .mg-icon--right {
+            right: 7px - $button__secondary-border-width--active;
+        }
+    }
 }
 
 .mg-icon--chevron-left {
