@@ -1,2 +1,6 @@
+# .gitignore
+# Files that should not be checked in.
+css
 node_modules
+*.tgz
 .sass-cache

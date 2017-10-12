@@ -1,0 +1,7 @@
+# .npmignore
+# Files to exclude from the package when publishing.
+node_modules
+npm-shrinkwrap.json
+.npmignore
+.sass-cache
+*.tgz

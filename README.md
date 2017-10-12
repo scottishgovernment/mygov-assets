@@ -2,33 +2,27 @@
 
 This repository provides static web assets for websites and web applications for the Scottish Government and other Scottish public sector bodies.
 
+Detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `docs` folder.
 
+## Building
 
-
-## Additional documentation
-
-Detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `/docs` folder.
-
-
-
-
-## CSS/SCSS
-
-Source SCSS files can be found in the `/scss` folder along with a sample "main" SCSS file, `mygov-assets.scss`, that you can use as a base for your own site's CSS.
+Source Sass files can be found in the `scss` folder along with a sample "main" SCSS file, `mygov-assets.scss`, that you can use as a base for your own site's CSS.
 
 We use [Compass](http://compass-style.org/) as an authoring framework. Check out their [installation instructions](http://compass-style.org/install/) for setup.
 
-Use `$ compass compile` in the `mygov-assets` folder to compile `mygov-assets.scss`.
+To download dependencies required to build this project:
 
+* Run `npm install`. This will install dependencies into the `node_modules` directory.
 
+To build CSS files from the Sass sources:
 
+* Run `compass compile` from the `mygov-assets` directory. This will compile `mygov-assets.scss`.
 
 ## Grid
 
 MyGov currently uses CSSWizardry Grids for its grid system. Its syntax is slightly fiddly since you need to eliminate whitespace between grid elements. See [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids) on GitHub for implementation notes.
 
 Regardless of the grid system you use, in the vast majority of cases you should use extra elements for your grid structure. This keeps your pages' layout and content separate, helping flexibility and maintainability.
-
 
 ### A trivial example
 
@@ -55,9 +49,6 @@ You **do** want this:
     --></div>
 
 In the second example the content (the `form` and the `h1`) is not in any way tied to the grid and can be freely moved.
-
-
-
 
 ## Style and conventions
 
