@@ -1,19 +1,23 @@
 {
   "name": "mygov-assets",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "Shared static components for Scottish public sector websites",
+  "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot>",
+  "license": "MIT",
+  "homepage": "https://www.mygov.scot",
   "repository": {
     "type": "git",
     "url": "http://stash.digital.gov.uk/scm/mgv/mygov-assets.git"
   },
-  "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot>",
-  "license": "MIT",
-  "homepage": "https://www.mygov.scot",
   "keywords": [
     "itcss",
     "oocss",
     "css"
   ],
+  "scripts": {
+    "prepublish": "compass compile",
+    "postshrinkwrap": ".bin/sealant"
+  },
   "dependencies": {
     "csswizardry-grids": "^2.2.0",
     "inuit-box-sizing": "^0.2.0",
@@ -29,5 +33,8 @@
     "inuit-starter-kit": "^0.2.9",
     "inuit-tools-widths": "^0.1.4",
     "inuit-widths": "^0.4.2"
+  },
+  "devDependencies": {
+    "sealant": "0.0.3"
   }
 }

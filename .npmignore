@@ -1,0 +1,6 @@
+# .npmignore
+# Files to exclude from the package when publishing.
+node_modules
+.npmignore
+.sass-cache
+*.tgz
