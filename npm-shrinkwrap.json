@@ -1,6 +1,6 @@
 {
-  "name": "mygov-assets",
-  "version": "0.0.2",
+  "name": "@scottish-government/mygov-assets",
+  "version": "0.0.0",
   "dependencies": {
     "csswizardry-grids": {
       "version": "2.2.0"

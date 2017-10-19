@@ -1,5 +1,5 @@
 {
-  "name": "mygov-assets",
+  "name": "@scottish-government/mygov-assets",
   "version": "0.0.0",
   "description": "Shared static components for Scottish public sector websites",
   "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot>",
