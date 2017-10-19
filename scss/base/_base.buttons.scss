@@ -258,7 +258,7 @@ button {
 .button--primary--fluid,
 .button--primary--fluid-persistent {
     min-width: 140px;
-    width: calc(50% - 5px);
+    width: calc(48% - 5px);
 }
 
 @include media-query(medium) {

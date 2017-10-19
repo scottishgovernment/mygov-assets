@@ -22,7 +22,7 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
       position: relative;
   }
 
-  p {
+  p, li {
     font-size: 16px;
     margin: 7px 0px;
   }
@@ -33,7 +33,7 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
   .form-group {
     margin-top: 49px;
   
-    p {
+    p, li {
       font-size: 17px;
     }
   }
