@@ -25,6 +25,7 @@ label.fancy-checkbox {
 input.fancy-checkbox {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=00)";
+  position: absolute;
 }
 
 input.fancy-consent-checkbox {
