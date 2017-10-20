@@ -7,7 +7,7 @@
   "homepage": "https://www.mygov.scot",
   "repository": {
     "type": "git",
-    "url": "http://stash.digital.gov.uk/scm/mgv/mygov-assets.git"
+    "url": "https://github.com/scottishgovernment/mygov-assets"
   },
   "keywords": [
     "itcss",
