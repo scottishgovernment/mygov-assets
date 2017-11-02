@@ -25,7 +25,7 @@
         @include transition(max-height 0.2s);
 
         &--open {
-            max-height: 260px;
+            max-height: 280px;
             max-width: 345px;
         }
     }
