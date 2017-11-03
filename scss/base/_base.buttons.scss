@@ -46,7 +46,7 @@ button {
     border-radius: 0;
     color: $color__white;
     display: inline-block;
-    font-size: 16px;
+    font-size: $base-font-size + 1px;
     font-weight: 700;
     line-height: 21px;
     margin: 35px 0;
@@ -56,7 +56,6 @@ button {
     position: relative;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
     vertical-align: top;
 
     @include transition(outline-color 1s, background-color 1s, color 1s);
@@ -196,7 +195,7 @@ button {
 }
 
 .button--small {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
     max-width: 174px;
     min-width: 56px;
@@ -207,7 +206,7 @@ button {
 // not specced in link/button language but added for guide mobile nav
 // todo: keep this in a "mygov-buttons" scss file
 .button--xsmall {
-    font-size: 12px;
+    font-size: 13px;
     margin: 7px 0;
     min-height: 28px;
     padding: 4px 15px 3px;
