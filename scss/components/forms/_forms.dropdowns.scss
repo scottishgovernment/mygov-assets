@@ -5,7 +5,7 @@
 
 
 /* Make select arrows hidden in IE 10 */
-form select::-ms-expand {
+select::-ms-expand {
   display: none;
 }
 
