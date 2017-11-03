@@ -293,18 +293,6 @@ ol.page-group__list {
   .page-group {
     border-right: 1px solid $color__grey--light;
 
-    &:after {
-        bottom: 0;
-        content: '';
-        height: 50vh;
-        margin-bottom: -50vh;
-        position: absolute;
-        right: -1px;
-        width: 1px;
-
-        @include background-image(linear-gradient($color__grey--light, $color__white));
-    }
-
     &:before {
         top: 0;
         content: '';
