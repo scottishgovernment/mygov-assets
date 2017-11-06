@@ -110,6 +110,11 @@ a,
     padding: 0;
 }
 
+a[disabled] {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
 // no underline on header links
 h1 a,
 h2 a,
