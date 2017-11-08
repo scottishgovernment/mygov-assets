@@ -84,6 +84,10 @@ label.consent {
   margin-left: 0px;
 }
 
+label.inline {
+  display: inline-block;
+}
+
 .optional {
   color: $color__grey--base;
   font-size: 16px;
