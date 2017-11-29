@@ -25,7 +25,7 @@ $medium-note-size: 14px !default;
     position: relative;
     top: 4px;
 
-    p {
+    :last-child {
         margin-bottom: 0;
     }
 
