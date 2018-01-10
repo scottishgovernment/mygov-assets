@@ -32,7 +32,7 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
 
   .form-group {
     margin-top: 49px;
-  
+
     p, li {
       font-size: 17px;
     }
@@ -105,12 +105,25 @@ p.word-count {
     font-size: 14px;
 }
 
+.form--required:before {
+    content: '*';
+}
+
+:not(.form-errors) .form--required span {
+    position: absolute;
+    left: -999em;
+}
+
+.form-errors .form--required:before {
+    content: '';
+}
+
 /* INPUTS */
 
 input[type=text],
 input[type=password],
 input[type=tel],
-input[type=email], 
+input[type=email],
 input[type=number] {
   border: 1px solid $color__white;
   border-radius: 0;
@@ -326,4 +339,3 @@ input.small {
   background-color: #ffffff;
   border-width: 1px;
 }
-
