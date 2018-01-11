@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $CARD
+\*------------------------------------*/
+
+$card__hover-bottom-color: $color__blue--base !default;
+$card__focus-color: $color__blue--light !default;
+$card__background-color: $color__white !default;
+
+.card {
+  background-color: $card__background-color;
+  box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.3);
+  line-height: 21px;
+  margin: 5px -10px;
+  position: relative;
+
+  &--hover {
+
+    &:active,
+    &:focus {
+      background: $card__focus-color;
+      box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.7);
+
+      a {
+        color: $color__link--focus;
+      }
+    }
+
+    /* bottom border on card hover */
+    &:after {
+      background: $card__hover-bottom-color;
+      bottom: 0;
+      content: '';
+      height: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+
+      @include transition(height 0.2s);
+    }
+
+    &:hover:after {
+      height: 5px;
+    }
+
+    &:hover {
+      box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.5);
+
+      /* remove underline from link contents */
+      a * {
+        text-decoration: none !important;
+      }
+    }
+
+  }
+}
+
+@include media-query(medium) {
+
+  .card--small {
+    height: 186px;
+  }
+
+}

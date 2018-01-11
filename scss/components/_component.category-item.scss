@@ -1,0 +1,288 @@
+/*------------------------------------*\
+    $CATEGORY ITEM
+    Navigation elements for different levels of category navigation. Includes classes for layout of these elements in a list. 
+\*------------------------------------*/
+
+.category-item {
+  margin-bottom: 28px;
+  padding: 0 0 0 10px;
+
+  border-left: 1px solid mix($color__link--primary, $color__grey--lighter, 30%); // calculate solid color at 30% tint since IE8 can't handle RGBA
+  @include transition(border-color 1s);
+
+  &:hover {
+    border-left-color: $color__link--hover;
+    @include transition(border-color 0.2s);
+  } 
+
+  &--limelight {
+    border-left: 2px solid $color__link--primary;
+    padding-bottom: 15px;
+    padding-left: 9px;
+  }
+
+  &--subcategory {
+    border-left: none;
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+
+  .category-item__link {
+    position: relative;
+
+    &:active {
+      outline: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    line-height: 21px;
+    text-decoration: none;
+
+    &--card {
+      padding: 20px 15px 30px;
+      height: 100%;
+
+      &:focus {
+        background: $color__blue--light;
+        outline: none;
+      }
+    }
+  
+    &:hover {
+      text-decoration: none;
+
+      .category-item__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__header {
+    margin-bottom: 0;
+  }
+
+  &__header--group-header {
+    margin: 0 -15px 34px;
+    padding: 7px 15px;
+    text-align: center;
+
+    @include transition(background 0.2s, box-shadow 0.2s);
+
+    &--sticky {
+      background: $color__white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+      .title-text {
+        background: $color__white;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 23px;
+    margin: 3px 0 13px;
+    position: relative;
+
+    .title-text {
+      background: $color__grey--lighter;
+      padding: 0 15px;
+
+      -webkit-box-decoration-break: clone;
+      -ms-box-decoration-break: clone;
+      -o-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+      &--sticky {
+        background: $color__white;
+      }
+    }
+
+    &--group-title {
+      color: $color__blue--dark;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 21px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+
+      &:before {
+        background: $color__blue--dark;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__summary {
+    color: $color__grey--base;
+    font-size: 14px;
+    line-height: 21px;
+    margin: -5px 0 1px 0;
+    position: relative;
+  }
+
+  // no focus state on children
+  &__title:focus,
+  &__summary:focus {
+    outline: none;
+  }
+}
+
+.limelit-items {
+  border-bottom: 1px solid darken($color__grey--light, 3%);
+  margin-bottom: 45px;
+
+  >:last-child {
+    margin-bottom: 45px;
+  }
+}
+
+@include media-query(medium) {
+
+  .js-category-header-ghost {
+    display: block;
+  }
+
+  .category-item {
+
+    padding-left: 15px;
+
+    &__header {
+      padding-top: 0;
+      text-align: left;
+
+      &--group-header {
+        margin-top: 3px;
+      }
+    }
+
+    margin-bottom: 40px;
+
+    &--limelight {
+      padding-left: 14px;
+    }
+
+    &--subcategory {
+      margin-bottom: 48px;
+    }
+
+    &__link {
+      line-height: 28px;
+    }
+
+    &__title {
+      font-size: $medium-h3-size;
+      line-height: 26px;
+
+      &--group-title {
+        padding: 0;
+        text-align: left;
+
+        &:before {
+          content: none;
+        }
+      }
+
+      .title-text {
+        padding: 0;
+
+        &--sticky {
+          background: transparent;
+        }
+      }
+    }
+
+    &__summary {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  .category-item__header--group-header--sticky {
+    background: transparent;
+    box-shadow: none;
+  }
+}
+
+@include media-query(large) {
+  .category-item {
+    &__title {
+      font-size: 21px;
+      margin: 0 0 13px;
+    }
+  }
+}
+
+
+/* Additional classes for layout of category items within a container */
+
+.home,
+.category-list-1,
+.category-list-2,
+.category-list-3,
+.jumpoff-with-sub-categories,
+.jumpoff {
+  background-color: $color__grey--lighter;
+}
+
+.header-wrapper {
+  background: $color__white;
+
+  &--border {
+    border-bottom: 1px solid $color__grey--light;
+  }
+}
+
+.category-list-container {
+  padding-bottom: rhythm(2);
+}
+
+.category-item-container {
+  @include media-query(medium) {
+    &.nth-child-2 {
+      clear: left;
+    }
+  }
+  @include media-query(large) {
+    &.nth-child-2 {
+      clear: none;
+    }
+    &.nth-child-3 {
+      clear: left;
+    }
+  }
+}
+
+.category-list {
+  padding-top: 28px;
+  position: relative;
+
+  &--cards {
+    margin: 0 10px;
+    padding-top: 5px;
+  }
+}
+
+@include media-query(medium) {
+
+  .category-list-container {
+    padding-bottom: rhythm(5);
+  }
+
+  .category-list--cards {
+    margin: auto;
+  }
+
+}
