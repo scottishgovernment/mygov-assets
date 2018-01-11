@@ -261,6 +261,10 @@ ol.page-group__list {
     padding: 7px 10px;
   }
 
+  &--inactive {
+    color: $color__grey--base;
+  }
+
   &--link {
     @include transition(background-color 1s);
 
