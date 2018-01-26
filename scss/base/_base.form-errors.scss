@@ -36,9 +36,6 @@
     }
 }
 
-
-/* errors */
-
 .current-errors,
 .server-side-errors,
 .field-errors {
@@ -88,6 +85,10 @@
 
 .input-error {
   border: 2px solid $color__red--base !important;
+
+  li, li a {
+    color: $color__red--base;
+  }
 }
 
 .input-error:focus {
