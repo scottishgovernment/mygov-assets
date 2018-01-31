@@ -62,6 +62,11 @@ label, legend {
   }
 }
 
+legend {
+  /* fix for text not wrapping in IE */
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   legend, label {
     font-size: 19px;
