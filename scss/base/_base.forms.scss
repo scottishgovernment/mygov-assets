@@ -67,6 +67,11 @@ legend {
   width: 100%;
 }
 
+label.minor {
+  @extend .small;
+  font-weight: normal;
+}
+
 @media (min-width: 768px) {
   legend, label {
     font-size: 19px;
