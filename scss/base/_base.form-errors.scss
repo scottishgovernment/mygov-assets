@@ -85,10 +85,11 @@
 
 .input-error {
   border: 2px solid $color__red--base !important;
+}
 
-  li, li a {
+.input-error__item,
+.input-error__link {
     color: $color__red--base;
-  }
 }
 
 .input-error:focus {
@@ -106,5 +107,5 @@ fieldset .input-wrapper.input-error {
   background-color: #f4e2df;
   border: 1px dashed $color__red--base !important;
   border-radius: 6px;
-  padding-bottom: 14px;
+  padding: 0 15px 14px;
 }
