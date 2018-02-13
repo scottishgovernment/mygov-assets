@@ -17,13 +17,13 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
 .form-group {
   margin-bottom: 28px;
   margin-top: 42px;
+  font-size: 16px;
 
   &.relative {
       position: relative;
   }
 
   p, li {
-    font-size: 16px;
     margin: 7px 0px;
   }
 }
@@ -32,12 +32,8 @@ $field__font-family: Helvetica, Arial, sans-serif !default; // IE8 & IE9 don't l
 
   .form-group {
     margin-top: 49px;
-
-    p, li {
-      font-size: 17px;
-    }
+    font-size: 17px;
   }
-
 }
 /* end from Bootstrap */
 
