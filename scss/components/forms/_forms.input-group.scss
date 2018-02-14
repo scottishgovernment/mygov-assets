@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #INPUT GROUP
+    for closely-related fields, e.g. radio groups or grouped checkboxes
+\*------------------------------------*/
+
+.input-group {
+    padding: 1px 10px 7px;
+}
+
+.input-group.input-error {
+    display: inline-block;
+    background-color: #f4e2df;
+    border: 1px dashed $color__red--base !important;
+    border-radius: 6px;
+    padding: 0 9px 6px;
+}
+
+.input-group label.fancy-radio {
+    margin-top: 6px;
+}
