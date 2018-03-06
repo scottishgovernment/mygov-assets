@@ -32,9 +32,9 @@ $filetypegroups: (
 
 $includeretina: true !default;
 @mixin icon-files($sizex, $sizey) {
-    background: url('../images/icons/documents/gen_#{$sizex}px.png') no-repeat center center $color__white;
+    background: url($images-path + 'icons/documents/gen_#{$sizex}px.png') no-repeat center center $color__white;
     @if $includeretina {
-         @include image-2x( '../images/icons/documents/gen_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
+         @include image-2x($images-path + 'icons/documents/gen_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
     }
     @each $filetypegroup in $filetypegroups {
         $classList: '';
@@ -45,7 +45,7 @@ $includeretina: true !default;
         }
 
         #{$classList} {
-            background-image: url('../images/icons/documents/#{$iconname}_#{$sizex}px.png');
+            background-image: url($images-path + 'icons/documents/#{$iconname}_#{$sizex}px.png');
             @if $iconcolor != $color__icon--default {
                 border-color: $iconcolor;
 
@@ -54,7 +54,7 @@ $includeretina: true !default;
                 }
             }
             @if $includeretina {
-                 @include image-2x( '../images/icons/documents/#{$iconname}_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
+                 @include image-2x($images-path + 'icons/documents/#{$iconname}_#{$sizex}px_@2x.png', #{$sizex}px, #{$sizey}px);
             }
         }
     }

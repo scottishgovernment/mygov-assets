@@ -8,8 +8,8 @@ $info-note__caution-border-color: $info-note__note-border-color !default;
 $info-note__attribution-background-color: $color__grey--lighter !default;
 $info-note__attribution-border-color: $color__grey--dark !default;
 $info-note__blockquote-border-color: $color__blue--base !default;
-$info-note__image-note: '../images/icons/note.png' !default;
-$info-note__image-caution: '../images/icons/caution.png' !default;
+$info-note__image-note: $images-path + 'icons/note.png' !default;
+$info-note__image-caution: $images-path + 'icons/caution.png' !default;
 $medium-note-size: 14px !default;
 
 

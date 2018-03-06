@@ -297,11 +297,11 @@ button {
 .button--secondary[href^="http://"]#{add-excluded-urls()},
 .button--secondary[href^="https://"]#{add-excluded-urls()} {
     &:after {
-        background-image: url(../images/icons/svg/external-17-blue.svg);
+        background-image: url($images-path + 'icons/svg/external-17-blue.svg');
     }
 
     &:hover:after {
-        background-image: url(../images/icons/svg/external-17-dkblue.svg);
+        background-image: url($images-path + 'icons/svg/external-17-dkblue.svg');
     }
 }
 
@@ -309,7 +309,7 @@ button {
 .button--cancel[href^="http://"]#{add-excluded-urls()},
 .button--cancel[href^="https://"]#{add-excluded-urls()} {
     &:after {
-        background-image: url(../images/icons/svg/external-17.svg);
+        background-image: url($images-path + 'icons/svg/external-17.svg');
     }
 }
 
@@ -330,8 +330,8 @@ button {
 
 // close cross
 .close-button {
-    background: transparent url(../images/icons/close-grey.png) center no-repeat;
-    @include image-2x(get2xImage('../images/icons/close-grey.png'), 27px, 27px);
+    background: transparent url($images-path + 'icons/close-grey.png') center no-repeat;
+    @include image-2x(get2xImage($images-path + 'icons/close-grey.png'), 27px, 27px);
     border: 0;
     display: inline-block;
     height: 27px;
@@ -405,15 +405,15 @@ $icon__height--medium: 17px;
 }
 
 .mg-icon--chevron-left {
-    background-image: url(../images/icons/svg/chevron-left-grey.svg);
+    background-image: url($images-path + 'icons/svg/chevron-left-grey.svg');
 }
 
 .mg-icon--chevron-right {
-    background-image: url(../images/icons/svg/chevron-right-grey.svg);
+    background-image: url($images-path + 'icons/svg/chevron-right-grey.svg');
 }
 
 .button--primary .mg-icon--chevron-left {
-    background-image: url(../images/icons/svg/chevron-left-white.svg);
+    background-image: url($images-path + 'icons/svg/chevron-left-white.svg');
 }
 
 .button--primary:active .mg-icon--chevron-left,
@@ -422,29 +422,29 @@ $icon__height--medium: 17px;
 }
 
 .button--primary .mg-icon--chevron-right {
-    background-image: url(../images/icons/svg/chevron-right-white.svg);
+    background-image: url($images-path + 'icons/svg/chevron-right-white.svg');
 }
 
 .button--secondary .mg-icon--chevron-left {
-    background-image: url(../images/icons/svg/chevron-left-dkblue.svg);
+    background-image: url($images-path + 'icons/svg/chevron-left-dkblue.svg');
 }
 
 .button--secondary .mg-icon--chevron-right {
-    background-image: url(../images/icons/svg/chevron-right-dkblue.svg);
+    background-image: url($images-path + 'icons/svg/chevron-right-dkblue.svg');
 }
 
 .button--cancel .mg-icon--chevron-left {
-    background-image: url(../images/icons/svg/chevron-left-grey.svg);
+    background-image: url($images-path + 'icons/svg/chevron-left-grey.svg');
 }
 
 .button--cancel:hover .mg-icon--chevron-left {
-    background-image: url(../images/icons/svg/chevron-left-dkblue.svg);
+    background-image: url($images-path + 'icons/svg/chevron-left-dkblue.svg');
 }
 
 .button--cancel .mg-icon--chevron-right {
-    background-image: url(../images/icons/svg/chevron-right-grey.svg);
+    background-image: url($images-path + 'icons/svg/chevron-right-grey.svg');
 }
 
 .button--cancel:hover .mg-icon--chevron-right {
-    background-image: url(../images/icons/svg/chevron-right-dkblue.svg);
+    background-image: url($images-path + 'icons/svg/chevron-right-dkblue.svg');
 }

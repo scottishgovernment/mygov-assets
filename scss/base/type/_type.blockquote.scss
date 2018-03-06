@@ -2,7 +2,7 @@
     $BLOCKQUOTES
 \*------------------------------------*/
 
-$blockquote__icon: '../images/icons/note.png' !default;
+$blockquote__icon: $images-path + 'icons/note.png' !default;
 $blockquote__icon-size: 26px !default;
 $blockquote__font-size: 15px !default;
 $blockquote__font-size--medium: 17px !default;

@@ -31,8 +31,8 @@ select::-ms-expand {
 
 .create-select__arrow:after {
   content: " ";
-  background: url('../images/icons/arrows/dd_arrows_35px.png');
-  @include image-2x("../images/icons/arrows/dd_arrows_35px_@2x.png", 35px, 42px);
+  background: url($images-path + 'icons/arrows/dd_arrows_35px.png');
+  @include image-2x($images-path + "icons/arrows/dd_arrows_35px_@2x.png", 35px, 42px);
   width: 35px;
   height: 42px;
   pointer-events: none;
@@ -45,8 +45,8 @@ select::-ms-expand {
 @include media-query(medium) {
 
   .create-select__arrow:after {
-    background: url('../images/icons/arrows/dd_arrows.png');
-    @include image-2x("../images/icons/arrows/dd_arrows_@2x.png", 42px, 42px);
+    background: url($images-path + 'icons/arrows/dd_arrows.png');
+    @include image-2x($images-path + "icons/arrows/dd_arrows_@2x.png", 42px, 42px);
     width: 42px;
   }
 

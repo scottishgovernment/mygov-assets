@@ -8,7 +8,7 @@ $external-link__size--small: 15px !default;
 $external-link__size--screen_medium: 17px !default;
 $external-link__size--screen_medium--large: 21px !default;
 $external-link__size--screen_medium--small: 15px !default;
-$external-link__icon-path: '../images/icons/arrows/' !default;
+$external-link__icon-path: $images-path + 'icons/arrows/' !default;
 $external-link__icon-filename-prefix: 'ext_arrow_text' !default;
 $external-link__excluded-sites: () !default;
 

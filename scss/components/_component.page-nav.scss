@@ -4,7 +4,7 @@
 \*------------------------------------*/
 
 $page-nav__icon-size: 56px !default;
-$page-nav__direction-link__icon-path: '../images/icons/arrows/' !default;
+$page-nav__direction-link__icon-path: $images-path + 'icons/arrows/' !default;
 $page-nav__prefix-color: $color__blue--darker !default;
 
 
