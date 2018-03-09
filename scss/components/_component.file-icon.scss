@@ -127,17 +127,17 @@ $includeretina: true !default;
 
 // hover and active states for icon links
 a.file-icon {
-    @include transition(background-color $transition-out-time);
+    transition: background-color $transition-out-time;
 
     &:hover {
         background-color: $color__grey--lighter;
-        @include transition-duration($transition-in-time);
+        transition-duration: $transition-in-time;
     }
 
     &:active {
         background-color: $color__blue--light;
         outline: none;
-        @include transition(none);
+        transition: none;
     }
 }
 

@@ -28,14 +28,14 @@
       right: 0;
       top: 0;
 
-      @include transition(background-color $transition-out-time);
+      transition: background-color $transition-out-time;
     }
   }
 
   &__link:hover &__image-container:after {
       background: rgba(0, 0, 0, 0.2);
 
-      @include transition-duration($transition-in-time);
+      transition-duration: $transition-in-time;
   }
 
   &__text-container {

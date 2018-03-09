@@ -62,7 +62,7 @@ $expand__background-color--focus: $color__blue--light !default;
           left: 10px;
           top: 4px;
 
-          @include transition(transform $transition-in-time);
+          transition: transform $transition-in-time;
         }
     }
 

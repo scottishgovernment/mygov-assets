@@ -134,11 +134,11 @@ input[type=number] {
   border: 1px solid $color__white;
   border-radius: 0;
   font-size: $field__font-size;
-  height: rhythm(6);
-  margin-top: rhythm(1);
+  height: 42px;
+  margin-top: 7px;
 
   &.large {
-    height: rhythm(8);
+    height: 56px;
   }
 
   &.grey {
@@ -158,7 +158,7 @@ input[type=submit] {
   padding: 0 12px;
 
   &.large {
-    height: rhythm(10);
+    height: 70px;
   }
 
   &.black {
@@ -190,13 +190,13 @@ textarea {
 
 aside select {
   display: block;
-  margin: 0 0 rhythm(2);
+  margin: 0 0 14px;
   width: 100%;
 }
 
 fieldset {
   border: 0;
-  margin: rhythm(3) 0;
+  margin: 21px 0;
   padding: 0;
 }
 
@@ -255,11 +255,11 @@ select {
   }
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-milli-size);
+    font-size: $medium-milli-size;
   }
 
   @include media-query(large) {
-    @include adjust-font-size-to($large-milli-size);
+    font-size: $large-milli-size;
   }
 
   option {

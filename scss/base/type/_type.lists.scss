@@ -10,7 +10,7 @@ li {
     margin-bottom: 0;
   }
 
-  padding-top: rhythm(1, $base-font-size);
+  padding-top: 7px;
 }
 
 ul.no-bullets {
@@ -41,7 +41,7 @@ article,
 
   ul + h2,
   ol + h2 {
-    margin-top: rhythm(6);
+    margin-top: 42px;
   }
 }
 
@@ -63,6 +63,6 @@ dl {
   dd {
     font-size: $base-font-size;
     line-height: $base-line-height * 4;
-    margin-bottom: rhythm(1);
+    margin-bottom: 7px;
   }
 }

@@ -5,7 +5,7 @@
 /**
  * As per: csswizardry.com/2012/06/single-direction-margin-declarations
  */
-$base-spacing-unit: ($base-line-height - 5);
+$base-spacing-unit: 19px;
 $half-spacing-unit: $base-spacing-unit / 2;
 $quarter-spacing-unit: $base-spacing-unit / 4;
 $line-height-ratio: $base-line-height / $base-font-size;

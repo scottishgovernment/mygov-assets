@@ -7,16 +7,8 @@
 
 
 
-/* SASS Libraries
-========================================================================== */
-/*
- * Global SASS libraries/helpers from Compass's built in mixins to aid
- * compatibility and progressive enhancement methods.
- */
-@import "compass";
-@import "compass/typography";
-@import "compass/utilities";
-@import "compass/css3";
+$base-line-height: 7px;
+$base-font-size: 16px;
 
 
 

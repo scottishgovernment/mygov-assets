@@ -13,12 +13,12 @@
         padding-top: 0;
         position: relative;
         text-decoration: none;
-        @include transition(background-color $transition-out-time);
+        transition: background-color $transition-out-time;
 
         &:hover {
             background-color: $color__grey--lighter;
             text-decoration: none;
-            @include transition-duration($transition-in-time);
+            transition-duration: $transition-in-time;
 
             .listed-content-item__title {
                 text-decoration: underline;
@@ -29,7 +29,7 @@
         &:active {
             background: $color__blue--light;
             outline: none;
-            @include transition(none);
+            transition: none;
         }
     }
 

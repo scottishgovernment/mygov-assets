@@ -61,7 +61,7 @@ Examples:
   @returns {px} length
 */
 @function baseline-nearest($input, $line-height: $base-line-height) {
-  @return rhythm(round($input / $line-height));
+  @return round($input / $line-height) * $base-line-height;
 }
 
 @mixin media-2x {

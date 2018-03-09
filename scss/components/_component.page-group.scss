@@ -57,7 +57,7 @@ $page-group-pip-size: 12px;
     background: url($images-path + 'icons/arrows/dd_handle.png') no-repeat $color__blue--base center;
     @include image-2x($images-path + 'icons/arrows/dd_handle_@2x.png', 56px, 56px);
 
-    @include transition(background-color 0.2s, border-color 0.2s);
+    transition: background-color 0.2s, border-color 0.2s;
   }
 
 
@@ -107,11 +107,11 @@ $page-group-pip-size: 12px;
     height: 100%;
     text-decoration: none !important;
 
-    @include transition(background-color 1s);
+    transition: background-color 1s;
 
     &:hover {
       background: $color__grey--lighter;
-      @include transition(background-color 0.2s);
+      transition: background-color 0.2s;
 
       .page-group-content-list__title {
           text-decoration: underline;
@@ -120,7 +120,7 @@ $page-group-pip-size: 12px;
 
     &:active {
       background: $color__blue--light;
-      @include transition(none);
+      transition: none;
     }
 
     p {
@@ -266,7 +266,7 @@ ol.page-group__list {
   }
 
   &--link {
-    @include transition(background-color 1s);
+    transition: background-color 1s;
 
     &:hover {
       background-color: $color__grey--lighter;
@@ -276,7 +276,7 @@ ol.page-group__list {
       margin-right: -15px;
       padding-left: 50px;
 
-      @include transition-duration(0.2s);
+      transition-duration: 0.2s;
     }
 
     &:active {
@@ -287,7 +287,7 @@ ol.page-group__list {
       margin-right: -15px;
       padding-left: 50px;
 
-      @include transition(none);
+      transition: none;
     }
   }
 }
@@ -304,7 +304,7 @@ ol.page-group__list {
         position: absolute;
         right: -1px;
         width: 1px;
-        @include background-image(linear-gradient($color__white, $color__grey--light));
+        background-image: linear-gradient(to bottom, $color__white, $color__grey--light);
     }
 
     &--right {

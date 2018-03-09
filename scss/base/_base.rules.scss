@@ -9,7 +9,7 @@ $hard-rule__border-color: $color__border--light !default;
 
 hr {
   border: 0;
-  @include trailing-border($border-style: solid $hard-rule__border-color);
+  border-bottom: 1px solid $hard-rule__border-color;
 
   position: relative;
   top: floor($base-line-height / -2);

@@ -44,8 +44,6 @@ $large-h5-size: $large-font-size !default;
 $large-note-size: $medium-note-size !default;
 $large-leader-size: $medium-leader-size !default;
 
-@include establish-baseline;
-
 /**
  * Font-family
  */

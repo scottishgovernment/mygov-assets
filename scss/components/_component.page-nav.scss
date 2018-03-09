@@ -31,7 +31,7 @@ $page-nav__prefix-color: $color__blue--darker !default;
     position: relative;
     text-decoration: none;
     width: 100%;
-    @include transition(background $transition-out-time);
+    transition: background $transition-out-time;
 
     &:not([href]) {
       display: none;
@@ -55,7 +55,7 @@ $page-nav__prefix-color: $color__blue--darker !default;
       position: absolute;
       top: 12px;
 
-      @include transition(background 1s);
+      transition: background 1s;
     }
 
     // :after is the chevron
@@ -112,7 +112,7 @@ $page-nav__prefix-color: $color__blue--darker !default;
 
 .page-nav__button:hover {
     background-color: $color__grey--lighter;
-    @include transition-duration(0.2s);
+    transition-duration: 0.2s;
 
     .page-nav__text {
         text-decoration: underline;

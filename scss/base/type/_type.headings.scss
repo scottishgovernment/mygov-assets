@@ -9,53 +9,63 @@ h1, h2, h3,
 }
 
 h1, .alpha {
-  @include adjust-font-size-to($base-h1-size, 5);
+  font-size: $base-h1-size;
+  line-height: 35px;
   margin: 28px 0 25px;
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-h1-size, 8);
+    font-size: $medium-h1-size;
+    line-height: 56px;
   }
 }
 
 h2, .beta {
-  @include adjust-font-size-to($base-h2-size, 4);
+  font-size: $base-h2-size;
+  line-height: 28px;
   margin: 30px 0 5px;
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-h2-size, 5);
-    margin: (rhythm(3, $medium-h2-size) + 1) 0 (rhythm(2, $medium-h2-size) - 1);
+    font-size: $medium-h2-size;
+    line-height: 35px;
+    margin: (21px + 1) 0 (14px - 1);
   }
 }
 
 h3, .gamma {
-  @include adjust-font-size-to($base-h3-size, 3);
-  margin: 0 0 rhythm(1, $base-h3-size);
+  font-size: $base-h3-size;
+  line-height: 21px;
+  margin: 0 0 7px;
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-h3-size, 4);
+    font-size: $medium-h3-size;
+    line-height: 28px;
     padding-top: 0;
     margin-bottom: 7px;
   }
 }
 
 h4, .delta {
-  @include adjust-font-size-to($base-h4-size, 4);
+  font-size: $base-h4-size;
+  line-height: 28px;
   font-weight: $bold;
   margin: 0;
 
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-h4-size, 4);
+    font-size: $medium-h4-size;
+    line-height: 28px;
   }
 }
 
 h5, .epsilon {
   font-weight: $semibold;
-  @include adjust-font-size-to($base-h5-size, 4);
+  font-size: $base-h5-size;
+  line-height: 28px;
   margin: 0;
 
   @include media-query(medium) {
-    @include adjust-font-size-to($medium-h5-size, 4);
+    font-size: $medium-h5-size;
+    line-height: 28px;
   }
 }
 

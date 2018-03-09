@@ -18,10 +18,10 @@ Your values for these should be included before you include the SCSS file.
 
     a {
       color: red;
-      @include transition(color, $transition-out-time);
+      transition: color $transition-out-time;
     }
 
     a:hover {
       color: blue;
-      @include transition-duration($transition-in-time);
+      transition-duration: $transition-in-time;
     }
