@@ -2,27 +2,27 @@
 
 This repository provides static web assets for websites and web applications for the Scottish Government and other Scottish public sector bodies.
 
-Detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `docs` folder.
+More detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `docs` folder.
 
 ## Building
 
 Source Sass files can be found in the `scss` folder along with a sample "main" SCSS file, `mygov-assets.scss`, that you can use as a base for your own site's CSS.
 
-We use [Compass](http://compass-style.org/) as an authoring framework. Check out their [installation instructions](http://compass-style.org/install/) for setup.
+### To download dependencies required to build this project:
 
-To download dependencies required to build this project:
+Run `npm install`. This will install dependencies into the `node_modules` directory.
 
-* Run `npm install`. This will install dependencies into the `node_modules` directory.
+### To build CSS files from the Sass sources:
 
-To build CSS files from the Sass sources:
+Compile `mygov-assets.scss` using the a Sass compiler.
 
-* Run `compass compile` from the `mygov-assets` directory. This will compile `mygov-assets.scss`.
+We have provided a Compass config file if Compass is your tool of choice. Run `compass compile` from the `mygov-assets` directory to compile `mygov-assets.scss`.
 
 ## Grid
 
 MyGov currently uses CSSWizardry Grids for its grid system. Its syntax is slightly fiddly since you need to eliminate whitespace between grid elements. See [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids) on GitHub for implementation notes.
 
-Regardless of the grid system you use, in the vast majority of cases you should use extra elements for your grid structure. This keeps your pages' layout and content separate, helping flexibility and maintainability.
+_Regardless of the grid system you use_, in the vast majority of cases you should use additional elements for your grid structure. This keeps your pages' layout and content separate, helping flexibility and maintainability.
 
 ### A trivial example
 
