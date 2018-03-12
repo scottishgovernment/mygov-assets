@@ -129,14 +129,14 @@ $document-info__text-margin: 20px;
       text-align: center;
       top: 50%;
 
-      transition: opacity 0.2s;
+      transition: opacity $transition-in-time;
     }
 
     &:focus,
     &:hover {
       .document-info__thumbnail-image {
         opacity: 0.25;
-        transition-duration: 0.2s;
+        transition-duration: $transition-in-time;
       }
 
       &:after {
@@ -166,7 +166,7 @@ $document-info__text-margin: 20px;
     display: block;
     width: 100%;
 
-    transition: opacity 0.2s;
+    transition: opacity $transition-in-time;
   }
 
   &__file-details {

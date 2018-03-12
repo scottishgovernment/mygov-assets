@@ -8,11 +8,11 @@
   padding: 0 0 0 10px;
 
   border-left: 1px solid mix($color__link--primary, $color__grey--lighter, 30%); // calculate solid color at 30% tint since IE8 can't handle RGBA
-  transition: border-color 1s;
+  transition: border-color $transition-out-time;
 
   &:hover {
     border-left-color: $color__link--hover;
-    transition: border-color 0.2s;
+    transition: border-color $transition-in-time;
   } 
 
   &--limelight {
@@ -68,7 +68,7 @@
     padding: 7px 15px;
     text-align: center;
 
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: background $transition-in-time, box-shadow $transition-in-time;
 
     &--sticky {
       background: $color__white;

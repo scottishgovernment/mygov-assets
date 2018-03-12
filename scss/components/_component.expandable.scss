@@ -66,7 +66,7 @@ $expandable__title-size: inherit !default;
         padding: 0 15px;
         position: relative;
         text-decoration: none;
-        transition: background 0.2s;
+        transition: background $transition-in-time;
         width: 100%;
 
         &:hover {
@@ -76,7 +76,7 @@ $expandable__title-size: inherit !default;
 
             .expandable-item__icon {
                 background-color: $expandable__icon-color-hover;
-                transition: background 0.2s;
+                transition: background $transition-in-time;
             }
         }
 
@@ -117,7 +117,7 @@ $expandable__title-size: inherit !default;
         top: 50%;
         width: 35px;
         @include image-2x(get2xImage($expandable__icon-image), 35px, 35px);
-        transition: background 1s;
+        transition: background $transition-out-time;
     }
 
     &__body {

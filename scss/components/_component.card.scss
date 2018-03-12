@@ -35,7 +35,7 @@ $card__background-color: $color__white !default;
       position: absolute;
       right: 0;
 
-      transition: height 0.2s;
+      transition: height $transition-in-time;
     }
 
     &:hover:after {

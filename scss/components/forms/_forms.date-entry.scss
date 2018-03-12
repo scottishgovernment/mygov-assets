@@ -22,7 +22,7 @@
         max-height: 0;
         overflow: hidden;
         max-width: 345px;
-        transition: max-height 0.2s;
+        transition: max-height $transition-in-time;
 
         &--open {
             max-height: 280px;

@@ -57,7 +57,7 @@ $page-group-pip-size: 12px;
     background: url($images-path + 'icons/arrows/dd_handle.png') no-repeat $color__blue--base center;
     @include image-2x($images-path + 'icons/arrows/dd_handle_@2x.png', 56px, 56px);
 
-    transition: background-color 0.2s, border-color 0.2s;
+    transition: background-color $transition-in-time, border-color $transition-in-time;
   }
 
 
@@ -107,11 +107,11 @@ $page-group-pip-size: 12px;
     height: 100%;
     text-decoration: none !important;
 
-    transition: background-color 1s;
+    transition: background-color $transition-out-time;
 
     &:hover {
       background: $color__grey--lighter;
-      transition: background-color 0.2s;
+      transition: background-color $transition-in-time;
 
       .page-group-content-list__title {
           text-decoration: underline;
@@ -266,7 +266,7 @@ ol.page-group__list {
   }
 
   &--link {
-    transition: background-color 1s;
+    transition: background-color $transition-out-time;
 
     &:hover {
       background-color: $color__grey--lighter;
@@ -276,7 +276,7 @@ ol.page-group__list {
       margin-right: -15px;
       padding-left: 50px;
 
-      transition-duration: 0.2s;
+      transition-duration: $transition-in-time;
     }
 
     &:active {
