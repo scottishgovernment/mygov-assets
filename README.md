@@ -14,7 +14,7 @@ Run `npm install`. This will install dependencies into the `node_modules` direct
 
 ### To build CSS files from the Sass sources:
 
-Compile `mygov-assets.scss` using the a Sass compiler.
+Compile `mygov-assets.scss` using a Sass compiler.
 
 We have provided a Compass config file if Compass is your tool of choice. Run `compass compile` from the `mygov-assets` directory to compile `mygov-assets.scss`.
 
