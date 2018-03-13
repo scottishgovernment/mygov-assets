@@ -7,112 +7,28 @@
 
 
 
-$base-line-height: 7px;
-$base-font-size: 16px;
+/*
+ * Grid system setup. Mygov Assets currently uses CSSWizardry Grids but that
+ * grid framework is not mandatory.
+ */
+@import "grid";
+
+
+
+
+/*
+ * The core mygov styles. These core styles are required for correct display of
+ * all of the Mygov Assets components.
+ */
+@import "core";
 
 
 
 
 /**
- * GRID/LAYOUT
+ * Form element style definitions. Include these if your project uses forms.
  */
-
-// CSS Wizardry grids settings
-$gutter: 30px;
-$pull: true;
-$push: true;
-
-// same breakpoints as gov.scot
-$breakpoints: (
-    'small' '(min-width: 480px)',
-    'medium' '(min-width: 768px)',
-    'large' '(min-width: 992px)',
-    'xlarge' '(min-width: 1200px)',
-
-    'small-down' '(max-width: 479px)',
-    'medium-down' '(max-width: 767px)',
-    'large-down' '(max-width: 991px)',
-    'small-to-medium' '(min-width: 480px) and (max-width: 767px)',
-    'medium-to-large' '(min-width: 768px) and (max-width: 991px)',
-    'large-to-xlarge' '(min-width: 992px) and (max-width: 1199px)',
-    'xlarge-up' '(min-width: 1200px)',
-
-    'medium-portrait' '(min-width: 768px) and (orientation: portrait) and (max-width : 1024px)',
-    'medium-landscape' '(min-width: 768px) and (orientation: landscape)  and (max-width : 1024px)'
-) !default;
-$breakpoint-has-widths: ('small', 'medium', 'large', 'xlarge') !default;
-$breakpoint-has-push:   ('medium', 'large', 'xlarge') !default;
-$breakpoint-has-pull:   ('medium', 'large', 'xlarge') !default;
-
-@import "../node_modules/csswizardry-grids/csswizardry-grids.scss";
-
-
-
-
-/**
- * SETTINGS
- */
-@import "settings/settings.base-spacing";
-@import "settings/settings.colors";
-@import "settings/settings.images";
-@import "settings/settings.transition";
-@import "settings/settings.type";
-
-
-
-
-/**
- * TOOLS
- */
-@import "tools/tools.mixins";
-
-
-
-
-/**
- * GENERIC
- */
-@import "generic/generic.normalize";
-@import "generic/generic.reset";
-@import "generic/generic.box-sizing";
-
-
-
-
-/**
- * HELPERS
- */
-@import "helpers/helper.bleed";
-@import "helpers/helper.overflows";
-@import "helpers/helper.visibility";
-@import "helpers/helper.wrappers";
-
-
-
-
-/**
- * BASE
- */
-@import "base/base.base-spacing";
-@import "base/base.external-links";
-@import "base/base.forms";
-@import "base/base.form-errors";
-@import "base/base.images";
-@import "base/base.rules";
-@import "base/base.tables";
-
-/* BASE: TYPE */
-@import "base/type/type.blockquote";
-@import "base/type/type.body";
-@import "base/type/type.header-emphasis";
-@import "base/type/type.headings";
-@import "base/type/type.leader";
-@import "base/type/type.lists";
-@import "base/type/type.small";
-
-/* BASE: BUTTONS AND LINKS */
-@import "base/base.buttons";
-@import "base/type/type.links";
+@import "form-elements";
 
 
 
@@ -141,19 +57,12 @@ $breakpoint-has-pull:   ('medium', 'large', 'xlarge') !default;
 @import "components/component.skip-links";
 
 
-/**
- * FORMS
- */
-
-@import "components/forms/forms.checkboxes";
-@import "components/forms/forms.date-entry";
-@import "components/forms/forms.dropdowns";
-@import "components/forms/forms.input-group";
-@import "components/forms/forms.multi-page-forms";
-@import "components/forms/forms.radio-buttons";
 
 
 /**
  * TRUMPS
+ * Trumps provide overrides for styles defined in component files where a more
+ * specific implementation of a component is desired. They typically extend or
+ * augment an existing component.
  */
 @import "trumps/trump.header-search";

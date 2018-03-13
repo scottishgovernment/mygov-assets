@@ -3,7 +3,7 @@
 \*------------------------------------*/
 /**
  * Bleeds allow one-whole grid items to extend to the screen edges.
- * Extends .grid__item
+ * Use with .grid__item or whichever containing element you wish to enlarge.
  */
 
 @include media-query(small-down) {

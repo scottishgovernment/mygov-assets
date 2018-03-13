@@ -6,12 +6,8 @@
  * Font-sizes in pixels.
  */
 
-$base-font-size: 16px;
-$base-line-height: 7px;
-$rhythm-unit: "px";
-$default-rhythm-border-width: 1px !default;
-$from-context: "px";
-$to-context: "px";
+$base-font-size: 16px !default;
+$base-line-height: 7px !default;
 
 $base-milli-size: 14px !default;
 $base-h1-size: 28px !default;
