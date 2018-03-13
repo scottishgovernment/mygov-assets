@@ -15,10 +15,6 @@
   &__prefix + &__title {
     margin-top: 0;
   }
-
-  &__title + &__meta {
-
-  }
 }
 
 @include media-query(medium) {

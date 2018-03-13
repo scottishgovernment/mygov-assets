@@ -1,6 +1,6 @@
 # Component: article header
 
-Styles for a complex header, such as a header with a title, a publication date, and a format description.
+Styles for a complex header, such as a header with a title, label, and metadata.
 
 Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](https://www.mygov.scot/apply-blue-badge/)
 

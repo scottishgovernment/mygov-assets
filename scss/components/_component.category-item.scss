@@ -1,6 +1,6 @@
 /*------------------------------------*\
     $CATEGORY ITEM
-    Navigation elements for different levels of category navigation. Includes classes for layout of these elements in a list. 
+    Navigation elements for different levels of category navigation. Includes classes for layout of these elements in a list.
 \*------------------------------------*/
 
 .category-item {
@@ -13,7 +13,7 @@
   &:hover {
     border-left-color: $color__link--hover;
     transition: border-color $transition-in-time;
-  } 
+  }
 
   &--limelight {
     border-left: 2px solid $color__link--primary;
@@ -40,16 +40,6 @@
     line-height: 21px;
     text-decoration: none;
 
-    &--card {
-      padding: 20px 15px 30px;
-      height: 100%;
-
-      &:focus {
-        background: $color__blue--light;
-        outline: none;
-      }
-    }
-  
     &:hover {
       text-decoration: none;
 

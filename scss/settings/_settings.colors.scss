@@ -35,10 +35,11 @@ $color__placeholder:    $color__grey--base !default;
 $color__grey--text:     $color__grey--base !default;
 
 // Links
-$color__link--primary:  $color__blue--base !default;
-$color__link--hover:    $color__blue--dark !default;
-$color__link--active:   $color__blue--dark !default;
-$color__link--focus:    $color__blue--dark !default;
+$color__link--primary:                  $color__blue--base !default;
+$color__link--hover:                    $color__blue--dark !default;
+$color__link--active:                   $color__blue--dark !default;
+$color__link--active--background:       $color__blue--light !default;
+$color__link--focus:                    $color__blue--dark !default;
 
 $color__tap-highlight:  transparent !default;
 

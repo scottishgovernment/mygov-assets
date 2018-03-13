@@ -7,11 +7,6 @@ $document-info__background-color: $color__grey--lighter !default;
 $document-info__preview__border: $color__grey--medium !default;
 $document-info__preview__background: $color__grey--light !default;
 $document-info__preview__background--focus: $color__blue--lighter !default;
-$document-info__button-size: 49px !default;
-$document-info__large-button-size: 70px !default;
-$document-info__button-color--focus:$color__blue--base !default;
-$document-info__button-color--hover:$color__blue--dark !default;
-
 $document-info__text-margin: 20px;
 
 
@@ -64,7 +59,7 @@ $document-info__text-margin: 20px;
     width: 70px;
 
     &--main {
-      padding-bottom: $document-info__button-size;
+      padding-bottom: 49px;
     }
 
     &--pdf {
@@ -155,10 +150,10 @@ $document-info__text-margin: 20px;
     right: 0;
 
     &:focus {
-      color: $document-info__button-color--focus;
+      color: $color__button--primary;
     }
     &:hover {
-      color: $document-info__button-color--hover;
+      color: $color__button--primary--hover;
     }
   }
 
@@ -331,7 +326,7 @@ Legacy stuff, pre-MGS-3144
     }
 
     /*
-    Legacy stuff (?), APS pubs
+    Legacy, e.g. APS publications
     */
     &.document-info--main {
         background-color: $document-info__background-color;
