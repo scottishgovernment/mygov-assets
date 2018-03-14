@@ -2,6 +2,8 @@
 
 Vertical navigation for a group of pages, such as pages within a multi-page article. Uses JavaScript for expand/collapse behaviour on small devices.
 
+Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](Apply for or renew a disabled parking permit)
+
 ## Example HTML
 
     <nav class="page-group">

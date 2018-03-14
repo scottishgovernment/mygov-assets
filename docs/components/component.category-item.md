@@ -2,6 +2,8 @@
 
 Navigation elements for different levels of category navigation. Includes classes for layout of these elements in a list.
 
+Example on mygov.scot: [Benefits](https://www.mygov.scot/benefits/)
+
 ## Example HTML
 
     <section class="category-list">

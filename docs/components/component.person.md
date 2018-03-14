@@ -2,6 +2,10 @@
 
 Used to display a portrait of a person along with some text content or metadata, such as you might find on an "about this organisation" page.
 
+Example on mygov.scot: [https://www.mygov.scot/organisations/scottish-veterans-commissioner/#organisation](Scottish Veterans Commissioner)
+
+Example on beta.gov.scot showing different display possibilities: [https://beta.gov.scot/about/who-runs-government/cabinet-and-ministers/](Cabinet and ministers)
+
 ## Example HTML
 
     <div class="person">

@@ -2,7 +2,7 @@
 
 Styles for a complex header, such as a header with a title, label, and metadata.
 
-Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](https://www.mygov.scot/apply-blue-badge/)
+Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](Apply for or renew a disabled parking permit)
 
 Code example: [https://codepen.io/jsutcliffe/pen/BWQzLj](CodePen article header example example)
 

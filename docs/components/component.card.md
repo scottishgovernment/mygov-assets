@@ -2,6 +2,8 @@
 
 Provides a highlight or callout box. Primarily used for landing page navigation.
 
+Example on mygov.scot: [https://www.mygov.scot/](Mygov home page)
+
 ## Configuration options
 
 * `$card__hover-bottom-color` - color used for the hover indication
