@@ -1,6 +1,6 @@
 # MyGov Assets
 
-The Mygov Assets repository provides static web assets for websites and web applications for the Scottish Government and other Scottish public sector bodies.
+The MyGov Assets repository provides static web assets for websites and web applications for the Scottish Government and other Scottish public sector bodies.
 
 More detailed documentation and usage notes for individual pieces of MyGov Assets can be found in the `docs` folder.
 
@@ -18,7 +18,7 @@ Compile `mygov-assets.scss` using a Sass compiler.
 
 We have provided a Compass config file if Compass is your tool of choice. Run `compass compile` from the `mygov-assets` directory to compile `mygov-assets.scss`.
 
-## Anatomy of Mygov Assets
+## Anatomy of MyGov Assets
 
 `mygov-assets.scss` is broken up into a few important pieces: grid, core, form elements, components, and trumps.
 
@@ -56,19 +56,19 @@ In the second example the content (the `form` and the `h1`) is not in any way ti
 
 ### Core
 
-Mygov Assets **core** contains styles are required for correct display of all of the Mygov Assets components. Everything else in Mygov Assets is optional depending on your project's requirements, but you should always include `_core.scss`.
+MyGov Assets **core** contains styles are required for correct display of all of the MyGov Assets components. Everything else in MyGov Assets is optional depending on your project's requirements, but you should always include `_core.scss`.
 
 ### Form elements
 
-Mygov Assets **form elements** contains styling for form-related elements. You should include `_form-elements.scss` if your project uses forms in any way.
+MyGov Assets **form elements** contains styling for form-related elements. You should include `_form-elements.scss` if your project uses forms in any way.
 
 ### Components
 
-Mygov Assets **components** are discrete pieces of SCSS required for the display of particular components of a site, such as styling for multi-page navigation or search results. Include all of them or pick and choose the ones that you need.
+MyGov Assets **components** are discrete pieces of SCSS required for the display of particular components of a site, such as styling for multi-page navigation or search results. Include all of them or pick and choose the ones that you need.
 
 ### Trumps
 
-Mygov Assets **trumps** provide overrides for styles defined in component files where a more specific implementation of a component is desired. They typically extend or augment an existing component.
+MyGov Assets **trumps** provide overrides for styles defined in component files where a more specific implementation of a component is desired. They typically extend or augment an existing component.
 
 ## Style and conventions
 
