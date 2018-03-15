@@ -1,6 +1,6 @@
 # Component: breadcrumbs
 
-Code example: [https://codepen.io/jsutcliffe/pen/mWOEEb](CodePen expandable example)
+Code example: [CodePen expandable example](https://codepen.io/jsutcliffe/pen/mWOEEb)
 
 ## Configuration options
 
@@ -9,7 +9,7 @@ Code example: [https://codepen.io/jsutcliffe/pen/mWOEEb](CodePen expandable exam
 * `$breadcrumbs__font-size` - font size
 * `$breadcrumbs__font-size--tablet` - font size tablet and up
 * `$breadcrumbs__font-size--desktop` - font size desktop and up
-* `$breadcrumbs__margin` - margin
+* `$breadcrumbs__margin` - margin (single value or CSS shorthand for multiple values)
 * `$breadcrumbs__margin--tablet` - margin tablet and up
 * `$breadcrumbs__margin--desktop` - margin desktop and up
 

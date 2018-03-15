@@ -2,9 +2,6 @@
     $LINKS
 \*------------------------------------*/
 
-// link colours should be defined in settings.colors
-$link__background--active: $color__blue--light !default;
-
 
 
 
@@ -22,9 +19,9 @@ $link__background--active: $color__blue--light !default;
       text-decoration: underline;
     }
     &:active {
-      background-color: $color__blue--light;
+      background-color: $color__link--active--background;
       color: $color__link--active;
-      outline: 3px solid $color__blue--light;
+      outline: 3px solid $color__link--active--background;
     }
   }
 }
@@ -42,9 +39,9 @@ $link__background--active: $color__blue--light !default;
       text-decoration: underline;
     }
     &:active {
-      background-color: $color__blue--light;
+      background-color: $color__link--active--background;
       color: $color__link--active;
-      outline: 3px solid $color__blue--light;
+      outline: 3px solid $color__link--active--background;
     }
   }
 }

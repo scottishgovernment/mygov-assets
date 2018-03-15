@@ -110,19 +110,19 @@
     }
 
     &__info-label {
-      color: $color__grey--base;
-      display: none;
-      font-size: 14px;
-      font-weight: 700;
-      position: absolute;
-      right: 15px;
-      text-transform: uppercase;
-      top: 20px;
+        color: $color__grey--base;
+        display: none;
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        right: 15px;
+        text-transform: uppercase;
+        top: 20px;
 
-      &--Closed {
-        display: block;
-      }
-  }
+        &--Closed {
+            display: block;
+        }
+    }
 }
 
 @include media-query(medium) {

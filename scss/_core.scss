@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $MYGOV ASSETS CORE
+\*------------------------------------*/
+
+
+
+
+/**
+ * SETTINGS
+ */
+@import "settings/settings.type";
+@import "settings/settings.base-spacing";
+@import "settings/settings.colors";
+@import "settings/settings.images";
+@import "settings/settings.transition";
+
+
+
+
+
+/**
+ * TOOLS
+ */
+@import "tools/tools.mixins";
+
+
+
+
+/**
+ * GENERIC
+ */
+@import "generic/generic.normalize";
+@import "generic/generic.reset";
+@import "generic/generic.box-sizing";
+
+
+
+
+/**
+ * HELPERS
+ */
+@import "helpers/helper.bleed";
+@import "helpers/helper.overflows";
+@import "helpers/helper.visibility";
+@import "helpers/helper.wrappers";
+
+
+
+
+/**
+ * BASE
+ */
+@import "base/base.base-spacing";
+@import "base/base.external-links";
+@import "base/base.forms";
+@import "base/base.form-errors";
+@import "base/base.images";
+@import "base/base.rules";
+@import "base/base.tables";
+
+/* BASE: TYPE */
+@import "base/type/type.blockquote";
+@import "base/type/type.body";
+@import "base/type/type.header-emphasis";
+@import "base/type/type.headings";
+@import "base/type/type.leader";
+@import "base/type/type.lists";
+@import "base/type/type.small";
+
+/* BASE: BUTTONS AND LINKS */
+@import "base/base.buttons";
+@import "base/type/type.links";
