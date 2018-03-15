@@ -2,7 +2,7 @@
 
 Multipurpose callout notices, for helpful tips, warnings, and similar.
 
-Code examples: [https://codepen.io/jsutcliffe/pen/dvOXpr](CodePen informational notes examples)
+Code examples: [CodePen informational notes examples](https://codepen.io/jsutcliffe/pen/dvOXpr)
 
 ## Configuration options
 

@@ -2,7 +2,7 @@
 
 The "expand" component is a button for revealing extra content. It requires the addition of some JavaScript to toggle an `expand--open` class on the element.
 
-Example on beta.gov.scot: [https://beta.gov.scot/about/how-government-is-run/civil-service/#permanent-secretary-and-directors-general](Civil Service - directors-general)
+Example on beta.gov.scot: [Civil Service - directors-general](https://beta.gov.scot/about/how-government-is-run/civil-service/#permanent-secretary-and-directors-general)
 
 ## Configuration options
 

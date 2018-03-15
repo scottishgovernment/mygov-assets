@@ -2,7 +2,7 @@
 
 Vertical navigation for a group of pages, such as pages within a multi-page article. Uses JavaScript for expand/collapse behaviour on small devices.
 
-Example on mygov.scot: [https://www.mygov.scot/apply-blue-badge/](Apply for or renew a disabled parking permit)
+Example on mygov.scot: [Apply for or renew a disabled parking permit](https://www.mygov.scot/apply-blue-badge/)
 
 ## Example HTML
 

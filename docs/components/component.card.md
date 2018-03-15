@@ -2,7 +2,7 @@
 
 Provides a highlight or callout box. Primarily used for landing page navigation.
 
-Example on mygov.scot: [https://www.mygov.scot/](Mygov home page)
+Example on mygov.scot: [Mygov home page](https://www.mygov.scot/)
 
 ## Configuration options
 

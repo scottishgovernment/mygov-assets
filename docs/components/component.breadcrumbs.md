@@ -1,6 +1,6 @@
 # Component: breadcrumbs
 
-Code example: [https://codepen.io/jsutcliffe/pen/mWOEEb](CodePen expandable example)
+Code example: [CodePen expandable example](https://codepen.io/jsutcliffe/pen/mWOEEb)
 
 ## Configuration options
 
