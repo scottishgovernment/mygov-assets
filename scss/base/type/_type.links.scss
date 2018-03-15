@@ -93,9 +93,9 @@ a,
   }
 
   &:active {
-    background-color: $link__background--active;
+    background-color: $color__link--active--background;
     color: $color__link--active;
-    outline: 3px solid $link__background--active;
+    outline: 3px solid $color__link--active--background;
 
     transition: background-color 0s, color 0s;
   }
