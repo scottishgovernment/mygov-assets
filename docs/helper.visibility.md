@@ -4,6 +4,16 @@
 
 Class to hide elements. Their content is kept available to screen readers.
 
+## Class `.hidden--hard`
+
+A modifier class that can be applied to `.hidden` elements. `.hidden--hard` hides the element's content from screen readers.
+
+The following examples illustrate that you only need to toggle the `.hidden` class on elements with `hidden--hard` for the class to do its job.
+
+    <p class="hidden hidden--hard">I am hidden and not available to screen readers.</p>
+
+    <p class="hidden--hard">I visible and available to screenreaders.</p>
+
 ## Class `.hidden-[breakpoint]`
 
 Classes to control when elements should be hidden only at particular breakpoints.
