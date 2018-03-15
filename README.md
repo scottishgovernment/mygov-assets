@@ -56,7 +56,7 @@ In the second example the content (the `form` and the `h1`) is not in any way ti
 
 ### Core
 
-MyGov Assets **core** contains styles are required for correct display of all of the MyGov Assets components. Everything else in MyGov Assets is optional depending on your project's requirements, but you should always include `_core.scss`.
+MyGov Assets **core** contains styles that are _required_ for correct display of all of the MyGov Assets components. Everything else in MyGov Assets is optional depending on your project's requirements, but you should always include `_core.scss`.
 
 ### Form elements
 
