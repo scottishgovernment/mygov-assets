@@ -364,6 +364,11 @@ $icon__height--medium: 17px;
     width: $icon__height--medium;
 }
 
+.mg-icon--full {
+    height: 100%;
+    width: 100%;
+}
+
 .mg-icon--absolute {
     margin-top: round(-$icon__height/2);
     position: absolute;
