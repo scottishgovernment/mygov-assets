@@ -3,4 +3,4 @@
 \*------------------------------------*/
 
 /* Sets the base directory path for all images - relative to where the compiled CSS is located */
-$images-path: '../images/';
+$images-path: '../images/' !default;
