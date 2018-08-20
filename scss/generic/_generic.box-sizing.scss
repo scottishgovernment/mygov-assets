@@ -9,9 +9,7 @@
  * paulirish.com/2012/box-sizing-border-box-ftw
  */
 html {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
@@ -19,9 +17,7 @@ html {
     &,
     &:before,
     &:after {
-        -webkit-box-sizing: inherit;
-           -moz-box-sizing: inherit;
-                box-sizing: inherit;
-        }
+        box-sizing: inherit;
+    }
 
 }
