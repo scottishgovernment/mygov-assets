@@ -78,8 +78,9 @@ button {
     }
 
     &[disabled] {
-        cursor: not-allowed;
-        opacity: 0.25;
+        background: $color__grey--medium;
+        color: $color__grey--lighter;
+        opacity: 1;
         pointer-events: none;
     }
 }
