@@ -1,6 +1,6 @@
 {
   "name": "@scottish-government/mygov-assets",
-  "version": "0.0.0",
+  "version": "1.0.115",
   "description": "Shared static components for Scottish public sector websites",
   "author": "Jonathan Sutcliffe <jonathan.sutcliffe@gov.scot>",
   "license": "MIT",
