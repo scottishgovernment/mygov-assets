@@ -17,13 +17,37 @@
   }
 }
 
+.article-header__flex-area {
+  display: flex;
+  align-items: center;
+}
+
+.article-header__flex-area-content {
+  display: table-cell; /* fallback for browsers with no support for flex */
+
+  &.org-logo {
+    text-align: right;
+  }
+
+  &.org-logo img {
+    display: inline-block;
+    max-height: 77px;
+    padding-left: 25%;
+  }
+}
+
 @include media-query(medium) {
   .article-header {
     margin-top: 26px;
 
     &.has-icon {
-      padding-left: 80px;
       position: relative;
+
+      .article-header__prefix,
+      .article-header__title,
+      .article-header__meta {
+        padding-left: 80px;
+      }
 
       &:before {
         content: '';
