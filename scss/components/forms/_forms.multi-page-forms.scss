@@ -13,6 +13,12 @@
 .postcode-search {
     text-transform: uppercase;
     display: inline-block;
+
+    & + .button {
+        text-transform: none;
+        vertical-align: baseline;
+        margin-top: 7px;
+    }
 }
 
 .form-group--add {
