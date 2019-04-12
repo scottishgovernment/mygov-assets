@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "prepublish": "compass compile",
-    "postshrinkwrap": ".bin/sealant"
+    "postshrinkwrap": "node_modules/.bin/sealant"
   },
   "dependencies": {
     "csswizardry-grids": "^2.2.0"
