@@ -140,6 +140,9 @@ $page-nav__prefix-color: $color__blue--darker !default;
     padding-top: 21px;
     position: relative;
 
+    /*
+    [1] this is the legacy property name, required by IE11. correct property name is "overflow-wrap"
+    */
     &:before {
         color: $page-nav__prefix-color;
         content: attr(data-label);
@@ -150,6 +153,8 @@ $page-nav__prefix-color: $color__blue--darker !default;
         right: 0;
         text-transform: uppercase;
         top: 0;
+        word-wrap: normal; /* [1] */
+        overflow-wrap: normal;
     }
 }
 
