@@ -15,13 +15,14 @@
     "css"
   ],
   "scripts": {
-    "prepublish": "compass compile",
+    "prepublish": "node-sass scss/  --output css  --output-style compressed  --source-map true",
     "postshrinkwrap": "node_modules/.bin/sealant"
   },
   "dependencies": {
     "csswizardry-grids": "^2.2.0"
   },
   "devDependencies": {
-    "sealant": "0.0.3"
+    "sealant": "0.0.3",
+    "node-sass": "^4.11.0"
   }
 }
