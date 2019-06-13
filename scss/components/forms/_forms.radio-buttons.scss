@@ -50,7 +50,18 @@ input:checked + label.fancy-radio:before {
   border-color: $color__blue--base;
   color: $color__blue--base;
   background-color: $color__white;
-  content: '\f111';
+}
+
+input:checked + label.fancy-radio:after {
+  background: $color__blue--base;
+  border: 5px solid $color__blue--base;
+  border-radius: 50%;
+  content: '';
+  height: 0;
+  left: 9px;
+  position: absolute;
+  top: 9px;
+  width: 0;
 }
 
 /* FOCUS STATE */
