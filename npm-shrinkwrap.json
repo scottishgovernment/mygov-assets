@@ -560,6 +560,21 @@
       "dev": true,
       "integrity": "sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg=="
     },
+    "lodash.assign": {
+      "version": "4.2.0",
+      "dev": true,
+      "integrity": "sha1-DZnzzNem0mHRm9rrkkUAXShYCOc="
+    },
+    "lodash.clonedeep": {
+      "version": "4.5.0",
+      "dev": true,
+      "integrity": "sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8="
+    },
+    "lodash.mergewith": {
+      "version": "4.6.1",
+      "dev": true,
+      "integrity": "sha512-eWw5r+PYICtEBgrBE5hhlT6aAa75f411bgDz/ZL2KZqYV03USvucsxcHUIlGTDTECs1eunpI7HOV7U+WLDvNdQ=="
+    },
     "loud-rejection": {
       "version": "1.6.0",
       "dev": true,
@@ -673,9 +688,9 @@
       }
     },
     "node-sass": {
-      "version": "4.12.0",
+      "version": "4.11.0",
       "dev": true,
-      "integrity": "sha512-A1Iv4oN+Iel6EPv77/HddXErL2a+gZ4uBeZUy+a8O35CFYTXhgA8MgLCWBtwpGZdCvTvQ9d+bQxX/QC36GDPpQ==",
+      "integrity": "sha512-bHUdHTphgQJZaF1LASx0kAviPH7sGlcyNhWade4eVIpFp6tsn7SV8xNMTbsQFpEV9VXpnwTTnNYlfsZXgGgmkA==",
       "requires": {
         "async-foreach": "^0.1.3",
         "chalk": "^1.1.1",
@@ -684,10 +699,12 @@
         "get-stdin": "^4.0.1",
         "glob": "^7.0.3",
         "in-publish": "^2.0.0",
-        "lodash": "^4.17.11",
+        "lodash.assign": "^4.2.0",
+        "lodash.clonedeep": "^4.3.2",
+        "lodash.mergewith": "^4.6.0",
         "meow": "^3.7.0",
         "mkdirp": "^0.5.1",
-        "nan": "^2.13.2",
+        "nan": "^2.10.0",
         "node-gyp": "^3.8.0",
         "npmlog": "^4.0.0",
         "request": "^2.88.0",
