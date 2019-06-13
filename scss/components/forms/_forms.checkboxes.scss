@@ -41,16 +41,29 @@ input + label.fancy-checkbox:before {
   text-align: center;
   top: 0;
   width: 28px;
-  font-family: 'FontAwesome';
 }
 
 /* CHECKED STATE */
 
 input:checked + label.fancy-checkbox:before {
-  border: 1px solid $color__blue--base;
   color: $color__blue--base;
   background-color: $color__white;
-  content: '\f00c';
+}
+
+input:checked + label.fancy-checkbox:after {
+  -webkit-transform: rotate(-45deg);
+  background: transparent;
+  border: solid;
+  border-top-color: transparent;
+  border-width: 0 0 4px 4px;
+  color: $color__blue--base;
+  content: '';
+  height: 9px;
+  left: 5px;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 18px;
 }
 
 /* FOCUS STATE */
