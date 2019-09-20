@@ -24,7 +24,7 @@ We have provided a Compass config file if Compass is your tool of choice. Run `c
 
 ### Grid
 
-MyGov currently uses CSSWizardry Grids for its grid system. Its syntax is slightly fiddly since you need to eliminate whitespace between grid elements. See [https://github.com/csswizardry/csswizardry-grids](CSSWizardry Grids) on GitHub for implementation notes.
+MyGov currently uses CSSWizardry Grids for its grid system. Its syntax is slightly fiddly since you need to eliminate whitespace between grid elements. See [CSSWizardry Grids](https://github.com/csswizardry/csswizardry-grids) on GitHub for implementation notes.
 
 _Regardless of the grid system you use_, in the vast majority of cases you should use additional elements for your grid structure. This keeps your pages' layout and content separate, helping flexibility and maintainability.
 
