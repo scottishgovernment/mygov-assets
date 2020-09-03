@@ -67,7 +67,7 @@ $card__background-color: $color__white !default;
 @include media-query(medium) {
 
     .card--small {
-        height: 186px;
+        min-height: 186px;
     }
 
 }
